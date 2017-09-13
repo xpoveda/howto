@@ -20,8 +20,6 @@ https://aws.amazon.com/es/solutions/case-studies/?nc2=h_mo
 
 https://aws.amazon.com/es/about-aws/global-infrastructure/?nc2=h_mo
 
----
-
 ## Introducción a AWS
 
 ### Introducción
@@ -31,8 +29,6 @@ https://aws.amazon.com/es/getting-started/?nc2=h_mo
 ### Capa gratuita de AWS	
 
 https://aws.amazon.com/es/free/?nc2=h_mo
-
----
 
 ## Noticias
 
@@ -51,6 +47,3 @@ https://aws.amazon.com/es/about-aws/in-the-news/?nc2=h_mo
 ### Informes de los analistas
 
 https://aws.amazon.com/es/resources/analyst-reports/?nc2=h_l2_cc
-
-
-
