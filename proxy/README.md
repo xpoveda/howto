@@ -1,7 +1,8 @@
 Configuración de ubuntu para trabajar con proxy corporativo
 ============================================================
 
-Conectividad via sshó--------------------
+Conectividad via ssh
+--------------------
 Modificamos como root el fichero `/etc/profile`
 
 ```bash
@@ -20,36 +21,59 @@ lynx http://google.es
 curl http://google.es
 ```
 
-#Asi ya funcionan la actualización de software con apt-get
-/etc/apt/apt.conf
+Configuración apt-get
+---------------------
+También tendremos que modificar el fichero `/etc/apt/apt.conf` para que los paquetes
+se puedan bajar vía proxy.
 
+```bash
 Acquire::http::proxy "http://USER:PASSWORD@PROXY_URL:PROXY_PORT/";
 Acquire::https::proxy "https://USER:PASSWORD@PROXY_URL:PROXY_PORT/";
 Acquire::ftp::proxy "ftp://USER:PASSWORD@PROXY_URL:PROXY_PORT/";
+```
 
-#Conectividad via graficos
-Red\proxy de red\Manual
-USER:PASSWORD@PROXY_URL PROXY_PORT
+Conectividad escritorio
+-----------------------
+En el interfaz gráfico de ubuntu entraremos en `Red\proxy de red\Manual` y modificaremos tambien el `USER:PASSWORD@PROXY_URL PROXY_PORT`
+que nos aparece en la ventana.
 
-#Conectividad con Docker
-#https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
-#https://docs.docker.com/engine/admin/systemd/#httphttps-proxy
+Conexión con Docker
+-----------------------
+Despues de instalar docker tendremos que configurar el proxy http y https para que podamos bajarnos
+las imagenes de docker hub correctamente.
 
-ubuntu@ubuntu:~$ more /etc/systemd/system/docker.service.d/http-proxy.conf
-[Service]
-Environment="HTTP_PROXY=http://USER:PASSWORD@PROXY_URL:PROXY_PORT/" "NO_PROXY=localhost,127.0.0.1"
+https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
+https://docs.docker.com/engine/admin/systemd/#httphttps-proxy
 
+Creamos los ficheros de configuración
+```bash
 ubuntu@ubuntu:~$ sudo mkdir -p /etc/systemd/system/docker.service.d
 ubuntu@ubuntu:~$ sudo vi /etc/systemd/system/docker.service.d/http-proxy.conf
 ubuntu@ubuntu:~$ sudo vi /etc/systemd/system/docker.service.d/https-proxy.conf
+```
 
+Con los siguientes datos:
+```bash
+ubuntu@ubuntu:~$ more /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service]
+Environment="HTTP_PROXY=http://USER:PASSWORD@PROXY_URL:PROXY_PORT/" "NO_PROXY=localhost,127.0.0.1"
+```
+
+Y a continuación reiniciamos el daemon de docker.
+```bash
 ubuntu@ubuntu:~$ sudo systemctl daemon-reload
 ubuntu@ubuntu:~$ sudo systemctl restart docker
 ubuntu@ubuntu:~$ systemctl show --property=Environment docker
 Environment=HTTP_PROXY=http://USER:PASSWORD@PROXY_URL:PROXY_PORT/ NO_PROXY=localhost,127.0.0.1 HTTPS_PROXY=https://USER:PASSWORD@PROXY_URL:PROXY_PORT/
+```
 
-#Conectividad con Maven
+Conectividad con Maven
+----------------------
 
+Maven tampoco usa directamente el proxy_http que se configura a nivel de sistema operativo sino que se ha de indicar
+en el fichero `settings.xml` que se encuentra en la carpeta oculta de configuración de Maven `.m2`.
+
+```bash
 ubuntu@ubuntu:~/.m2$ more settings.xml
 <settings>
   <proxies>
@@ -75,4 +99,4 @@ ubuntu@ubuntu:~/.m2$ more settings.xml
     </proxy>
   </proxies>
 </settings>
-
+```
