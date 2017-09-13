@@ -7,7 +7,7 @@ ubuntu@ubuntu:~/misproyectos$ mkdir howto
 ubuntu@ubuntu:~/misproyectos$ cd howto
 
 3) Inicializamos Git sobre él realizando un primer commit 
-``
+~~~ 
 ubuntu@ubuntu:~/misproyectos/howto$ git init
 Initialized empty Git repository in /home/ubuntu/misproyectos/howto/.git/
 ubuntu@ubuntu:~/misproyectos/howto$ echo "hola" > README.md
@@ -16,7 +16,7 @@ ubuntu@ubuntu:~/misproyectos/howto$ git commit -m "v1"
 [master (root-commit) f16b64e] v1
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
-``
+ ~~~
 
 4) Le asignamos la rama "master" al repo
 ``
