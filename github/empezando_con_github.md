@@ -4,7 +4,7 @@ Empezando a trabajar con Github
 1) Creamos un repositorio en Github
 
 2) Creamos un directorio local con el mismo nombre que el repositorio
-~~~
+~~~ bash
 ubuntu@ubuntu:~/misproyectos$ mkdir howto
 ubuntu@ubuntu:~/misproyectos$ cd howto
 ~~~
