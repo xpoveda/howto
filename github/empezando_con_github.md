@@ -70,17 +70,17 @@ Branch master set up to track remote branch master from origin.
 8) Si realizamos modificaciones directas sobre el "master" y despues queremos actualizar el local
 ~~~ bash
 ubuntu@ubuntu:~/misproyectos/howto$ git pull origin master
-remote: Counting objects: 8, done.
-remote: Compressing objects: 100% (8/8), done.
-remote: Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (8/8), done.
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
 From https://github.com/xpoveda/howto
  * branch            master     -> FETCH_HEAD
-   93cc6bc..1748542  master     -> origin/master
-Updating 93cc6bc..1748542
+   7c43350..5e4a410  master     -> origin/master
+Updating 7c43350..5e4a410
 Fast-forward
- github/empezando_con_github.md | 20 ++++++++++++++------
- 1 file changed, 14 insertions(+), 6 deletions(-)
+ github/empezando_con_github.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 ~~~
 
 Y cuando ya estamos actualizados..
