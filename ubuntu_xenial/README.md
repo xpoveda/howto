@@ -53,7 +53,7 @@ OpenJDK 64-Bit Server VM (build 25.131-b11, mixed mode)
 
 Lynx
 ----
-Lynx es un navegador en modo texto que nos servirá para comprobar la conectividad vía http.
+Lynx es un navegador en modo texto que nos servirá para comprobar la conectividad vía http/https.
 
 ```bash
 sudo apt-get update
