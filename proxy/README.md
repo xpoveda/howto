@@ -1,5 +1,5 @@
-Ubuntu xenial con proxy corporativo
-===================================
+Configurando Ubuntu para trabajar con proxy corporativo
+=======================================================
 
 A continuación anotamos los distintos elementos a configurar para la version de **Ubuntu 16.04.03**.
 
