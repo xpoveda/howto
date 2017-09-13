@@ -4,10 +4,10 @@ Empezando a trabajar con Github
 1) Crearemos un repositorio en Github
 
 2) Creamos un directorio local con el mismo nombre que el repositorio
-~~~ bash
+```bash
 ubuntu@ubuntu:~/misproyectos$ mkdir howto
 ubuntu@ubuntu:~/misproyectos$ cd howto
-~~~
+```
 
 3) Inicializamos Git sobre él realizando un primer commit 
 ~~~ bash
