@@ -64,7 +64,7 @@ Docker
 ------
 Los contenedores docker los instalaremos a partir de la última versión disponible de `docker ce` y de `docker-compose`.
 
-#Docker-ce
+###Docker-ce
 
 https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 https://docs.docker.com/engine/admin/systemd/
@@ -82,7 +82,7 @@ sudo apt-get install docker-ce
 sudo docker run hello-world
 ```
 
-#Docker compose
+###Docker compose
 Más tarde instalaremos `docker compose` el cual nos permite crear más de una imagen docker a partir de un fichero `docker-compose.yml` YAML inicial
 y de la definición propia de cada `Dockerfile`.
 
@@ -99,9 +99,7 @@ docker-compose --version
 
 Maven
 -----
-
 Con maven podremos generar los ejecutables java a partir de la definición de un fichero `POM.xml`.
-
 
 https://www.build-business-websites.co.uk/how-to-install-maven-3-on-ubuntu-16-04/
 
@@ -140,7 +138,6 @@ OS name: "linux", version: "4.10.0-33-generic", arch: "amd64", family: "unix"
 
 Cliente FTP
 -----------
-
 Configuraremos el cliente FTP que viene por defecto con ubuntu, descomentando únicamente la instrucción `write_enable=YES` y reiniciando el servicio.
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-16-04
