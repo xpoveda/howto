@@ -124,16 +124,12 @@ A veces al ejecutar Maven tendremos este error, que se solventará haciendo un *
 ```bash
 ubuntu@ubuntu:~/mimaven$ mvn -version
 Error: Could not find or load main class org.codehaus.plexus.classworlds.launcher.Launcher
+```
+
 Que se resuelve simplemente con :
+```bash
 https://stackoverflow.com/questions/11118237/maven-error-could-not-find-or-load-main-class-org-codehaus-plexus-classworlds-l
 ubuntu@ubuntu:~/mimaven$ unset M2_HOME
-ubuntu@ubuntu:~/mimaven$ mvn -version
-Apache Maven 3.3.9
-Maven home: /usr/share/maven
-Java version: 1.8.0_131, vendor: Oracle Corporation
-Java home: /usr/lib/jvm/java-8-openjdk-amd64/jre
-Default locale: en_US, platform encoding: UTF-8
-OS name: "linux", version: "4.10.0-33-generic", arch: "amd64", family: "unix"
 ```
 
 Cliente FTP
