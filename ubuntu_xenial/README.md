@@ -23,7 +23,15 @@ Instalamos este paquete para podernos conectar via SSH con putty.
 ```bash
 sudo apt-get install openssh-server
 sudo service ssh status
+```
+
+El archivo de configuración lo tendremos aquí por si lo quisieramos modificar
+```bash
 sudo nano /etc/ssh/sshd_config
+```
+
+Y para reiniciar el servicio
+```bash
 sudo service ssh restart
 ```
 
