@@ -1,7 +1,7 @@
 Empezando a trabajar con Github
 ===============================
 
-1) Creamos un repositorio en Github
+1) Crearemos un repositorio en Github
 
 2) Creamos un directorio local con el mismo nombre que el repositorio
 ~~~ bash
