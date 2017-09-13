@@ -2,10 +2,9 @@
 1) Creamos un repositorio en Github
 
 2) Creamos un directorio local con el mismo nombre que el repositorio
-``
+
 ubuntu@ubuntu:~/misproyectos$ mkdir howto
 ubuntu@ubuntu:~/misproyectos$ cd howto
-``
 
 3) Inicializamos Git sobre él realizando un primer commit 
 ``
