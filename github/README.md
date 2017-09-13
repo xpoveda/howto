@@ -4,8 +4,8 @@ Manuales y guías sobre el ecosistema de Git/Github
 
 En este directorio se crearán distintos documentos para aprender a trabajar sobre el ecosistema de Git.
 
-Tutorial de Git
----------------
+Tutorial de Git en castellano
+-----------------------------
 
 https://git-scm.com/book/es/v1/Empezando
 
