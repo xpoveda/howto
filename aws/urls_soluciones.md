@@ -26,7 +26,9 @@
 ### AWS Marketplace                             https://aws.amazon.com/marketplace/search/results/ref=mkt_ste_l2_bigdata?page=1&category=6153421011&nc2=h_mo
 ```                                             
                                                 
-## Servicios financieros                        https://aws.amazon.com/es/financial-services/
+## Servicios financieros                        
+
+https://aws.amazon.com/es/financial-services/
                                                 
 ## Desarrollo de juegos                         
 ```                                             
@@ -58,6 +60,14 @@
 ### AWS Marketplace                             https://aws.amazon.com/marketplace/b/2649275011/ref=mkt_ste_l2_bizapps?page=1&category=2649275011&nc2=h_mo
 ```                                             
                                                 
-## Enterprise                                   https://aws.amazon.com/es/enterprise/?nc2=h_mo
-## Empresas emergentes                          https://aws.amazon.com/es/startups/
-## Sector publico                               https://aws.amazon.com/es/government-education/?nc2=h_mo
+## Enterprise                                   
+
+https://aws.amazon.com/es/enterprise/?nc2=h_mo
+
+## Empresas emergentes                          
+
+https://aws.amazon.com/es/startups/
+
+## Sector publico                              
+
+https://aws.amazon.com/es/government-education/?nc2=h_mo
