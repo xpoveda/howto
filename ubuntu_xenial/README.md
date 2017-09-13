@@ -8,7 +8,7 @@ http://releases.ubuntu.com/16.04/ y elegir `64-bit PC (AMD64) desktop image`.
 
 *Notas:*
 
- 1. Para que funcione docker la distro instalada ha de ser de 64 bits. 
+ 1. Para que funcione `Docker` la distro instalada ha de ser de 64 bits. 
     Algunos ordenadores no soportan el `modo VT-x` que es el necesario para poder correr la virtualizacion de 64 bits. 
     Hemos de asegurarnos que nuestro windows es de 64 bit (revisar el panel de control) y que tiene ese paquete activado, muchas veces esto último se configura directamente desde la BIOS.
 
