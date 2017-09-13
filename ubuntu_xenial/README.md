@@ -7,13 +7,14 @@ y lanzado con `Vmware workstation player 12`.
 http://releases.ubuntu.com/16.04/
 
 *Notas:*
-	1. Para que funcione docker la distro instalada ha de ser de 64 bits. 
-	   Algunos ordenadores no soportan el `modo VT-x` que es el necesario para poder correr la virtualizacion de 64 bits. 
-	   Hemos de asegurarnos que nuestro windows es de 64 y tiene ese paquete activado, muchas veces esto ultimo se configura directamente desde la BIOS.
 
-    2. Si queremos instalar `Vagrant` en ubuntu para poder lanzar máquinas virtuales desde ubuntu con `Virtualbox` tambien tendremos que habilitar el modo VT-x
-       que se encuentra en la configuración de la máquina virtual de Vmware en `Player\Manage\Virtual Machine Settings\Processors` (o similar) y hacer un click en el checkbox
-	   de `Virtualize Intel VT-x or AMD-V`.
+ 1. Para que funcione docker la distro instalada ha de ser de 64 bits. 
+    Algunos ordenadores no soportan el `modo VT-x` que es el necesario para poder correr la virtualizacion de 64 bits. 
+    Hemos de asegurarnos que nuestro windows es de 64 y tiene ese paquete activado, muchas veces esto ultimo se configura directamente desde la BIOS.
+
+ 2. Si queremos instalar `Vagrant` en ubuntu para poder lanzar máquinas virtuales desde ubuntu con `Virtualbox` tambien tendremos que habilitar el modo VT-x
+    que se encuentra en la configuración de la máquina virtual de Vmware en `Player\Manage\Virtual Machine Settings\Processors` (o similar) y hacer un click en el checkbox
+    de `Virtualize Intel VT-x or AMD-V`.
 
 Openssh
 --------
