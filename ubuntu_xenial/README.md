@@ -1,12 +1,8 @@
-
-
-proxy_corporativo
-
-Configuraci�n de ubuntu para trabajar con proxy corporativo
+﻿
+Configuración de ubuntu para trabajar con proxy corporativo
 ============================================================
 
-Conectividad via ssh
---------------------
+Conectividad via sshó--------------------
 Modificamos como root el fichero `/etc/profile`
 
 ```bash
@@ -25,7 +21,7 @@ lynx http://google.es
 curl http://google.es
 ```
 
-#Asi ya funcionan la actualizaci�n de software con apt-get
+#Asi ya funcionan la actualización de software con apt-get
 /etc/apt/apt.conf
 
 Acquire::http::proxy "http://USER:PASSWORD@PROXY_URL:PROXY_PORT/";
