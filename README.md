@@ -12,3 +12,7 @@
     * https://github.com/xpoveda/howto/blob/master/markdown/ejemplo1.md
     * https://github.com/xpoveda/howto/blob/master/markdown/ejemplo2.md
     * https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+    
+5. Apache tips
+    * https://github.com/xpoveda/howto/tree/master/apache
+   
