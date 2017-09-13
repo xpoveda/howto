@@ -11,3 +11,4 @@
 4. Ejemplos markdown
     * https://github.com/xpoveda/howto/blob/master/markdown/ejemplo1.md
     * https://github.com/xpoveda/howto/blob/master/markdown/ejemplo2.md
+    * https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
