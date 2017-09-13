@@ -64,7 +64,7 @@ Docker
 ------
 Los contenedores docker los instalaremos a partir de la última versión disponible de `docker ce` y de `docker-compose`.
 
-###Docker-ce
+### Docker-ce
 
 https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 https://docs.docker.com/engine/admin/systemd/
@@ -82,7 +82,7 @@ sudo apt-get install docker-ce
 sudo docker run hello-world
 ```
 
-###Docker compose
+### Docker compose
 Más tarde instalaremos `docker compose` el cual nos permite crear más de una imagen docker a partir de un fichero `docker-compose.yml` YAML inicial
 y de la definición propia de cada `Dockerfile`.
 
