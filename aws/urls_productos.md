@@ -2,11 +2,11 @@
 
 ## Computacion   
 ```
-### **Amazon EC2**                              https://aws.amazon.com/es/ec2/?nc2=h_mo
-### **Amazon EC2 Container Registry**           https://aws.amazon.com/es/ecr/?nc2=h_mo
-### **Amazon EC2 Container Service**            https://aws.amazon.com/es/ecs/?nc2=h_mo
+### Amazon EC2                                  https://aws.amazon.com/es/ec2/?nc2=h_mo
+### Amazon EC2 Container Registry               https://aws.amazon.com/es/ecr/?nc2=h_mo
+### Amazon EC2 Container Service                https://aws.amazon.com/es/ecs/?nc2=h_mo
 ### Amazon Ligthsail                            https://amazonlightsail.com/
-### **Amazon VPC**                              https://aws.amazon.com/es/vpc/?nc2=h_mo
+### Amazon VPC                                  https://aws.amazon.com/es/vpc/?nc2=h_mo
 ### AWS Batch                                   https://aws.amazon.com/es/batch/?nc2=h_mo
 ### AWS Elastic Beanstalk                       https://aws.amazon.com/es/elasticbeanstalk/?nc2=h_mo
 ### AWS Lambda                                  https://aws.amazon.com/es/lambda/?nc2=h_mo
@@ -31,7 +31,7 @@
 ## Bases de datos                                                                               
 ```
 ### Amazon Aurora                               https://aws.amazon.com/es/rds/aurora/?nc2=h_mo
-### **Amazon RDS**                              https://aws.amazon.com/es/rds/?nc2=h_mo
+### Amazon RDS                                  https://aws.amazon.com/es/rds/?nc2=h_mo
 ### Amazon DynamoDB Accelerator (DAX)           https://aws.amazon.com/es/dynamodb/?nc2=h_mo
 ### Amazon ElastiCache                          https://aws.amazon.com/es/elasticache/?nc2=h_mo
 ### Amazon Redshift                             https://aws.amazon.com/es/redshift/?nc2=h_l3_db
@@ -82,9 +82,9 @@
 
 ## Herramientas de administracion               
 ```
-### **Amazon CloudWatch**                       https://aws.amazon.com/es/cloudwatch/?nc2=h_mo
+### Amazon CloudWatch                           https://aws.amazon.com/es/cloudwatch/?nc2=h_mo
 ### Amazon EC2 Systems Manager                  https://aws.amazon.com/es/ec2/systems-manager/?nc2=h_mo
-### **AWS CloudFormation**                      https://aws.amazon.com/es/cloudformation/?nc2=h_mo
+### AWS CloudFormation                          https://aws.amazon.com/es/cloudformation/?nc2=h_mo
 ### AWS CloudTrail                              https://aws.amazon.com/es/cloudtrail/?nc2=h_mo
 ### AWS Config                                  https://aws.amazon.com/es/config/?nc2=h_mo
 ### AWS OpsWorks                                https://aws.amazon.com/es/opsworks/?nc2=h_mo
