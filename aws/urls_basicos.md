@@ -2,27 +2,27 @@
 
 ## AWS básico
 ```
-EC2            http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
-ECS            http://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html
-Cloudformation http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html
-ELB            http://aws.amazon.com/documentation/elasticloadbalancing
-CloudWatch     http://aws.amazon.com/documentation/cloudwatch/
-Autoscaling    http://aws.amazon.com/documentation/autoscaling
+EC2                             http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
+ECS                             http://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html
+Cloudformation                  http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html
+ELB                             http://aws.amazon.com/documentation/elasticloadbalancing
+CloudWatch                      http://aws.amazon.com/documentation/cloudwatch/
+Autoscaling                     http://aws.amazon.com/documentation/autoscaling
 ```
 
 ## Desarrolladores
 ```
-Introduccion                https://aws.amazon.com/es/developers/getting-started/?nc2=h_mo
-Herramientas                https://aws.amazon.com/es/tools/?nc2=h_mo
-Operaciones de desarrollo   https://aws.amazon.com/es/devops/?nc2=h_mo
-Foros                       https://forums.aws.amazon.com/index.jspa?nc2=h_mo
-Java                        https://aws.amazon.com/es/java/?nc2=h_mo
-Javascript                  https://aws.amazon.com/es/javascript/?nc2=h_mo
-Movil                       https://aws.amazon.com/es/mobile/?nc2=h_mo
-PHP                         https://aws.amazon.com/es/php/?nc2=h_mo
-Ruby                        https://aws.amazon.com/es/ruby/?nc2=h_mo
-Python                      https://aws.amazon.com/es/python/?nc2=h_mo
-Windows y .NET              https://aws.amazon.com/es/net/?nc2=h_mo
+Introduccion                    https://aws.amazon.com/es/developers/getting-started/?nc2=h_mo
+Herramientas                    https://aws.amazon.com/es/tools/?nc2=h_mo
+Operaciones de desarrollo       https://aws.amazon.com/es/devops/?nc2=h_mo
+Foros                           https://forums.aws.amazon.com/index.jspa?nc2=h_mo
+Java                            https://aws.amazon.com/es/java/?nc2=h_mo
+Javascript                      https://aws.amazon.com/es/javascript/?nc2=h_mo
+Movil                           https://aws.amazon.com/es/mobile/?nc2=h_mo
+PHP                             https://aws.amazon.com/es/php/?nc2=h_mo
+Ruby                            https://aws.amazon.com/es/ruby/?nc2=h_mo
+Python                          https://aws.amazon.com/es/python/?nc2=h_mo
+Windows y .NET                  https://aws.amazon.com/es/net/?nc2=h_mo
 ```
 
 ## Recursos
