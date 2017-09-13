@@ -10,6 +10,18 @@ CloudWatch                      http://aws.amazon.com/documentation/cloudwatch/
 Autoscaling                     http://aws.amazon.com/documentation/autoscaling
 ```
 
+```
+Amazon EC2                      https://aws.amazon.com/es/ec2/?nc2=h_mo
+Amazon EC2 Container Registry   https://aws.amazon.com/es/ecr/?nc2=h_mo
+Amazon EC2 Container Service    https://aws.amazon.com/es/ecs/?nc2=h_mo
+Amazon VPC                      https://aws.amazon.com/es/vpc/?nc2=h_mo
+Auto Scaling                    https://aws.amazon.com/es/autoscaling/?nc2=h_mo
+Elastic Load Balancing          https://aws.amazon.com/es/elasticloadbalancing/?nc2=h_mo
+Amazon RDS                      https://aws.amazon.com/es/rds/?nc2=h_mo
+Amazon CloudWatch               https://aws.amazon.com/es/cloudwatch/?nc2=h_mo
+AWS CloudFormation              https://aws.amazon.com/es/cloudformation/?nc2=h_mo
+```
+
 ## Desarrolladores
 ```
 Introduccion                    https://aws.amazon.com/es/developers/getting-started/?nc2=h_mo
