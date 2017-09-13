@@ -39,7 +39,7 @@ To https://github.com/xpoveda/howto.git
 Branch master set up to track remote branch master from origin.
 ~~~ 
 
-6) Para cualquier cambio que realicemos sobre los fichero podemos aplicar las siguientes instrucciones enlazadas.
+6) Para cualquier cambio que realicemos sobre los ficheros podemos aplicar las siguientes instrucciones enlazadas.
 
 Con esto lo que haremos es añadir todos los ficheros al control de versiones (por si hubiera alguno nuevo), aplicariamos un 
 commit sobre los que esten modificados/nuevos/borrados y lo subiriamos a la rama "master" de Github.
