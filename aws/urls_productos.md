@@ -11,7 +11,7 @@
 ### AWS Elastic Beanstalk                       https://aws.amazon.com/es/elasticbeanstalk/?nc2=h_mo
 ### AWS Lambda                                  https://aws.amazon.com/es/lambda/?nc2=h_mo
 ### Auto Scaling                                https://aws.amazon.com/es/autoscaling/?nc2=h_mo
-### **Elastic Load Balancing**                  https://aws.amazon.com/es/elasticloadbalancing/?nc2=h_mo
+### Elastic Load Balancing                      https://aws.amazon.com/es/elasticloadbalancing/?nc2=h_mo
 ### AWS Marketplace                             https://aws.amazon.com/marketplace/ref=mkt_ste_l2_ec2_Category?nc1=h_l2_c&nc2=h_mo
 ```                                             
 
