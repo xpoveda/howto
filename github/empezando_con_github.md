@@ -10,7 +10,7 @@ ubuntu@ubuntu:~/misproyectos$ cd howto
 ~~~
 
 3) Inicializamos Git sobre él realizando un primer commit 
-~~~ 
+~~~ bash
 ubuntu@ubuntu:~/misproyectos/howto$ git init
 Initialized empty Git repository in /home/ubuntu/misproyectos/howto/.git/
 ubuntu@ubuntu:~/misproyectos/howto$ echo "hola" > README.md
@@ -22,12 +22,12 @@ ubuntu@ubuntu:~/misproyectos/howto$ git commit -m "v1"
  ~~~
 
 4) Le asignamos la rama "master" al repo
-~~~ 
+~~~ bash
 ubuntu@ubuntu:~/misproyectos/howto$ git remote add origin https://github.com/xpoveda/howto.git
 ~~~ 
 
 5) Subimos los cambios
-~~~ 
+~~~ bash
 ubuntu@ubuntu:~/misproyectos/howto$ git push -u origin master
 Username for 'https://github.com': xpoveda
 Password for 'https://xpoveda@github.com':
@@ -43,12 +43,12 @@ Branch master set up to track remote branch master from origin.
 
 Con esto lo que haremos es añadir todos los ficheros al control de versiones (por si hubiera alguno nuevo), aplicariamos un 
 commit sobre los que esten modificados/nuevos/borrados y lo subiriamos a la rama "master" de Github.
-~~~ 
+~~~ bash
 git add --all && git commit -m "modificacion" && git push -u origin master
 ~~~ 
 
 7) Aquí vemos un ejemplo de como queda..
-~~~ 
+~~~ bash
 ubuntu@ubuntu:~/misproyectos/howto/github$ vi empezando_con_github.md
 ubuntu@ubuntu:~/misproyectos/howto/github$ cd ..
 ubuntu@ubuntu:~/misproyectos/howto$ git add --all && git commit -m "modificacion" && git push -u origin master
@@ -65,4 +65,12 @@ Total 5 (delta 0), reused 0 (delta 0)
 To https://github.com/xpoveda/howto.git
    f16b64e..2394f20  master -> master
 Branch master set up to track remote branch master from origin.
+~~~ 
+
+8) Si realizamos modificaciones directas sobre el "master" y despues queremos actualizar el local
+~~~ bash
+ubuntu@ubuntu:~/misproyectos/howto$ git pull origin master
+From https://github.com/xpoveda/howto
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
 ~~~ 
