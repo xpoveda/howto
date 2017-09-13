@@ -1,3 +1,4 @@
+
 1) Creamos un repositorio en Github
 
 2) Creamos un directorio local con el mismo nombre que el repositorio
@@ -37,3 +38,22 @@ Con esto lo que haremos es añadir todos los ficheros al control de versiones (p
 commit sobre los que esten modificados/nuevos/borrados y lo subiriamos a la rama "master" de Github.
 
 git add --all && git commit -m "modificacion" && git push -u origin master
+
+7) Aquí vemos un ejemplo de como queda..
+
+ubuntu@ubuntu:~/misproyectos/howto/github$ vi empezando_con_github.md
+ubuntu@ubuntu:~/misproyectos/howto/github$ cd ..
+ubuntu@ubuntu:~/misproyectos/howto$ git add --all && git commit -m "modificacion" && git push -u origin master
+[master 2394f20] modificacion
+ 3 files changed, 41 insertions(+), 1 deletion(-)
+ create mode 100644 github/empezando_con_github.md
+ create mode 100644 github/hola.txt
+Username for 'https://github.com': xpoveda
+Password for 'https://xpoveda@github.com':
+Counting objects: 5, done.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.09 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/xpoveda/howto.git
+   f16b64e..2394f20  master -> master
+Branch master set up to track remote branch master from origin.
