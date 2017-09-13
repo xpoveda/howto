@@ -4,7 +4,7 @@
 Aquí explicamos los elementos más importantes para configurar `Ubuntu xenial` como máquina virtual a partir de la `imagen ISO` que nos hemos descargado 
 y lanzado con `Vmware workstation player 12`.
 
-http://releases.ubuntu.com/16.04/
+http://releases.ubuntu.com/16.04/ y elegir `64-bit PC (AMD64) desktop image`.
 
 *Notas:*
 
