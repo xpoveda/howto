@@ -30,6 +30,7 @@ sudo service ssh restart
 Java 8
 -------
 Java 8 es la versión que utilizaremos para poder probar la gran mayoria de programas que implementemos y aplicaciones que vayamos a utilizar.
+
 https://askubuntu.com/questions/762999/how-to-install-java-8-in-ubuntu-16-04
 
 ```bash
@@ -141,5 +142,3 @@ sudo nano /etc/vsftpd.conf
 ..
 sudo systemctl restart vsftpd
 ```
-
-
