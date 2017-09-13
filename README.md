@@ -1,3 +1,5 @@
+![octojekyll-opt](https://user-images.githubusercontent.com/13355927/30377816-736912b2-9891-11e7-8690-2b3113ebaef2.jpg)
+
 1. Configurando Ubuntu para trabajar con proxy corporativo
     * https://github.com/xpoveda/howto/tree/master/proxy
 
