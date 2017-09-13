@@ -176,7 +176,7 @@
 ### Amazon appstream                            https://aws.amazon.com/es/appstream2/?nc2=h_mo
 ```
 
-# Internet de las cosas 
+## Internet de las cosas 
 ```
 ### Plataforma AWS iot                          https://aws.amazon.com/es/iot-platform/?nc2=h_mo
 ### AWS Greengrass                              https://aws.amazon.com/es/greengrass/?nc2=h_mo
