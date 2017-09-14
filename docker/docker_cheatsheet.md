@@ -32,3 +32,8 @@ WARNING! This will remove:
 Are you sure you want to continue? [y/N]
 ```
 
+```
+root@ubuntu:/var/lib/docker/aufs/diff# docker volume prune
+WARNING! This will remove all volumes not used by at least one container.
+Are you sure you want to continue? [y/N]
+```
