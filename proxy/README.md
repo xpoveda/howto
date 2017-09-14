@@ -1,7 +1,7 @@
 Configurando Ubuntu para trabajar con proxy corporativo
 =======================================================
 
-A continuaci髇 anotamos los distintos elementos a configurar para la version de **Ubuntu 16.04.03**.
+A continuaci贸n anotamos los distintos elementos a configurar para la version de **Ubuntu 16.04.03**.
 
 Conectividad via ssh
 --------------------
@@ -14,6 +14,7 @@ export FTP_PROXY=http://USER:PASSWORD@PROXY_URL:PROXY_PORT/
 export http_proxy=http://USER:PASSWORD@PROXY_URL:PROXY_PORT/
 export https_proxy=https://USER:PASSWORD@PROXY_URL:PROXY_PORT/
 export ftp_proxy=http://USER:PASSWORD@PROXY_URL:PROXY_PORT/
+export no_proxy=localhost,127.0.0.0,127.0.1.1,127.0.1.1,local.home
 ```
 
 Y despues podemos probar la conectividad con
@@ -23,10 +24,10 @@ lynx http://google.es
 curl http://google.es
 ```
 
-Configuraci髇 apt-get
+Configuraci贸n apt-get
 ---------------------
-Tambi閚 tendremos que modificar el fichero `/etc/apt/apt.conf` para que los paquetes
-se puedan bajar v韆 proxy.
+Tambi茅n tendremos que modificar el fichero `/etc/apt/apt.conf` para que los paquetes
+se puedan bajar v铆a proxy.
 
 ```bash
 Acquire::http::proxy "http://USER:PASSWORD@PROXY_URL:PROXY_PORT/";
@@ -36,10 +37,10 @@ Acquire::ftp::proxy "ftp://USER:PASSWORD@PROXY_URL:PROXY_PORT/";
 
 Conectividad escritorio
 -----------------------
-En el interfaz gr醘ico de ubuntu entraremos en `Red\proxy de red\Manual` y modificaremos tambien el `USER:PASSWORD@PROXY_URL PROXY_PORT`
+En el interfaz gr谩fico de ubuntu entraremos en `Red\proxy de red\Manual` y modificaremos tambien el `USER:PASSWORD@PROXY_URL PROXY_PORT`
 que nos aparece en la ventana.
 
-Conexi髇 con Docker
+Conexi贸n con Docker
 -----------------------
 Despues de instalar docker tendremos que configurar el proxy http y https para que podamos bajarnos
 las imagenes de docker hub correctamente.
@@ -47,7 +48,7 @@ las imagenes de docker hub correctamente.
 https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 https://docs.docker.com/engine/admin/systemd/#httphttps-proxy
 
-Creamos los ficheros de configuraci髇
+Creamos los ficheros de configuraci贸n
 ```bash
 ubuntu@ubuntu:~$ sudo mkdir -p /etc/systemd/system/docker.service.d
 ubuntu@ubuntu:~$ sudo vi /etc/systemd/system/docker.service.d/http-proxy.conf
@@ -61,7 +62,7 @@ ubuntu@ubuntu:~$ more /etc/systemd/system/docker.service.d/http-proxy.conf
 Environment="HTTP_PROXY=http://USER:PASSWORD@PROXY_URL:PROXY_PORT/" "NO_PROXY=localhost,127.0.0.1"
 ```
 
-Y a continuaci髇 reiniciamos el daemon de docker.
+Y a continuaci贸n reiniciamos el daemon de docker.
 ```bash
 ubuntu@ubuntu:~$ sudo systemctl daemon-reload
 ubuntu@ubuntu:~$ sudo systemctl restart docker
@@ -73,7 +74,7 @@ Conectividad con Maven
 ----------------------
 
 Maven tampoco usa directamente el proxy_http que se configura a nivel de sistema operativo sino que se ha de indicar
-en el fichero `settings.xml` que se encuentra en la carpeta oculta de configuraci髇 de Maven `.m2`.
+en el fichero `settings.xml` que se encuentra en la carpeta oculta de configuraci贸n de Maven `.m2`.
 
 ```bash
 ubuntu@ubuntu:~/.m2$ more settings.xml
