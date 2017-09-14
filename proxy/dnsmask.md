@@ -19,7 +19,7 @@ IP4.DNS[1]:                             192.168.140.2
 
 Y modificamos el fichero de configuracion de docker.
 
-Este es el original
+Este es el **original**
 ```
 root@ubuntu:/home/ubuntu/misproyectos/composetest# more /etc/default/docker
 # Docker Upstart and SysVinit configuration file
@@ -44,7 +44,7 @@ root@ubuntu:/home/ubuntu/misproyectos/composetest# more /etc/default/docker
 #export DOCKER_TMPDIR="/mnt/bigdrive/docker-tmp"
 ```
 
-Y este el nuevo
+Y este el **nuevo**
 ```
 root@ubuntu:/home/ubuntu/misproyectos/composetest# more /etc/default/docker
 # Docker Upstart and SysVinit configuration file
