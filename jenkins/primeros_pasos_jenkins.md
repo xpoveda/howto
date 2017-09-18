@@ -13,7 +13,7 @@ ubuntu@ubuntu:~$ sudo apt-get update
 ubuntu@ubuntu:~$ sudo apt-get install jenkins
 ```
 
-Modificamos los puertos por defecto en /etc/default/jenkins cambiando el 8080 por 8099.
+Modificamos los puertos por defecto en `/etc/default/jenkins` cambiando el **8080** por **8099**.
 ```bash
 ubuntu@ubuntu:~$ sudo /etc/init.d/jenkins restart
 ```
