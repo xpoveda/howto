@@ -29,7 +29,7 @@ ubuntu@ubuntu:~$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 0ca63ef04b2f4351957d34a174f0b2e0
 ```
 
-Instalamos los plugins sugerido
+Instalamos los plugins sugeridos
 ```bash
 Install suggested plugins
 ```
@@ -40,7 +40,7 @@ Una vez en Jenkins podemos crear una tarea.
 
 1) Le damos un nombre + `Crear proyecto estilo libre` + **OK**.
 2) En `Configurar el origen del código fuente` ponemos **Git** y la URL del repositorio, por ejemplo *https://github.com/xpoveda/maven-hello-world.git*
-3) Añadimos tambien las credenciales de "Git", el "usuario" y su "contraseña" + **Add**.
+3) Añadimos tambien las credenciales de Git: "usuario" y su "contraseña" + **Add**.
 4) En `Ejecutar` podemos poner varios pasos, uno por ejemplo puede ser `Ejecutar tareas maven de nivel superior`, despues ponemos **clean package** por ejemplo
 y despues en `Avanzado` pondriamos donde esta el pom.xml que en nuestro caso está en **my-app/pom.xml**
 
@@ -49,4 +49,4 @@ Con la tarea ya creada iremos a `Construir ahora` del menu principal y lo ejecut
 Si todo esta correcto nos dara bien, siempre podemos ver en la `Zona de trabajo`.
 Ahi podemos ver los fuentes directamente y los logs de las distintas ejecuciones en `Console output`.
 
-La ejecucion de trabajos, su integracion con github y el paso a paso que se puede realizar lanzando diversas opciones es la mayor potencia de Jenkins.
+La ejecucion de trabajos, su integracion con Github y el paso a paso que se puede realizar lanzando diversas opciones es la mayor potencia de Jenkins.
