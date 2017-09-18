@@ -1,5 +1,5 @@
-Configurando Ubuntu para trabajar con proxy corporativo
-=======================================================
+Ubuntu para trabajar con proxy corporativo
+==========================================
 
 A continuación anotamos los distintos elementos a configurar para la version de **Ubuntu 16.04.03**.
 
@@ -72,7 +72,6 @@ Environment=HTTP_PROXY=http://USER:PASSWORD@PROXY_URL:PROXY_PORT/ NO_PROXY=local
 
 Conectividad con Maven
 ----------------------
-
 Maven tampoco usa directamente el proxy_http que se configura a nivel de sistema operativo sino que se ha de indicar
 en el fichero `settings.xml` que se encuentra en la carpeta oculta de configuración de Maven `.m2`.
 
