@@ -150,6 +150,7 @@ ubuntu@ubuntu:~$ find . -name *gs-spring-boot*
 ./misproyectos/gs-spring-boot
 ./misproyectos/gs-spring-boot/complete/target/gs-spring-boot-0.1.0.jar
 ./misproyectos/gs-spring-boot/complete/target/gs-spring-boot-0.1.0.jar.original
+
 ubuntu@ubuntu:~$ ls -lt ./misproyectos/gs-spring-boot/complete/target/gs-spring-boot-0.1.0.jar
 -rw-rw-r-- 1 ubuntu ubuntu 15022674 Sep 18 14:39 ./misproyectos/gs-spring-boot/complete/target/gs-spring-boot-0.1.0.jar
 ```
@@ -212,8 +213,9 @@ Starting a Gradle Daemon (subsequent builds will be faster)
 
 BUILD SUCCESSFUL in 15s
 1 actionable task: 1 up-to-date
-
 ```
+
+```bash
 ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ gradle build
 
 > Task :test
