@@ -15,7 +15,7 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "4.10.0-33-generic", arch: "amd64", family: "unix"
 ```
 
-Mediante el parametro --quiet operamos con maven en `modo silencioso`.
+Mediante el parametro `--quiet` operamos con maven en `silent mode`.
 Lo de siempre, `mvn clean` para borrar, `mvn compile` para compilar el *.java* y generar un *.class* o `mvn package` para generar un *.jar* que lo encapsule todo.
 La primera vez que ejecutemos el maven nos bajará un monton de dependencias, tantas como nos indique el fichero `pom.xml`.
 ```bash
