@@ -1,6 +1,6 @@
 
 Manuales y guías sobre el ecosistema de Git/Github
-==================================================
+===================================================
 
 En este directorio se crearán distintos documentos para aprender a trabajar sobre el ecosistema de Git.
 
