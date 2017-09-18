@@ -2,13 +2,20 @@
 Hello world spring boot
 ========================
 
-```
+Información adicional
+----------------------
+https://spring.io/guides/gs/spring-boot/
+
+https://github.com/xpoveda/gs-spring-boot
+
+Bajandonos el proyecto de Github
+--------------------------------
+```bash
 ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ git clone https://github.com/xpoveda/gs-spring-boot.git
 ```
 
 Organización del proyecto
 -------------------------
-
 ```bash
 ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ tree
 .
