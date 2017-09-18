@@ -103,3 +103,54 @@ ubuntu@ubuntu:~/.m2$ more settings.xml
   </proxies>
 </settings>
 ```
+
+Conectividad con Gradle
+------------------------
+```
+$ curl -s "https://get.sdkman.io" | bash
+$ source "$HOME/.sdkman/bin/sdkman-init.sh"
+$ sdk version
+
+ubuntu@ubuntu:~$ sdk install gradle
+
+
+ubuntu@ubuntu:~$ gradle -version
+
+------------------------------------------------------------
+Gradle 4.1
+------------------------------------------------------------
+
+Build time:   2017-08-07 14:38:48 UTC
+Revision:     941559e020f6c357ebb08d5c67acdb858a3defc2
+
+Groovy:       2.4.11
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_131 (Oracle Corporation 25.131-b11)
+OS:           Linux 4.10.0-33-generic amd64
+
+ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ more gradle.properties
+systemProp.http.proxyHost=PROXY
+systemProp.http.proxyPort=PROXY_PORT
+systemProp.http.proxyUser=USER
+systemProp.http.proxyPassword=PASSWORD
+systemProp.https.proxyHost=PROXY
+systemProp.https.proxyPort=PROXY_PORT
+systemProp.https.proxyUser=USER
+systemProp.https.proxyPassword=PASSWORD
+```
+
+```
+https://spring.io/guides/gs/spring-boot/
+```
+
+```
+ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ gradle clean build
+
+> Task :test
+2017-09-18 09:17:47.644  INFO 2457 --- [       Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@678b56a5: startup date [Mon Sep 18 09:17:36 PDT 2017]; root of context hierarchy
+2017-09-18 09:17:47.655  INFO 2457 --- [       Thread-9] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7094bfce: startup date [Mon Sep 18 09:17:44 PDT 2017]; root of context hierarchy
+
+
+BUILD SUCCESSFUL in 16s
+7 actionable tasks: 7 executed
+```
