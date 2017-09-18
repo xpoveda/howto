@@ -26,7 +26,7 @@ OS name: "linux", version: "4.10.0-33-generic", arch: "amd64", family: "unix"
 ```
 
 Mediante el parametro `--quiet` operamos con maven en `silent mode`.
-Lo de siempre, `mvn clean` para borrar, `mvn compile` para compilar el *.java* y generar un *.class* o `mvn package` para generar un *.jar* que lo encapsule todo.
+Lo de siempre, `mvn clean` para borrar, `mvn compile` para compilar el **.java** y generar un **.class** o `mvn package` para generar un **.jar** que lo encapsule todo.
 La primera vez que ejecutemos el maven nos bajará un monton de dependencias, tantas como nos indique el fichero `pom.xml`.
 ```bash
 ubuntu@ubuntu:~/misproyectos/maven-hello-world/my-app$ mvn clean --quiet
@@ -157,7 +157,7 @@ drwxrwxr-x 7 ubuntu ubuntu    4096 Sep 18 14:10 org
 ```
 
 Y ademas contiene un directorio `META-INF` con un fichero `MANIFEST.MF` con informacion sobre la generacion y la clase principal.
-Tambien se indica el nombre el `artifact` final y el pom.xml que hemos utilizado. 
+Tambien se indica el nombre el `artifact` final y el `pom.xml` que hemos utilizado. 
 ```bash
 ubuntu@ubuntu:~/misproyectos/maven-hello-world/my-app/target/mira/META-INF$ more MANIFEST.MF
 Manifest-Version: 1.0
