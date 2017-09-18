@@ -1,5 +1,5 @@
 Trabajando con Maven
-====================
+=====================
 
 Información complementaria
 --------------------------
