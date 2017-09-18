@@ -2,7 +2,10 @@
 Empezando a trabajar con Vagrant
 ================================
 
-#https://drupalize.me/videos/installing-vagrant-and-virtualbox?p=1526
+Información adicional
+---------------------
++ https://sercomi.com/maquinas-virtuales-vagrant-virtualbox/
++ https://drupalize.me/videos/installing-vagrant-and-virtualbox?p=1526
 
 Primero de todo hemos de instalar la ultima version de Virtualbox.
 ```
