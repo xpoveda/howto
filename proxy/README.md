@@ -106,7 +106,7 @@ ubuntu@ubuntu:~/.m2$ more settings.xml
 
 Conectividad con Gradle
 ------------------------
-```
+```bash
 $ curl -s "https://get.sdkman.io" | bash
 $ source "$HOME/.sdkman/bin/sdkman-init.sh"
 $ sdk version
@@ -139,11 +139,11 @@ systemProp.https.proxyUser=USER
 systemProp.https.proxyPassword=PASSWORD
 ```
 
-```
+```bash
 https://spring.io/guides/gs/spring-boot/
 ```
 
-```
+```bash
 ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ gradle clean build
 
 > Task :test
