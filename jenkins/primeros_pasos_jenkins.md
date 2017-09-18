@@ -3,9 +3,8 @@ Primeros pasos con jenkins
 
 Información adicional
 ---------------------
-https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
-
-http://www.notodocodigo.com/blog/instalacion-y-primeros-pasos-con-jenkins/
+* https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
+* http://www.notodocodigo.com/blog/instalacion-y-primeros-pasos-con-jenkins/
 
 Instalando Jenkins
 ------------------
