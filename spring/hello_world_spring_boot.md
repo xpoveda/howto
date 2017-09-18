@@ -162,17 +162,6 @@ ubuntu@ubuntu:~$ ls -lt ./misproyectos/gs-spring-boot/complete/target/gs-spring-
 -rw-rw-r-- 1 ubuntu ubuntu 15022674 Sep 18 14:39 ./misproyectos/gs-spring-boot/complete/target/gs-spring-boot-0.1.0.jar
 ```
 
-Y ejecutamos el servidor
-```bash
-ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ java -jar target/gs-spring-boot-0.1.0.jar
-```
-
-Y lanzamos el cliente por `navegador` o con `lynx` o `curl`
-```bash
-ubuntu@ubuntu:~$ curl http://localhost:8080
-Greetings from Spring Boot!
-```
-
 Generación con Gradle
 ---------------------
 ```bash
@@ -381,4 +370,18 @@ public class HelloControllerIT {
         assertThat(response.getBody(), equalTo("Greetings from Spring Boot!"));
     }
 }
+```
+
+Resultado
+---------
+
+Y ejecutamos el servidor
+```bash
+ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ java -jar target/gs-spring-boot-0.1.0.jar
+```
+
+Y lanzamos el cliente por `navegador` o con `lynx` o `curl`
+```bash
+ubuntu@ubuntu:~$ curl http://localhost:8080
+Greetings from Spring Boot!
 ```
