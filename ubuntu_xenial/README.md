@@ -1,5 +1,5 @@
-﻿Configurando Ubuntu xenial desde 0
-==================================
+Ubuntu xenial desde 0
+=====================
 
 Aquí explicamos los elementos más importantes para configurar `Ubuntu xenial` como máquina virtual a partir de la `imagen ISO` que nos hemos descargado 
 y lanzado con `Vmware workstation player 12`.
