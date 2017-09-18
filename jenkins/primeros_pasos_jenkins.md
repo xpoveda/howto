@@ -1,7 +1,7 @@
 Primeros pasos con jenkins
 ===========================
 
-#https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
+https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
 
 Instalando Jenkins
 ------------------
