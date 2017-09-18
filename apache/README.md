@@ -24,3 +24,5 @@ post_max_size = 104M
 Modificamos el post_max_size y el upload_max_filesize y despues lo comprobamos con info.php tal que
 
 http://php.net/manual/es/function.phpinfo.php
+
+
