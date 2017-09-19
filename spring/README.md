@@ -14,6 +14,11 @@ Ahi le daremos al `Clone a git repository..`, despues a `Github` y `Next`.
 Despues pondremos el nombre del proyecto y nos apareceran los proyectos que ha hospedados ahi, tambien los forks.
 Lo seleccionaremos y STS nos lo bajará a un directorio local de nuestro windows.
 
+Si buscamos asi los proyectos llegará un momento en el que el API de Github saltará por maximo número de consultas.
+La forma directa es ir por `Clone a git repository..`, despues a `Clone Uri` y despues a `Next`.
+Ahi le añadiremos la URI de git, el nos añadira el host (github.com) y el path del repositorio.
+Nos autenticamos con el usuario y password de Github y ya esta listo para bajarse ese repositorio a nuestro local de Windows.
+
 Despues nos situaremos con el boton derecho en el nodo principal del proyecto que nos queremos bajar y le daremos a `Properties`.
 Con eso lo que haremos es localizar el directorio donde STS se ha bajado los fuentes de Github.
 
