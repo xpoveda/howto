@@ -1,3 +1,29 @@
+
+Lanzando proyectos Spring en UNIX y Windows
+===========================================
+Lanzar proyectos spring desde **UNIX** es muy sencillo.
+Simplemente se ha de bajar el proyecto de Github, regenerarlo con Maven o Gradle y lanzarlo tal y como se indica en las instrucciones.
+
+Lo mismo se puede hacer tambien desde el editor *STS-Spring tool suite* en **Windows** muy facilmente.
+Estos pasos aplican tanto a proyectos Spring como No-Spring.
+
+En el editor iremos a `Window` despues a `Show view` y buscaremos `Git repositories`.
+Con esto tendremos una ventana en la que podremos ver la vista que tenemos en Github. 
+
+Ahi le daremos al `Clone a git repository..`, despues a `Github` y `Next`.
+Despues pondremos el nombre del proyecto y nos apareceran los proyectos que ha hospedados ahi, tambien los forks.
+Lo seleccionaremos y STS nos lo bajará a un directorio local de nuestro windows.
+
+Despues nos situaremos con el boton derecho en el nodo principal del proyecto que nos queremos bajar y le daremos a `Properties`.
+Con eso lo que haremos es localizar el directorio donde STS se ha bajado los fuentes de Github.
+
+Seguidamente haremos un `File` y un `Open file from file system`, indicando a continuacion el directorio local donde esta el proyecto.
+
+Con todo esto lo que conseguimos es bajarnos el proyecto, poderlo modificar, regenerar y probar desde windows.
+
+Las guias
+---------
+
 Spring guides
 ```
 http://spring.io/guides
