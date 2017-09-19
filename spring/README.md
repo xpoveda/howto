@@ -26,9 +26,36 @@ Seguidamente haremos un `File` y un `Open file from file system`, indicando a co
 
 Con todo esto lo que conseguimos es bajarnos el proyecto, poderlo modificar, regenerar y probar desde windows.
 
+Versionado en STS con Git directamente con la opcion "Team"
+------------------------------------------------------------
+En STS podremos abrir un terminal del tipo "Git bash" y tendremos sentencias parecidas a UNIX.
+
+pwd
+cd /c/Users/xpoveda/git/maven-hello-world/my-app
+
+$ git remote -v
+
+origin  https://github.com/xpoveda/maven-hello-world.git (fetch)
+
+origin  https://github.com/xpoveda/maven-hello-world.git (push)
+
+El directorio que nos hemos bajado en local en un workspace tambien apunta al mismo directorio por lo que 
+los ficheros estan sincronizados.
+
+Podemos revisar el status del versionado de nuestro proyecto mediante la instruccion git o mediante el boton derecho "Team".
+
+Con "Team" podremos hacer todo el tratamiento de versionado de una forma muy sencilla.
+
+Podremos hacer por ejemplo un "Commit" y ver que hay en la "stage area"y que no.
+Y tambien hacer "drag and drop" de los ficheros que pasen a la "stage area" para despues hacer un commit y un push.
+
+Podremos crear nuevas ramas, cambiar entre ellas e incluso hacer un "pull request" o una subida al "upstream" del repositorio principal
+si este venia de un forked.
+
+Tambien podemos hacer comparaciones con el "HEAD".
+
 Las guias
 ---------
-
 Spring guides
 ```
 http://spring.io/guides
