@@ -7,6 +7,8 @@ https://github.com/xpoveda/maven-hello-world
 
 https://zeroturnaround.com/rebellabs/maven-cheat-sheet/
 
+https://www.tutorialspoint.com/maven/maven_tutorial.pdf
+
 
 Vamos a ello..
 --------------
