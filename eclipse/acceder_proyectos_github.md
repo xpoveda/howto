@@ -4,8 +4,8 @@ Accediendo a github desde eclipse
 
 https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-import-a-GitHub-project-into-Eclipse
 
-Jugando con eclipse
--------------------
+Jugando con eclipse (directorio doc)
+------------------------------------
 
 * Configurando Spring tool suite para crear microservicios con spring boot.docx	
 * Creacion de un proyecto con maven a partir de arquetipos desde eclipse.docx	
