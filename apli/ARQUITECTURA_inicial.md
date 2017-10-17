@@ -2,8 +2,9 @@
 ARQUITECTURA INICIAL
 ====================
 
-## APLICACION
 Implementaré una o varias aplicaciones con el propósito de poner en práctica el conocimiento adquirido en los últimos meses sobre las distintas tecnologías que conforman las arquitecturas de computación en la nube (**CLOUD COMPUTING**).
+
+## APLICACION
 
 El lenguaje de programación utilizado será `JAVA 8`, que desarrolla los últimos paradigmas en **programación funcional**, **STREAMS** y **expresiones LAMBDA**. 
 
