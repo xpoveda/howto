@@ -21,6 +21,7 @@ El servidor web será APACHE TOMCAT, el cual nos ofrecerá la posibilidad, adem�
 <p align="center">
 <img src="https://user-images.githubusercontent.com/13355927/31693920-8594c834-b3a1-11e7-9c2f-11a3a6d404ed.png"></img>
 </p>
+
 ## INFRAESTRUCTURA
 
 Cada vez que se realice la modificación de fuentes y se haga COMMIT en la rama principal se activarán BUILDS automáticos (SCRIPTS GROOVY) de  JENKINS que nos proporciona un entorno de integración continua (CONTINUOUS INTEGRATION) y nos facilita a su vez la entrega continua (CONTINUOUS DELIVERY).
