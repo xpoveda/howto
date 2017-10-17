@@ -29,6 +29,7 @@ Una vez esté desarrollada la aplicación su puesta en producción nos tendría 
 La orquestación de contenedores la realizaremos preferiblemente con KUBERNETES. 
 
 La capa cliente la implementaremos mediante ANGULAR o cualquier otro FRAMEWORK que nos permita la interacción vía API con la capa servidor.
+
  
 El MODELO DE PRUEBAS
 --------------------
