@@ -11,7 +11,7 @@ Se utilizarán también intensivamente todos los elementos que JAVA proporcione 
 
 La construcción de los proyectos se realizará mediante `MAVEN`. 
 
-Este lo sustituiremos en alguno de ellos por `GRADLE`, más moderno, el cual, mediante el uso de potentes scripts en `GROOVY`, nos dará una mayor flexibilidad en la construcción, TESTING y empaquetado de nuestras aplicaciones. Estudiaremos  el **MANIFEST** de los distintos formatos comprimidos **JAR, WAR y EAR** que ofrece JAVA.
+Este lo sustituiremos en alguno de ellos por `GRADLE`, más moderno, el cual, mediante el uso de potentes scripts en `GROOVY`, nos dará una mayor flexibilidad en la construcción, testeo y empaquetado de nuestras aplicaciones. Estudiaremos  el **MANIFEST** de los distintos formatos comprimidos **JAR, WAR y EAR** que ofrece JAVA.
 
 `ECLIPSE` o `SPRING TOOL SUITE` (según convenga), nos permitirán editar el código fuente de nuestra aplicación, que guardaremos remotamente en `GITHUB` y al que tendremos acceso directo al versionado de sus distintas ramas mediante el PLUGIN de `GIT` que nos proporciona el IDE.
 
