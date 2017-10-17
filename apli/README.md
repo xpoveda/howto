@@ -33,7 +33,7 @@ Cada vez que se realice la modificación de fuentes y se haga **COMMIT** en la r
 
 Para realizar las pruebas unitarias (**UNIT TESTING**), que es lo que nos posibilita la automatización de las pruebas y por lo tanto la validación automática de las entregas, utilizaremos las aserciones (**ASSERTS**) de `JUNIT`.
 
-Nuestra aplicación se ejecutará tanto en el propio `LOCALHOST de WINDOWS`, en sistemas `LINUX UBUNTU locales` y en el `mundo real colgando directamente de INTERNET`.
+Nuestra aplicación se ejecutará tanto en el propio **LOCALHOST de WINDOWS**, en sistemas **LINUX UBUNTU virtualizados** o en el **mundo real colgando directamente de INTERNET**.
 
 La aplicación se encapsulará en contenedores `DOCKER` que los tendremos almacenados en **repositorios de imágenes** como `DOCKER HUB` y que ejecutaremos en proveedores en nube como `AWS` dentro de una infraestructura mixta (pública y privada) que nos proporcione una red virtual `VPC` y máquinas virtuales `EC2` que podrían estar en CLUSTER mediante balanceadores `ELB`.
 
