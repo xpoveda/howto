@@ -14,7 +14,7 @@ La construcción de los proyectos se realizará mediante `MAVEN`.
 
 Este lo sustituiremos en alguno de ellos por `GRADLE`, más moderno, el cual, mediante el uso de potentes scripts en `GROOVY`, nos dará una mayor flexibilidad en la construcción, testeo y empaquetado de nuestras aplicaciones. Estudiaremos  el **MANIFEST** de los distintos formatos comprimidos **JAR, WAR y EAR** que ofrece JAVA.
 
-`ECLIPSE` o `SPRING TOOL SUITE` (según convenga), nos permitirán editar el código fuente de nuestra aplicación, que guardaremos remotamente en `GITHUB` y al que tendremos acceso directo al versionado de sus distintas ramas mediante el PLUGIN de `GIT` que nos proporciona el IDE.
+`ECLIPSE` o `SPRING TOOL SUITE` (según convenga), nos permitirán editar el código fuente de nuestra aplicación, que guardaremos remotamente en `GITHUB` y al que tendremos acceso directo al versionado de sus distintas ramas via interprete de comandos desde la consola, cmd windows, ssh linux o plugin de `GIT` que nos proporciona directamente el IDE.
 
 El acceso a datos será, en distintas versiones de pruebas, con `JDBC` e `HIBERNATE`. Este último lo utilizaremos tanto en modo NATIVO como en modo implementación de `JPA`, mapeando en ambos casos el modelo de **BBDD relacional** como `MYSQL` (por ejemplo) con el modelo de objetos que es con el que trabaja JAVA. También realizaré pruebas con **BBDD NOSQL** como `MONGODB`.
 
