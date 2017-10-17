@@ -1,6 +1,6 @@
 
-DECLARACIÓN DE INTENCIONES
-==========================
+ARQUITECTURA INICIAL
+====================
 
 ## APLICACION
 Implementaré una o varias aplicaciones con el propósito de poner en práctica el conocimiento adquirido en los últimos meses sobre las distintas tecnologías que conforman las arquitecturas de computación en la nube (**CLOUD COMPUTING**).
