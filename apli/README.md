@@ -1,3 +1,14 @@
+APLICACION
+----------
+
+https://user-images.githubusercontent.com/13355927/31693920-8594c834-b3a1-11e7-9c2f-11a3a6d404ed.png
+
+
+INFRAESTRUCTURA
+---------------
+
+https://user-images.githubusercontent.com/13355927/31693962-b64bc9dc-b3a1-11e7-8476-e587eb273fe2.png
+
 DECLARACIÓN DE INTENCIONES
 --------------------------
 Implementaré una o varias aplicaciones con el propósito de poner en práctica el conocimiento adquirido en los últimos meses sobre las distintas tecnologías que conforman las arquitecturas de computación en la nube (CLOUD COMPUTING).
