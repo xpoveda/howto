@@ -1,16 +1,8 @@
-APLICACION
-----------
-
-https://user-images.githubusercontent.com/13355927/31693920-8594c834-b3a1-11e7-9c2f-11a3a6d404ed.png
-
-
-INFRAESTRUCTURA
----------------
-
-https://user-images.githubusercontent.com/13355927/31693962-b64bc9dc-b3a1-11e7-8476-e587eb273fe2.png
 
 DECLARACIÓN DE INTENCIONES
---------------------------
+==========================
+
+## APLICACION
 Implementaré una o varias aplicaciones con el propósito de poner en práctica el conocimiento adquirido en los últimos meses sobre las distintas tecnologías que conforman las arquitecturas de computación en la nube (CLOUD COMPUTING).
 
 El lenguaje de programación utilizado será JAVA 8, que desarrolla los últimos paradigmas en programación funcional, STREAMS y expresiones LAMBDA. Se utilizarán también intensivamente todos los elementos que JAVA proporcione como el uso de clases, clases abstractas, paquetes, interfaces, herencia, polimorfismo, GENERICS y manejo de excepciones.
@@ -27,6 +19,10 @@ Esta capa ofrecerá sus SERVICIOS WEB mediante API RESTFUL donde el intercambio 
 
 El servidor web será APACHE TOMCAT, el cual nos ofrecerá la posibilidad, además de hacer correr la aplicación, de mapearla en el virtual host  con el nombre de dominio con el que la queramos relacionar (DNS, fichero hosts).
 
+![aplicacion](https://user-images.githubusercontent.com/13355927/31693920-8594c834-b3a1-11e7-9c2f-11a3a6d404ed.png)
+
+## INFRAESTRUCTURA
+
 Cada vez que se realice la modificación de fuentes y se haga COMMIT en la rama principal se activarán BUILDS automáticos (SCRIPTS GROOVY) de  JENKINS que nos proporciona un entorno de integración continua (CONTINUOUS INTEGRATION) y nos facilita a su vez la entrega continua (CONTINUOUS DELIVERY).
 
 Para realizar las pruebas unitarias (UNIT TESTING), que es lo que nos posibilita la automatización de las pruebas y por lo tanto la validación automática de las entregas, utilizaremos las aserciones (ASSERTS) de JUNIT.
@@ -41,10 +37,14 @@ La orquestación de contenedores la realizaremos preferiblemente con KUBERNETES.
 
 La capa cliente la implementaremos mediante ANGULAR o cualquier otro FRAMEWORK que nos permita la interacción vía API con la capa servidor.
 
+![infraestructura](https://user-images.githubusercontent.com/13355927/31693962-b64bc9dc-b3a1-11e7-8476-e587eb273fe2.png)
+
  
-El MODELO DE PRUEBAS
---------------------
-Clase “Persona”  persistente en BBDD.
+MODELO DE PRUEBAS
+-----------------
+
+## Clase “Persona”  persistente en BBDD.
+
 * Correo electrónico  (primary key)
 * Nombre
 * Apellidos
@@ -53,6 +53,7 @@ Clase “Persona”  persistente en BBDD.
 Constructor, getters y setters.
 
 ## Microservicio 1: MANTENIMIENTO
+
 * Mantenimiento de persona.
     * Alta
     * Baja
@@ -61,6 +62,7 @@ Constructor, getters y setters.
     * Consulta
 
 ## Microservicio 2: VALIDACION
+
 * Validacion usuario a partir de pk. 
 
 Se comunica con MANTENIMIENTO para consultar.
