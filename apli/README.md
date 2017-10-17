@@ -18,9 +18,9 @@ Nuestra aplicación podría constar de una arquitectura cliente/servidor MVC en 
 Esta capa ofrecerá sus SERVICIOS WEB mediante API RESTFUL donde el intercambio de datos vía HTTP y en JSON proporcionará respuesta a aplicaciones cliente y hará posible también la mensajería entre los propios servicios que componen la aplicación servidora. El API REST lo podremos utilizar con PLUGINS de FIREFOX o CHROME como HTTP REQUESTER/SOAPUI.
 
 El servidor web será APACHE TOMCAT, el cual nos ofrecerá la posibilidad, además de hacer correr la aplicación, de mapearla en el virtual host  con el nombre de dominio con el que la queramos relacionar (DNS, fichero hosts).
-
+<p align="center">
 ![aplicacion](https://user-images.githubusercontent.com/13355927/31693920-8594c834-b3a1-11e7-9c2f-11a3a6d404ed.png)
-
+</p>
 ## INFRAESTRUCTURA
 
 Cada vez que se realice la modificación de fuentes y se haga COMMIT en la rama principal se activarán BUILDS automáticos (SCRIPTS GROOVY) de  JENKINS que nos proporciona un entorno de integración continua (CONTINUOUS INTEGRATION) y nos facilita a su vez la entrega continua (CONTINUOUS DELIVERY).
@@ -36,10 +36,10 @@ Una vez esté desarrollada la aplicación su puesta en producción nos tendría 
 La orquestación de contenedores la realizaremos preferiblemente con KUBERNETES. 
 
 La capa cliente la implementaremos mediante ANGULAR o cualquier otro FRAMEWORK que nos permita la interacción vía API con la capa servidor.
-
+<p align="center">
 ![infraestructura](https://user-images.githubusercontent.com/13355927/31693962-b64bc9dc-b3a1-11e7-8476-e587eb273fe2.png)
+</p>
 
- 
 MODELO DE PRUEBAS
 -----------------
 
