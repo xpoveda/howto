@@ -8,7 +8,7 @@ Implementaré una o varias aplicaciones con el propósito de poner en práctica 
 
 El lenguaje de programación utilizado será `JAVA 8`, que desarrolla los últimos paradigmas en **programación funcional**, **STREAMS** y **expresiones LAMBDA**. 
 
-Se utilizarán también intensivamente todos los elementos que JAVA proporcione como el uso de **clases, clases abstractas, paquetes, interfaces, herencia, polimorfismo, GENERICS y manejo de excepciones**.
+Se utilizarán también intensivamente todos los elementos que JAVA proporcione como el uso de **clases, clases abstractas, paquetes, interfaces, herencia, polimorfismo, GENERICS, reflexión, anotaciones, beans y manejo de excepciones**.
 
 La construcción de los proyectos se realizará mediante `MAVEN`. 
 
