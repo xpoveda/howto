@@ -1,6 +1,8 @@
 Spring boot Helloworld en docker
 ================================
 
+**Muy importante trabajar siempre con docker con el usuario `root`**.
+
 ## Revisamos versiones
 
 Primero de todo comprobamos las versiones que tenemos de java, maven y gradle.
@@ -516,11 +518,12 @@ root@ubuntu:~# docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
-Si queremos exponer el puerto 8080 que esta corriendo en el contenedor para que fuera sea otro puerto lo hacemos asi.
+Si queremos exponer el puerto 8080 que esta corriendo en el contenedor para que fuera sea otro puerto, en este caso el 8081, lo hacemos asi.
 ```
 root@ubuntu:~/misproyectos/gs-spring-boot-docker/complete# docker run -p 8081:8080 -t springio/gs-spring-boot-docker
 
 root@ubuntu:~# curl -s http://localhost:8080
+
 root@ubuntu:~# curl -s http://localhost:8081
 Hello Docker World
 ```
