@@ -102,6 +102,63 @@ public class Application {
 ```
 ## Generacion con GRADLE
 
+Este es el fichero de build
+```
+root@ubuntu:~/misproyectos/gs-spring-boot-docker/complete# more build.gradle
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath('org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE')
+// tag::build[]
+        classpath('se.transmode.gradle:gradle-docker:1.2')
+// end::build[]
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+// tag::plugin[]
+apply plugin: 'docker'
+// end::plugin[]
+
+// This is used as the docker image prefix (org)
+group = 'springio'
+
+jar {
+    baseName = 'gs-spring-boot-docker'
+    version =  '0.1.0'
+}
+
+// tag::task[]
+task buildDocker(type: Docker, dependsOn: build) {
+  applicationName = jar.baseName
+  dockerfile = file('Dockerfile')
+  doFirst {
+    copy {
+      from jar
+      into "${stageDir}/target"
+    }
+  }
+}
+// end::task[]
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+```
+
 Y ejecutamos gradle
 ```
 root@ubuntu:~/misproyectos/gs-spring-boot-docker/complete# ./gradlew build buildDocker
@@ -218,6 +275,89 @@ Hello Docker World
 ## Generación con MAVEN
 
 Tambien lo podemos crear con maven.
+
+```
+root@ubuntu:~/misproyectos/gs-spring-boot-docker/complete# more pom.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.springframework</groupId>
+    <artifactId>gs-spring-boot-docker</artifactId>
+    <version>0.1.0</version>
+    <packaging>jar</packaging>
+    <name>Spring Boot Docker</name>
+    <description>Getting started with Spring Boot and Docker</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.8.RELEASE</version>
+        <relativePath />
+    </parent>
+
+    <properties>
+        <docker.image.prefix>springio</docker.image.prefix>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- tag::plugin[] -->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.3.4</version>
+                <configuration>
+                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                </configuration>
+            </plugin>
+            <!-- end::plugin[] -->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${project.artifactId}</artifactId>
+                                    <version>${project.version}</version>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
+```
 
 ```
 root@ubuntu:~/misproyectos/gs-spring-boot-docker/complete# ./mvnw install dockerfile:build
