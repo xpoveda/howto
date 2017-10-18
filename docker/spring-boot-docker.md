@@ -172,7 +172,7 @@ dependencies {
 }
 ```
 
-Y ejecutamos gradle
+Y ejecutamos gradle para la generacion del jar y de la imagen docker.
 ```
 root@ubuntu:~/misproyectos/gs-spring-boot-docker/complete# ./gradlew build buildDocker
 :compileJava
@@ -233,7 +233,7 @@ Total time: 1 mins 0.692 secs
 This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.13/userguide/gradle_daemon.html
 ```
 
-El cual nos ha creado la imagen y la ha desplegado en docker
+Vemos que nos ha creado la imagen correctamente.
 ```
 root@ubuntu:~/misproyectos/gs-spring-boot-docker/complete# docker images
 REPOSITORY                       TAG                 IMAGE ID            CREATED             SIZE
@@ -243,7 +243,7 @@ openjdk                          8-jdk-alpine        a8bd10541772        4 weeks
 
 ## Ejecucion
 
-La ejecutamos
+Y la desplegamos..
 ```
 root@ubuntu:~/misproyectos/gs-spring-boot-docker/complete# docker run -p 8080:8080 -t springio/gs-spring-boot-docker
 
@@ -287,7 +287,7 @@ Hello Docker World
 ```
 ## Generación con MAVEN
 
-Tambien lo podemos crear con maven.
+Podemos hacer exactamente la misma generación que habiamos hecho con gradle tambien con maven.
 
 ```
 root@ubuntu:~/misproyectos/gs-spring-boot-docker/complete# more pom.xml
