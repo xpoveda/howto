@@ -498,3 +498,29 @@ Y tambien funciona
 ubuntu@ubuntu:~/misproyectos/gs-spring-boot-docker/complete$ curl -s http://localhost:8080
 Hello Docker World
 ```
+
+Comprobamos como va el proceso
+```
+ubuntu@ubuntu:~$ sudo -s
+[sudo] password for ubuntu:
+root@ubuntu:~# docker ps
+CONTAINER ID        IMAGE                            COMMAND                  CREATED              STATUS              PORTS                    NAMES
+6a939f7369c0        springio/gs-spring-boot-docker   "/bin/sh -c 'exec ..."   About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp   heuristic_kirch
+```
+
+Lo matamos
+```
+root@ubuntu:~# docker stop 6a939f7369c0
+6a939f7369c0
+root@ubuntu:~# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+```
+
+Si queremos exponer el puerto 8080 que esta corriendo en el contenedor para que fuera sea otro puerto lo hacemos asi.
+```
+root@ubuntu:~/misproyectos/gs-spring-boot-docker/complete# docker run -p 8081:8080 -t springio/gs-spring-boot-docker
+
+root@ubuntu:~# curl -s http://localhost:8080
+root@ubuntu:~# curl -s http://localhost:8081
+Hello Docker World
+```
