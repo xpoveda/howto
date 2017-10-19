@@ -102,6 +102,10 @@ ubuntu@ubuntu:~/.m2$ more settings.xml
   </proxies>
 </settings>
 ```
+Tambien tendremos que dar de alta esta variable de entorno, donde PROXY_URL no tiene el "http" ni el "https".
+```
+export MAVEN_OPTS="-Dhttp.proxyHost=PROXY_URL  -Dhttp.proxyPort=8PROXY_PORT -Dhttps.proxyHost=PROXY_URL -Dhttps.proxyPort=PROXY_PORT -Dhttp.proxyUser=USER -Dhttp.proxyPassword=PASSWORD -Dhttps.proxyUser=USER -Dhttps.proxyPassword=PASSWORD"
+```
 
 Conectividad con Gradle
 ------------------------
