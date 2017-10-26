@@ -48,6 +48,8 @@ dependencies {
 }
 ```
 
+Hacemos un clean para borrar todo atisbo de fichero generado y despues build para generar el jar.
+
 ```bash
 ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ gradle clean build
 Download https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-gradle-plugin/1.5.8.RELEASE/spring-boot-gradle-plugin-1.5.8.RELEASE.pom
@@ -66,12 +68,16 @@ BUILD SUCCESSFUL in 1m 17s
 7 actionable tasks: 6 executed, 1 up-to-date
 ```
 
+Comprobamos que hay.
+
 ```bash
 ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ find . -name "*.jar"
 ./gradle/wrapper/gradle-wrapper.jar
 ./.mvn/wrapper/maven-wrapper.jar
 ./build/libs/gs-spring-boot-0.1.0.jar
 ```
+
+Y finalmente lo ejecutamos.
 
 ```bash
 ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ java -jar build/libs/gs-spring-boot-0.1.0.jar
@@ -87,4 +93,10 @@ ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ java -jar build/libs/gs-sp
 2017-10-26 11:00:17.265  INFO 37813 --- [           main] hello.Application                        : Starting Application on ubuntu with PID 37813 (/home/ubuntu/misproyectos/gs-spring-boot/complete/build/libs/gs-spring-boot-0.1.0.jar started by ubuntu in /home/ubuntu/misproyectos/gs-spring-boot/complete)
 2017-10-26 11:00:17.282  INFO 37813 --- [           main] hello.Application                        : No active profile set, falling back to default profiles: default
 2017-10-26 11:00:17.537  INFO 37813 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4459eb14: startup date [Thu Oct 26 11:00:17 PDT 2017]; root of context hierarchy
+```
+
+Et voilà
+```bash
+ubuntu@ubuntu:~$ curl http://localhost:8080
+Greetings from Spring Boot!
 ```
