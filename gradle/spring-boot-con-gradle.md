@@ -95,7 +95,7 @@ ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ java -jar build/libs/gs-sp
 2017-10-26 11:00:17.537  INFO 37813 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4459eb14: startup date [Thu Oct 26 11:00:17 PDT 2017]; root of context hierarchy
 ```
 
-Et voilà
+Y en otra sesion ssh, et voilà
 ```bash
 ubuntu@ubuntu:~$ curl http://localhost:8080
 Greetings from Spring Boot!
