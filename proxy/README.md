@@ -157,3 +157,10 @@ ubuntu@ubuntu:~/misproyectos/gs-spring-boot/complete$ gradle clean build
 BUILD SUCCESSFUL in 16s
 7 actionable tasks: 7 executed
 ```
+
+Git bash con windows
+--------------------
+
+```
+git config --global http.proxy http://USER:PASSWORD@PROXY:PROXY_PORT
+```
