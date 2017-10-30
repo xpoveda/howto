@@ -31,6 +31,7 @@ Configuramos nuestro usuario con:
 git config --global user.name "xpoveda"
 git config --global user.mail "xpoveda@gmail.com"
 git config --global color.vi true
+git config --global http.proxy http://USER:PASSWORD@PROXY:PROXY_PORT
 ```
 
 Y con esto podemos revisar los parametros de configuracion
