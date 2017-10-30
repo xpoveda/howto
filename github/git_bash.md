@@ -1,8 +1,3 @@
-http://rogerdudler.github.io/git-guide/index.es.html
-
-http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf
-
-
 Desde `git bash` de windows podemos trabajar tambien con git para acceder a nuestros repositorios remotos o incluso trabajar graficamente 
 con `git gui`
 
