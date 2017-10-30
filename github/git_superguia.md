@@ -1,10 +1,21 @@
 
 Super guía de Git y Github
 ==========================
-
+```
 * https://codigofacilito.com/cursos/git
 * https://frontendlabs.io/3266--que-es-hacer-fork-repositorio-y-como-hacer-un-fork-github
 * https://git-scm.com/book/es/v1
+* http://rogerdudler.github.io/git-guide/index.es.html
+```
+
+Cheat sheet
+-----------
+```
+* https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
+* https://education.github.com/git-cheat-sheet-education.pdf
+* https://www.git-tower.com/blog/git-cheat-sheet
+* http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf
+```
 
 Estados en Git
 ------------------
