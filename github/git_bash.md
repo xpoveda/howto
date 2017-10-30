@@ -1,5 +1,9 @@
+http://rogerdudler.github.io/git-guide/index.es.html
 
-Desded `git bash` de windows podemos trabajar tambien con git para acceder a nuestros repositorios remotos o incluso trabajar graficamente 
+http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf
+
+
+Desde `git bash` de windows podemos trabajar tambien con git para acceder a nuestros repositorios remotos o incluso trabajar graficamente 
 con `git gui`
 
 Para ello creamos un repositorio publico en `github` y a continuacion una carpeta en local con el mismo nombre donde tendremos
