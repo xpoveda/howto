@@ -143,3 +143,58 @@ sudo nano /etc/vsftpd.conf
 ..
 sudo systemctl restart vsftpd
 ```
+
+Node y angular
+--------------
+
+Instalamos node.
+
+https://nodejs.org/es/download/package-manager/#distribuciones-de-linux-basadas-en-debian-y-ubuntu
+
+```
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install -y build-essential
+
+```
+
+Instalamos angular siempre como "root" (sudo -i) mejor...
+
+Si tenemos proxy
+```
+npm config set strict-ssl false
+npm config set registry "http://registry.npmjs.org/"
+npm config set proxy = http://USUARIO:PASSWORD@PROXY:PORT
+npm config set https-proxy = https://USUARIO:PASSWORD@PROXY:PORT
+npm config list
+```
+
+```
+npm install -g @angular/cli
+
+ng -v
+
+    _                      _                 ____ _     ___
+   / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+  / ? \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+ / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+/_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+               |___/
+
+Angular CLI: 1.5.0
+Node: 6.11.5
+OS: linux x64
+Angular:
+```
+
+```
+mkdir angular4
+cd angular4
+ng new my-app --skip-install
+ng serve --open
+```
+
+Accedemos desde ubuntu (no se puede acceder desde windows) con http://localhost:4200 o directamente con curl http://localhost:4200
+
+
+
