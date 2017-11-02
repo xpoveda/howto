@@ -158,9 +158,23 @@ BUILD SUCCESSFUL in 16s
 7 actionable tasks: 7 executed
 ```
 
+Npm de node
+-----------
+```
+npm config set proxy = http://USER:PASSWORD@PROXY_URL:PROXY_PORT
+npm config set https-proxy = https://USER:PASSWORD@PROXY_URL:PROXY_PORT
+npm config list
+```
+
+Acceso desde cmd de windows
+---------------------------
+```
+set http_proxy=http://USER:PASSWORD@PROXY_URL:PROXY_PORT
+set https_proxy=https://USER:PASSWORD@PROXY_URL:PROXY_PORT
+```
+
 Git bash con windows
 --------------------
-
 ```
-git config --global http.proxy http://USER:PASSWORD@PROXY:PROXY_PORT
+git config --global http.proxy http://USER:PASSWORD@PROXY_URL:PROXY_PORT
 ```
