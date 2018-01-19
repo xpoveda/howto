@@ -1,0 +1,1187 @@
+ubuntu@ubuntu:~/misproyectos/mijava$ mvn archetype:generate -DgroupId=org.sonatype.mavenbook -DartifactId=simple -Dpackage=org.sonatype.mavenbook -Dversion=1.0-SNAPSHOT
+
+
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.1
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: /home/ubuntu/misproyectos/mijava
+[INFO] Parameter: package, Value: org.sonatype.mavenbook
+[INFO] Parameter: groupId, Value: org.sonatype.mavenbook
+[INFO] Parameter: artifactId, Value: simple
+[INFO] Parameter: packageName, Value: org.sonatype.mavenbook
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: /home/ubuntu/misproyectos/mijava/simple
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:11 min
+[INFO] Finished at: 2018-01-11T12:05:14-08:00
+[INFO] Final Memory: 17M/60M
+[INFO] ------------------------------------------------------------------------
+
+
+ubuntu@ubuntu:~/misproyectos/mijava$ tree
+.
++-- simple
+    +-- pom.xml
+    +-- src
+        +-- main
+        ¦   +-- java
+        ¦       +-- org
+        ¦           +-- sonatype
+        ¦               +-- mavenbook
+        ¦                   +-- App.java
+        +-- test
+            +-- java
+                +-- org
+                    +-- sonatype
+                        +-- mavenbook
+                            +-- AppTest.java
+
+12 directories, 3 files
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ more pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.sonatype.mavenbook</groupId>
+  <artifactId>simple</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>simple</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple/src/main/java/org/sonatype/mavenbook$ more App.java
+package org.sonatype.mavenbook;
+
+/**
+ * Hello world!
+ *
+ */
+public class App
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn install
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building simple 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simple ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ubuntu/misproyectos/mijava/simple/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ simple ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/ubuntu/misproyectos/mijava/simple/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simple ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ubuntu/misproyectos/mijava/simple/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ simple ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/ubuntu/misproyectos/mijava/simple/target/test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ simple ---
+[INFO] Surefire report directory: /home/ubuntu/misproyectos/mijava/simple/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.sonatype.mavenbook.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec - in org.sonatype.mavenbook.AppTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ simple ---
+[INFO] Building jar: /home/ubuntu/misproyectos/mijava/simple/target/simple-1.0-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ simple ---
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.pom (4 KB at 4.9 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.jar (152 KB at 162.4 KB/sec)
+[INFO] Installing /home/ubuntu/misproyectos/mijava/simple/target/simple-1.0-SNAPSHOT.jar to /home/ubuntu/.m2/repository/org/sonatype/mavenbook/simple/1.0-SNAPSHOT/simple-1.0-SNAPSHOT.jar
+[INFO] Installing /home/ubuntu/misproyectos/mijava/simple/pom.xml to /home/ubuntu/.m2/repository/org/sonatype/mavenbook/simple/1.0-SNAPSHOT/simple-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.767 s
+[INFO] Finished at: 2018-01-11T12:09:35-08:00
+[INFO] Final Memory: 19M/60M
+[INFO] ------------------------------------------------------------------------
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ tree
+.
++-- pom.xml
++-- src
+¦   +-- main
+¦   ¦   +-- java
+¦   ¦       +-- org
+¦   ¦           +-- sonatype
+¦   ¦               +-- mavenbook
+¦   ¦                   +-- App.java
+¦   +-- test
+¦       +-- java
+¦           +-- org
+¦               +-- sonatype
+¦                   +-- mavenbook
+¦                       +-- AppTest.java
++-- target
+    +-- classes
+    ¦   +-- org
+    ¦       +-- sonatype
+    ¦           +-- mavenbook
+    ¦               +-- App.class
+    +-- maven-archiver
+    ¦   +-- pom.properties
+    +-- maven-status
+    ¦   +-- maven-compiler-plugin
+    ¦       +-- compile
+    ¦       ¦   +-- default-compile
+    ¦       ¦       +-- createdFiles.lst
+    ¦       ¦       +-- inputFiles.lst
+    ¦       +-- testCompile
+    ¦           +-- default-testCompile
+    ¦               +-- createdFiles.lst
+    ¦               +-- inputFiles.lst
+    +-- simple-1.0-SNAPSHOT.jar
+    +-- surefire-reports
+    ¦   +-- org.sonatype.mavenbook.AppTest.txt
+    ¦   +-- TEST-org.sonatype.mavenbook.AppTest.xml
+    +-- test-classes
+        +-- org
+            +-- sonatype
+                +-- mavenbook
+                    +-- AppTest.class
+
+28 directories, 13 files
+ubuntu@ubuntu:~/misproyectos/mijava/simple$
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn clean
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building simple 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simple ---
+[INFO] Deleting /home/ubuntu/misproyectos/mijava/simple/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.967 s
+[INFO] Finished at: 2018-01-11T12:11:44-08:00
+[INFO] Final Memory: 7M/60M
+[INFO] ------------------------------------------------------------------------
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ tree
+.
++-- pom.xml
++-- src
+    +-- main
+    ¦   +-- java
+    ¦       +-- org
+    ¦           +-- sonatype
+    ¦               +-- mavenbook
+    ¦                   +-- App.java
+    +-- test
+        +-- java
+            +-- org
+                +-- sonatype
+                    +-- mavenbook
+                        +-- AppTest.java
+
+11 directories, 3 files
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn install
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building simple 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simple ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ubuntu/misproyectos/mijava/simple/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ simple ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/ubuntu/misproyectos/mijava/simple/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simple ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ubuntu/misproyectos/mijava/simple/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ simple ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/ubuntu/misproyectos/mijava/simple/target/test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ simple ---
+[INFO] Surefire report directory: /home/ubuntu/misproyectos/mijava/simple/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.sonatype.mavenbook.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec - in org.sonatype.mavenbook.AppTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ simple ---
+[INFO] Building jar: /home/ubuntu/misproyectos/mijava/simple/target/simple-1.0-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ simple ---
+[INFO] Installing /home/ubuntu/misproyectos/mijava/simple/target/simple-1.0-SNAPSHOT.jar to /home/ubuntu/.m2/repository/org/sonatype/mavenbook/simple/1.0-SNAPSHOT/simple-1.0-SNAPSHOT.jar
+[INFO] Installing /home/ubuntu/misproyectos/mijava/simple/pom.xml to /home/ubuntu/.m2/repository/org/sonatype/mavenbook/simple/1.0-SNAPSHOT/simple-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.263 s
+[INFO] Finished at: 2018-01-11T12:12:08-08:00
+[INFO] Final Memory: 15M/60M
+[INFO] ------------------------------------------------------------------------
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ tree
+.
++-- pom.xml
++-- src
+¦   +-- main
+¦   ¦   +-- java
+¦   ¦       +-- org
+¦   ¦           +-- sonatype
+¦   ¦               +-- mavenbook
+¦   ¦                   +-- App.java
+¦   +-- test
+¦       +-- java
+¦           +-- org
+¦               +-- sonatype
+¦                   +-- mavenbook
+¦                       +-- AppTest.java
++-- target
+    +-- classes
+    ¦   +-- org
+    ¦       +-- sonatype
+    ¦           +-- mavenbook
+    ¦               +-- App.class
+    +-- maven-archiver
+    ¦   +-- pom.properties
+    +-- maven-status
+    ¦   +-- maven-compiler-plugin
+    ¦       +-- compile
+    ¦       ¦   +-- default-compile
+    ¦       ¦       +-- createdFiles.lst
+    ¦       ¦       +-- inputFiles.lst
+    ¦       +-- testCompile
+    ¦           +-- default-testCompile
+    ¦               +-- createdFiles.lst
+    ¦               +-- inputFiles.lst
+    +-- simple-1.0-SNAPSHOT.jar
+    +-- surefire-reports
+    ¦   +-- org.sonatype.mavenbook.AppTest.txt
+    ¦   +-- TEST-org.sonatype.mavenbook.AppTest.xml
+    +-- test-classes
+        +-- org
+            +-- sonatype
+                +-- mavenbook
+                    +-- AppTest.class
+
+28 directories, 13 files
+ubuntu@ubuntu:~/misproyectos/mijava/simple$
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ java -cp ./target/simple-1.0-SNAPSHOT.jar org.sonatype.mavenbook.App
+Hello World!
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ jar -tvf ./target/simple-1.0-SNAPSHOT.jar
+     0 Thu Jan 11 12:12:08 PST 2018 META-INF/
+   132 Thu Jan 11 12:12:06 PST 2018 META-INF/MANIFEST.MF
+     0 Thu Jan 11 12:12:06 PST 2018 org/
+     0 Thu Jan 11 12:12:06 PST 2018 org/sonatype/
+     0 Thu Jan 11 12:12:06 PST 2018 org/sonatype/mavenbook/
+   559 Thu Jan 11 12:12:06 PST 2018 org/sonatype/mavenbook/App.class
+     0 Thu Jan 11 12:12:08 PST 2018 META-INF/maven/
+     0 Thu Jan 11 12:12:08 PST 2018 META-INF/maven/org.sonatype.mavenbook/
+     0 Thu Jan 11 12:12:08 PST 2018 META-INF/maven/org.sonatype.mavenbook/simple/
+   756 Thu Jan 11 12:05:14 PST 2018 META-INF/maven/org.sonatype.mavenbook/simple/pom.xml
+   120 Thu Jan 11 12:12:08 PST 2018 META-INF/maven/org.sonatype.mavenbook/simple/pom.properties
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ more ./target/maven-archiver/pom.properties
+#Generated by Maven
+#Thu Jan 11 12:12:07 PST 2018
+version=1.0-SNAPSHOT
+groupId=org.sonatype.mavenbook
+artifactId=simple
+
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mkdir mira
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ cd mira
+ubuntu@ubuntu:~/misproyectos/mijava/simple/mira$ cp ../target/*.jar .
+ubuntu@ubuntu:~/misproyectos/mijava/simple/mira$ jar xvf *.jar
+  created: META-INF/
+ inflated: META-INF/MANIFEST.MF
+  created: org/
+  created: org/sonatype/
+  created: org/sonatype/mavenbook/
+ inflated: org/sonatype/mavenbook/App.class
+  created: META-INF/maven/
+  created: META-INF/maven/org.sonatype.mavenbook/
+  created: META-INF/maven/org.sonatype.mavenbook/simple/
+ inflated: META-INF/maven/org.sonatype.mavenbook/simple/pom.xml
+ inflated: META-INF/maven/org.sonatype.mavenbook/simple/pom.properties
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple/mira/META-INF$ more MANIFEST.MF
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: ubuntu
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_131
+
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple/mira$ tree
+.
++-- META-INF
+¦   +-- MANIFEST.MF
+¦   +-- maven
+¦       +-- org.sonatype.mavenbook
+¦           +-- simple
+¦               +-- pom.properties
+¦               +-- pom.xml
++-- org
+¦   +-- sonatype
+¦       +-- mavenbook
+¦           +-- App.class
++-- simple-1.0-SNAPSHOT.jar
+
+
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn help:effective-pom > efective_pom.xml
+
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building simple 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-help-plugin:2.2:effective-pom (default-cli) @ simple ---
+[INFO] 
+Effective POMs, after inheritance, interpolation, and profiles are applied:
+
+<!-- ====================================================================== -->
+<!--                                                                        -->
+<!-- Generated by Maven Help Plugin on 2018-01-11T12:23:07                  -->
+<!-- See: http://maven.apache.org/plugins/maven-help-plugin/                -->
+<!--                                                                        -->
+<!-- ====================================================================== -->
+
+<!-- ====================================================================== -->
+<!--                                                                        -->
+<!-- Effective POM for project                                              -->
+<!-- 'org.sonatype.mavenbook:simple:jar:1.0-SNAPSHOT'                       -->
+<!--                                                                        -->
+<!-- ====================================================================== -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.sonatype.mavenbook</groupId>
+  <artifactId>simple</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>simple</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <build>
+    <sourceDirectory>/home/ubuntu/misproyectos/mijava/simple/src/main/java</sourceDirectory>
+    <scriptSourceDirectory>/home/ubuntu/misproyectos/mijava/simple/src/main/scripts</scriptSourceDirectory>
+    <testSourceDirectory>/home/ubuntu/misproyectos/mijava/simple/src/test/java</testSourceDirectory>
+    <outputDirectory>/home/ubuntu/misproyectos/mijava/simple/target/classes</outputDirectory>
+    <testOutputDirectory>/home/ubuntu/misproyectos/mijava/simple/target/test-classes</testOutputDirectory>
+    <resources>
+      <resource>
+        <directory>/home/ubuntu/misproyectos/mijava/simple/src/main/resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>/home/ubuntu/misproyectos/mijava/simple/src/test/resources</directory>
+      </testResource>
+    </testResources>
+    <directory>/home/ubuntu/misproyectos/mijava/simple/target</directory>
+    <finalName>simple-1.0-SNAPSHOT</finalName>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>1.7</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>2.4.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>2.8</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.3.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>2.5</version>
+        <executions>
+          <execution>
+            <id>default-clean</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <id>default-testResources</id>
+            <phase>process-test-resources</phase>
+            <goals>
+              <goal>testResources</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>default-resources</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>resources</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <id>default-jar</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.2</version>
+        <executions>
+          <execution>
+            <id>default-compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>default-testCompile</id>
+            <phase>test-compile</phase>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.17</version>
+        <executions>
+          <execution>
+            <id>default-test</id>
+            <phase>test</phase>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>2.5.2</version>
+        <executions>
+          <execution>
+            <id>default-install</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.7</version>
+        <executions>
+          <execution>
+            <id>default-deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.3</version>
+        <executions>
+          <execution>
+            <id>default-site</id>
+            <phase>site</phase>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>/home/ubuntu/misproyectos/mijava/simple/target/site</outputDirectory>
+              <reportPlugins>
+                <reportPlugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-project-info-reports-plugin</artifactId>
+                </reportPlugin>
+              </reportPlugins>
+            </configuration>
+          </execution>
+          <execution>
+            <id>default-deploy</id>
+            <phase>site-deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>/home/ubuntu/misproyectos/mijava/simple/target/site</outputDirectory>
+              <reportPlugins>
+                <reportPlugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-project-info-reports-plugin</artifactId>
+                </reportPlugin>
+              </reportPlugins>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <outputDirectory>/home/ubuntu/misproyectos/mijava/simple/target/site</outputDirectory>
+          <reportPlugins>
+            <reportPlugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-project-info-reports-plugin</artifactId>
+            </reportPlugin>
+          </reportPlugins>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <reporting>
+    <outputDirectory>/home/ubuntu/misproyectos/mijava/simple/target/site</outputDirectory>
+  </reporting>
+</project>
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.821 s
+[INFO] Finished at: 2018-01-11T12:23:07-08:00
+[INFO] Final Memory: 10M/60M
+[INFO] ------------------------------------------------------------------------
+
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn clean
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building simple 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simple ---
+[INFO] Deleting /home/ubuntu/misproyectos/mijava/simple/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.556 s
+[INFO] Finished at: 2018-01-11T12:27:20-08:00
+[INFO] Final Memory: 7M/60M
+[INFO] ------------------------------------------------------------------------
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn compiler:compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building simple 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:compile (default-cli) @ simple ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/ubuntu/misproyectos/mijava/simple/target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.810 s
+[INFO] Finished at: 2018-01-11T12:27:31-08:00
+[INFO] Final Memory: 12M/60M
+[INFO] ------------------------------------------------------------------------
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ tree
+.
++-- efective_pom.xml
++-- pom.xml
++-- src
+¦   +-- main
+¦   ¦   +-- java
+¦   ¦       +-- org
+¦   ¦           +-- sonatype
+¦   ¦               +-- mavenbook
+¦   ¦                   +-- App.java
+¦   +-- test
+¦       +-- java
+¦           +-- org
+¦               +-- sonatype
+¦                   +-- mavenbook
+¦                       +-- AppTest.java
++-- target
+    +-- classes
+    ¦   +-- org
+    ¦       +-- sonatype
+    ¦           +-- mavenbook
+    ¦               +-- App.class
+    +-- maven-status
+        +-- maven-compiler-plugin
+            +-- compile
+                +-- default-cli
+                    +-- createdFiles.lst
+                    +-- inputFiles.lst
+
+20 directories, 7 files
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn compiler:help
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building simple 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:help (default-cli) @ simple ---
+[INFO] Apache Maven Compiler Plugin 3.2
+  The Compiler Plugin is used to compile the sources of your project.
+
+This plugin has 3 goals:
+
+compiler:compile
+  Compiles application sources
+
+compiler:help
+  Display help information on maven-compiler-plugin.
+  Call mvn compiler:help -Ddetail=true -Dgoal=<goal-name> to display parameter
+  details.
+
+compiler:testCompile
+  Compiles application test sources.
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.273 s
+[INFO] Finished at: 2018-01-11T12:31:00-08:00
+[INFO] Final Memory: 9M/60M
+[INFO] ------------------------------------------------------------------------
+
+
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn compiler:help -Ddetail=true -Dgoal=compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building simple 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:help (default-cli) @ simple ---
+[INFO] Apache Maven Compiler Plugin 3.2
+  The Compiler Plugin is used to compile the sources of your project.
+
+compiler:compile
+  Compiles application sources
+
+  Available parameters:
+
+    annotationProcessors
+      Names of annotation processors to run. Only applies to JDK 1.6+ If not
+      set, the default annotation processors discovery process applies.
+
+    compilerArgs
+      Sets the arguments to be passed to the compiler if fork is set to true.
+      Example:
+
+      <compilerArgs>
+       <arg>-Xmaxerrs=1000</arg>
+       <arg>-Xlint</arg>
+       <arg>-J-Duser.language=en_us</arg>
+      </compilerArgs>
+
+    compilerArgument
+      Sets the unformatted single argument string to be passed to the compiler
+      if fork is set to true. To pass multiple arguments such as -Xmaxerrs 1000
+      (which are actually two arguments) you have to use compilerArguments.
+
+      This is because the list of valid arguments passed to a Java compiler
+      varies based on the compiler version.
+
+    compilerArguments
+      Sets the arguments to be passed to the compiler (prepending a dash) if
+      fork is set to true.
+
+      This is because the list of valid arguments passed to a Java compiler
+      varies based on the compiler version.
+
+      To pass -Xmaxerrs 1000 -Xlint -Xlint:-path -Averbose=true you should
+      include the following:
+
+      <compilerArguments>
+       <Xmaxerrs>1000</Xmaxerrs>
+       <Xlint/>
+       <Xlint:-path/>
+       <Averbose>true</Averbose>
+      </compilerArguments>
+
+    compilerId
+      The compiler id of the compiler to use. See this guide for more
+      information.
+
+    compilerReuseStrategy
+      Strategy to re use javacc class created:
+      - reuseCreated (default): will reuse already created but in case of
+        multi-threaded builds, each thread will have its own instance
+      - reuseSame: the same Javacc class will be used for each compilation even
+        for multi-threaded build
+      - alwaysNew: a new Javacc class will be created for each compilation
+      Note this parameter value depends on the os/jdk you are using, but the
+      default value should work on most of env.
+
+    compilerVersion
+      Version of the compiler to use, ex. '1.3', '1.5', if fork is set to true.
+
+    debug
+      Set to true to include debugging information in the compiled class files.
+
+    debuglevel
+      Keyword list to be appended to the -g command-line switch. Legal values
+      are none or a comma-separated list of the following keywords: lines, vars,
+      and source. If debug level is not specified, by default, nothing will be
+      appended to -g. If debug is not turned on, this attribute will be ignored.
+
+    encoding
+      The -encoding argument for the Java compiler.
+
+    excludes
+      A list of exclusion filters for the compiler.
+
+    executable
+      Sets the executable of the compiler to use when fork is true.
+
+    failOnError
+      Indicates whether the build will continue even if there are compilation
+      errors.
+
+    fileExtensions
+      file extensions to check timestamp for incremental build default contains
+      only .class
+
+    forceJavacCompilerUse
+      compiler can now use javax.tools if available in your current jdk, you can
+      disable this feature using -Dmaven.compiler.forceJavacCompilerUse=true or
+      in the plugin configuration
+
+    fork
+      Allows running the compiler in a separate process. If false it uses the
+      built in compiler, while if true it will use an executable.
+
+    generatedSourcesDirectory
+      Specify where to place generated source files created by annotation
+      processing. Only applies to JDK 1.6+
+
+    includes
+      A list of inclusion filters for the compiler.
+
+    maxmem
+      Sets the maximum size, in megabytes, of the memory allocation pool, ex.
+      '128', '128m' if fork is set to true.
+
+    meminitial
+      Initial size, in megabytes, of the memory allocation pool, ex. '64', '64m'
+      if fork is set to true.
+
+    optimize
+      Set to true to optimize the compiled code using the compiler's
+      optimization methods.
+
+    outputFileName
+      Sets the name of the output file when compiling a set of sources to a
+      single file. expression='${project.build.finalName}'
+
+    proc
+      Sets whether annotation processing is performed or not. Only applies to
+      JDK 1.6+ If not set, both compilation and annotation processing are
+      performed at the same time.
+
+      Allowed values are:
+
+      - none - no annotation processing is performed.
+      - only - only annotation processing is done, no compilation.
+
+    showDeprecation
+      Sets whether to show source locations where deprecated APIs are used.
+
+    showWarnings
+      Set to true to show compilation warnings.
+
+    skipMain
+      Set this to 'true' to bypass compilation of main sources. Its use is NOT
+      RECOMMENDED, but quite convenient on occasion.
+
+    skipMultiThreadWarning
+
+
+    source
+      The -source argument for the Java compiler.
+
+    staleMillis
+      Sets the granularity in milliseconds of the last modification date for
+      testing whether a source needs recompilation.
+
+    target
+      The -target argument for the Java compiler.
+
+    useIncrementalCompilation
+      to enable/disable incrementation compilation feature
+
+    verbose
+      Set to true to show messages about what the compiler is doing.
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.130 s
+[INFO] Finished at: 2018-01-11T12:32:03-08:00
+[INFO] Final Memory: 9M/60M
+[INFO] ------------------------------------------------------------------------
+
+
+Goals de un 
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn clean | grep "@ simple"
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simple ---
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn compiler:compile | grep "@ simple"
+[INFO] --- maven-compiler-plugin:3.2:compile (default-cli) @ simple ---
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn install | grep "@ simple"
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simple ---
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ simple ---
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simple ---
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ simple ---
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ simple ---
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ simple ---
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ simple ---
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn package | grep "@ simple"
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simple ---
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ simple ---
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simple ---
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ simple ---
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ simple ---
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ simple ---
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn test | grep "@ simple"
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simple ---
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ simple ---
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simple ---
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ simple ---
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ simple ---
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn compile | grep "@ simple"
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simple ---
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ simple ---
+
+
+
+
+Lista de fases
+
+
+Van en orden, ejecutaran todas hasta llegar a la ultima.
+
+
+http://maven.apache.org/ref/3.5.0/maven-core/lifecycles.html
+
+<phases>
+  <phase>validate</phase>
+  <phase>initialize</phase>
+  <phase>generate-sources</phase>
+  <phase>process-sources</phase>
+  <phase>generate-resources</phase>
+  <phase>process-resources</phase>
+  <phase>compile</phase>
+  <phase>process-classes</phase>
+  <phase>generate-test-sources</phase>
+  <phase>process-test-sources</phase>
+  <phase>generate-test-resources</phase>
+  <phase>process-test-resources</phase>
+  <phase>test-compile</phase>
+  <phase>process-test-classes</phase>
+  <phase>test</phase>
+  <phase>prepare-package</phase>
+  <phase>package</phase>
+  <phase>pre-integration-test</phase>
+  <phase>integration-test</phase>
+  <phase>post-integration-test</phase>
+  <phase>verify</phase>
+  <phase>install</phase>
+  <phase>deploy</phase>
+</phases>
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn help:describe -Dcmd=compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building simple 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-help-plugin:2.2:describe (default-cli) @ simple ---
+[INFO] 'compile' is a phase corresponding to this plugin:
+org.apache.maven.plugins:maven-compiler-plugin:3.2:compile
+
+It is a part of the lifecycle for the POM packaging 'jar'. This lifecycle includes the following phases:
+* validate: Not defined
+* initialize: Not defined
+* generate-sources: Not defined
+* process-sources: Not defined
+* generate-resources: Not defined
+* process-resources: org.apache.maven.plugins:maven-resources-plugin:2.6:resources
+* compile: org.apache.maven.plugins:maven-compiler-plugin:3.2:compile
+* process-classes: Not defined
+* generate-test-sources: Not defined
+* process-test-sources: Not defined
+* generate-test-resources: Not defined
+* process-test-resources: org.apache.maven.plugins:maven-resources-plugin:2.6:testResources
+* test-compile: org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile
+* process-test-classes: Not defined
+* test: org.apache.maven.plugins:maven-surefire-plugin:2.17:test
+* prepare-package: Not defined
+* package: org.apache.maven.plugins:maven-jar-plugin:2.4:jar
+* pre-integration-test: Not defined
+* integration-test: Not defined
+* post-integration-test: Not defined
+* verify: Not defined
+* install: org.apache.maven.plugins:maven-install-plugin:2.5.2:install
+* deploy: org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.526 s
+[INFO] Finished at: 2018-01-11T12:52:13-08:00
+[INFO] Final Memory: 10M/60M
+[INFO] ------------------------------------------------------------------------
+
+
+
+ubuntu@ubuntu:~/.m2/repository/org/sonatype/mavenbook/simple/1.0-SNAPSHOT$ ls -lt | more
+total 16
+-rw-rw-r-- 1 ubuntu ubuntu  708 Jan 11 13:12 maven-metadata-local.xml
+-rw-rw-r-- 1 ubuntu ubuntu  185 Jan 11 13:12 _remote.repositories
+-rw-rw-r-- 1 ubuntu ubuntu 2400 Jan 11 13:03 simple-1.0-SNAPSHOT.jar
+-rw-rw-r-- 1 ubuntu ubuntu  756 Jan 11 12:05 simple-1.0-SNAPSHOT.pom
+ubuntu@ubuntu:~/.m2/repository/org/sonatype/mavenbook/simple/1.0-SNAPSHOT$
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ mvn site
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building simple 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-site-plugin:3.3:site (default-site) @ simple ---
+[WARNING] Report plugin org.apache.maven.plugins:maven-project-info-reports-plugin has an empty version.
+[WARNING]
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING]
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[INFO] configuring report plugin org.apache.maven.plugins:maven-project-info-reports-plugin:2.9
+[INFO] Relativizing decoration links with respect to project URL: http://maven.apache.org
+[INFO] Rendering site with org.apache.maven.skins:maven-default-skin:jar:1.0 skin.
+[INFO] Generating "Dependencies" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "Dependency Convergence" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "Dependency Information" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "About" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "Plugin Management" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "Plugins" report    --- maven-project-info-reports-plugin:2.9
+[INFO] Generating "Summary" report    --- maven-project-info-reports-plugin:2.9
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.786 s
+[INFO] Finished at: 2018-01-11T13:16:10-08:00
+[INFO] Final Memory: 20M/60M
+[INFO] ------------------------------------------------------------------------
+
+
+ubuntu@ubuntu:~/misproyectos/mijava/simple$ tree
+.
++-- efective_pom.xml
++-- pom.xml
++-- src
+¦   +-- main
+¦   ¦   +-- java
+¦   ¦       +-- org
+¦   ¦           +-- sonatype
+¦   ¦               +-- mavenbook
+¦   ¦                   +-- App.java
+¦   +-- test
+¦       +-- java
+¦           +-- org
+¦               +-- sonatype
+¦                   +-- mavenbook
+¦                       +-- AppTest.java
++-- target
+    +-- classes
+    ¦   +-- org
+    ¦       +-- sonatype
+    ¦           +-- mavenbook
+    ¦               +-- App.class
+    +-- maven-archiver
+    ¦   +-- pom.properties
+    +-- maven-status
+    ¦   +-- maven-compiler-plugin
+    ¦       +-- compile
+    ¦       ¦   +-- default-compile
+    ¦       ¦       +-- createdFiles.lst
+    ¦       ¦       +-- inputFiles.lst
+    ¦       +-- testCompile
+    ¦           +-- default-testCompile
+    ¦               +-- createdFiles.lst
+    ¦               +-- inputFiles.lst
+    +-- simple-1.0-SNAPSHOT.jar
+    +-- site
+    ¦   +-- css
+    ¦   ¦   +-- maven-base.css
+    ¦   ¦   +-- maven-theme.css
+    ¦   ¦   +-- print.css
+    ¦   ¦   +-- site.css
+    ¦   +-- dependencies.html
+    ¦   +-- dependency-convergence.html
+    ¦   +-- dependency-info.html
+    ¦   +-- images
+    ¦   ¦   +-- close.gif
+    ¦   ¦   +-- collapsed.gif
+    ¦   ¦   +-- expanded.gif
+    ¦   ¦   +-- external.png
+    ¦   ¦   +-- icon_error_sml.gif
+    ¦   ¦   +-- icon_info_sml.gif
+    ¦   ¦   +-- icon_success_sml.gif
+    ¦   ¦   +-- icon_warning_sml.gif
+    ¦   ¦   +-- logos
+    ¦   ¦   ¦   +-- build-by-maven-black.png
+    ¦   ¦   ¦   +-- build-by-maven-white.png
+    ¦   ¦   ¦   +-- maven-feather.png
+    ¦   ¦   +-- newwindow.png
+    ¦   +-- index.html
+    ¦   +-- plugin-management.html
+    ¦   +-- plugins.html
+    ¦   +-- project-info.html
+    ¦   +-- project-summary.html
+    +-- surefire-reports
+    ¦   +-- org.sonatype.mavenbook.AppTest.txt
+    ¦   +-- TEST-org.sonatype.mavenbook.AppTest.xml
+    +-- test-classes
+        +-- org
+            +-- sonatype
+                +-- mavenbook
+                    +-- AppTest.class
+
+32 directories, 38 files
