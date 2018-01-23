@@ -1,6 +1,8 @@
 Vagrant multimachine
 ====================
 
+https://manski.net/2016/09/vagrant-multi-machine-tutorial/
+
 Vagrantfile
 ```
 # -*- mode: ruby -*-
