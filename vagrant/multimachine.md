@@ -545,3 +545,14 @@ rtt min/avg/max/mdev = 0.154/0.177/0.196/0.023 ms
 root@master:~# ping node3
 ping: unknown host node3
 ```
+
+Si queremos parar el entorno multimaquina simplemente con `vagrant suspend`
+http://albertoromeu.com/7-comandos-vagrant/
+```
+c:\HashiCorp\Vagrant\bin>vagrant suspend
+==> master: Saving VM state and suspending execution...
+==> node1: Saving VM state and suspending execution...
+==> node2: Saving VM state and suspending execution...
+```
+
+
