@@ -3,7 +3,7 @@ Vagrant multimachine
 
 https://manski.net/2016/09/vagrant-multi-machine-tutorial/
 
-Vagrantfile
+Definimos el `Vagrantfile`
 ```
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
@@ -36,6 +36,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+Iniciamos vagrant para que se creen las VM
 ```
 c:\HashiCorp\Vagrant\bin>vagrant up
 Bringing machine 'master' up with 'virtualbox' provider...
@@ -490,4 +491,57 @@ Bringing machine 'node2' up with 'virtualbox' provider...
 ==> node2: Processing triggers for dbus (1.10.6-1ubuntu3.3) ...
 ==> node2: Processing triggers for systemd (229-4ubuntu21) ...
 ==> node2: Processing triggers for ureadahead (0.100.0-19) ...
+```
+
+A partir de aqui podemos entrar via ssh con usuario `vagrant` y password `vagrant` a la ip + puerto con el que hemos definido las maquinas `master`, `node1` y `node2`.
+
+Modificaremos como root con  `sudo -i` el fichero `/etc/hosts` de los 3 nodos añadiendo las ips de los 3 nodos para que podamos hacer ping sobre su nombre y sea mas facil recordarlos.
+
+```
+
+root@master:~# more /etc/hosts
+127.0.0.1       master  master
+127.0.0.1       localhost
+127.0.1.1       vagrant.vm      vagrant
+10.0.0.10       master
+10.0.0.11       node1
+10.0.0.12       node2
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+```
+Vemos que es correcto
+```
+
+root@master:~# ping master
+PING master (127.0.0.1) 56(84) bytes of data.
+64 bytes from master (127.0.0.1): icmp_seq=1 ttl=64 time=0.018 ms
+64 bytes from master (127.0.0.1): icmp_seq=2 ttl=64 time=0.019 ms
+^C
+--- master ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 999ms
+rtt min/avg/max/mdev = 0.018/0.018/0.019/0.004 ms
+root@master:~# ping node1
+PING node1 (10.0.0.11) 56(84) bytes of data.
+64 bytes from node1 (10.0.0.11): icmp_seq=1 ttl=64 time=0.182 ms
+64 bytes from node1 (10.0.0.11): icmp_seq=2 ttl=64 time=0.179 ms
+64 bytes from node1 (10.0.0.11): icmp_seq=3 ttl=64 time=0.205 ms
+^C
+--- node1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1998ms
+rtt min/avg/max/mdev = 0.179/0.188/0.205/0.019 ms
+root@master:~# ping node2
+PING node2 (10.0.0.12) 56(84) bytes of data.
+64 bytes from node2 (10.0.0.12): icmp_seq=1 ttl=64 time=0.154 ms
+64 bytes from node2 (10.0.0.12): icmp_seq=2 ttl=64 time=0.183 ms
+64 bytes from node2 (10.0.0.12): icmp_seq=3 ttl=64 time=0.196 ms
+^C
+--- node2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1998ms
+rtt min/avg/max/mdev = 0.154/0.177/0.196/0.023 ms
+root@master:~# ping node3
+ping: unknown host node3
 ```
