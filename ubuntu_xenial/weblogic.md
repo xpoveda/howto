@@ -17,10 +17,10 @@ sudo apt-get install default-jdk
 ```
 
 ```
-export http_proxy=http://xpoveda:dic.2017@proxy.indra.es:8080/
-export HTTP_PROXY=http://xpoveda:dic.2017@proxy.indra.es:8080/
-export https_proxy=https://xpoveda:dic.2017@proxy.indra.es:8080/
-export HTTPS_PROXY=https://xpoveda:dic.2017@proxy.indra.es:8080/
+export http_proxy=LOQUETOCA
+export HTTP_PROXY=LOQUETOCA
+export https_proxy=LOQUETOCA
+export HTTPS_PROXY=LOQUETOCA
 ```
 
 ```
