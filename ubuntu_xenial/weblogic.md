@@ -84,3 +84,12 @@ Desde windows en un explorador
 http://192.168.140.133:7001/console
 http://192.168.140.133:7001/console/login/LoginForm.jsp
 ```
+
+Deploy war en weblogic
+----------------------
+
+Podemos probar el war que nos podemos descargar de esta pagina y probar a continuacion despues de haber hecho el despliegue.
+
+http://javahonk.com/how-to-deploy-war-file-on-weblogic-server/
+
+http://192.168.140.133:7001/DynamicWebProject/
