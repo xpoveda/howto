@@ -3,6 +3,29 @@ Ubuntu para trabajar con proxy corporativo
 
 A continuación anotamos los distintos elementos a configurar para la version de **Ubuntu 16.04.03**.
 
+Modificacion de password corporativo
+------------------------------------
+```bash
+sed -i -e 's/PASS_ANT/PASS_NUE'   /etc/profile
+sed -i -e 's/PASS_ANT/PASS_NUE/g' /etc/apt/apt.conf
+
+sed -i -e 's/PASS_ANT/PASS_NUE/g' /home/ubuntu/.m2/settings.xml
+export MAVEN_OPTS="-Dhttp.proxyHost=PROXY_URL  -Dhttp.proxyPort=PROXY_PORT -Dhttps.proxyHost=PROXY_URL -Dhttps.proxyPort=PROXY_PORT -Dhttp.proxyUser=USER -Dhttp.proxyPassword=PASS_NUE -Dhttps.proxyUser=USER -Dhttps.proxyPassword=PASS_NUE"
+
+sed -i -e 's/PASS_ANT/PASS_NUE/g' /home/ubuntu/misproyectos/gs-spring-boot/complete/gradle.properties
+
+sed -i -e 's/PASS_ANT/PASS_NUE/g' /etc/systemd/system/docker.service.d/http-proxy.conf
+sed -i -e 's/PASS_ANT/PASS_NUE/g' /etc/systemd/system/docker.service.d/https-proxy.conf
+systemctl daemon-reload
+systemctl restart docker
+systemctl show --property=Environment docker
+
+
+npm config set proxy http://USER:PASS_NUE@PROXY_URL:PROXY_PORT/
+npm config set https-proxy https://USER:PASS_NUE@PROXY_URL:PROXY_PORT/
+npm config list
+```
+
 Conectividad via ssh
 --------------------
 Modificamos como root el fichero `/etc/profile`
