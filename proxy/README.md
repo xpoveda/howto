@@ -184,8 +184,8 @@ BUILD SUCCESSFUL in 16s
 Npm de node
 -----------
 ```
-npm config set proxy = http://USER:PASSWORD@PROXY_URL:PROXY_PORT
-npm config set https-proxy = https://USER:PASSWORD@PROXY_URL:PROXY_PORT
+npm config set proxy=http://USER:PASSWORD@PROXY_URL:PROXY_PORT
+npm config set https-proxy=http://USER:PASSWORD@PROXY_URL:PROXY_PORT
 npm config list
 ```
 
