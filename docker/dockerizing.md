@@ -263,12 +263,11 @@ Todas las versiones que añadamos de nuestro repositorio se guardaran en `https:
 Para borrar alguna de las versiones tenemos un icono de papelera en la seccion `tags` y para que el repositorio sea privado o lo borremos por completo iremos a `settings`.
 
 
-Documentación interesante en:
-```
-https://medium.com/@itsromiljain/docker-setup-and-dockerize-an-application-5c24a4c8b428
-https://medium.com/@itsromiljain/dockerize-rest-spring-boot-application-with-hibernate-having-database-as-mysql-579abcc4edc4
-https://medium.com/@itsromiljain/docker-compose-file-to-run-rest-spring-boot-application-container-and-mysql-container-775f15d21416
-```
+Más documentacion
+-----------------
+* https://medium.com/@itsromiljain/docker-setup-and-dockerize-an-application-5c24a4c8b428
+* https://medium.com/@itsromiljain/dockerize-rest-spring-boot-application-with-hibernate-having-database-as-mysql-579abcc4edc4
+* https://medium.com/@itsromiljain/docker-compose-file-to-run-rest-spring-boot-application-container-and-mysql-container-775f15d21416
 
 
 
