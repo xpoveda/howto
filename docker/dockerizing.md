@@ -12,7 +12,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 hello-world         latest              f2a91732366c        4 months ago        1.85kB
 ```
 Sobre él podemos aplicarle un `tag`, que necesariamente tendrá que empezar por nuestro usuario de `Docker hub`.
-Tambien podemos añadirle mas etiquetas como versionados y demas con ":".
+Tambien podemos añadirle mas etiquetas como versionados y demas con ":", por ejemplo `xpoveda/hello-world:v1`.
 ```
 root@ubuntu:~# docker tag f2a91732366c xpoveda/hello-world
 
