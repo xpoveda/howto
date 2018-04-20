@@ -153,3 +153,8 @@ ubuntu@ip-172-31-33-239:~$ sudo cat /opt/tomcat/webapps/manager/META-INF/context
 
 Para realizar la comprobacion del acceso podemos hacerlo baja una web que no haya cacheado nuestro resultado (cache de chrome o cache de proxy), desde el telefono mobil o incluso con lynx atacando
 directamente a localhost (aunque ahi no veremos si el filtro por IP funciona o no).
+
+Siempre que apliquemos alguna modificacion en estos ficheros de configuracion reiniciaremos tomcat
+```
+sudo systemctl restart tomcat
+```
