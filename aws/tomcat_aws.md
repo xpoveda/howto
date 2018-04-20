@@ -2,11 +2,19 @@
 Instalación en aws de tomcat 8
 ==============================
 
-Instalación
------------
-Para la instalacion de tomcat8 seguiremos la guia de digital ocean que esta muy correcta pero que tiene algun pequeño error.
+Introducción
+------------
+Para la instalacion de `Tomcat 8` seguiremos la guia de digital ocean que esta muy correcta pero que tiene algun pequeño error.
 
 https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04
+
+En esta misma guía tambien tenemos al final de todo un enlace hacia como hacer que las conexiones de nuestra aplicación utilicen SSL mediante la utilizacion de un **proxy inverso** con `Apache` o `Nginx`.
+
+https://www.digitalocean.com/community/tutorials/how-to-encrypt-tomcat-8-connections-with-apache-or-nginx-on-ubuntu-16-04
+
+Instalación
+-----------
+Pero empecemos por el principio, vamos a instalar Tomcat.
 
 Nos aseguramos que está el sistema actualizado y con java.
 ```
