@@ -107,3 +107,9 @@ If you need the private key in PEM format then install OpenSSL and run the follo
 
 If you need the multiple certificates in PEM format or everything in PEM format then first convert your private key to PEM format above then follow these instructions.
 ```
+
+URLS interesantes
+-----------------
+https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04
+https://comodosslstore.com/ssltools/
+
