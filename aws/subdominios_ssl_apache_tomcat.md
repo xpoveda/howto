@@ -47,7 +47,7 @@ worker.ajp13_worker.lbfactor=1
 worker.loadbalancer.balance_workers=ajp13_worker
 ```
 
-Esto ultimo lo haremos con el uso adecuado de las rutas para capturar los recursos.
+Esto ultimo lo haremos con el uso adecuado de las rutas para capturar los recursos, en este caso todo lo que capturamos `/*` será redirigido al servidor de aplicaciones (Tomcat), pero podriamos hacer que parte de los recursos (por ejemplo las imagenes) las devuelva directamente Apache.
 ```
 root@ip-172-31-33-239:/etc/apache2/sites-available# more tomcat.xavierpoveda.com.conf
 <VirtualHost *:80>
