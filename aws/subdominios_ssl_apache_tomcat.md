@@ -32,6 +32,21 @@ Apache actua entonces como un proxy inverso que lo ke hace es capturar las petic
 De esta forma puede redirigir el contenido estatico hacia él y el dinamico hacia Tomcat mediante AJP13, resolviendose finalmente la 
 peticion mediante el hostname y el docbase donde estamos apuntando.
 
+Unicamente a nivel informativo veremos que el AJP13 lo que hace es redirigir la peticion del puerto donde estemos escuchando del virtualhost hacia el puerto 8009 y despues den el server.xml de Tomcat se redirigirá al 8443.
+```
+ubuntu@ip-172-31-33-239:~$ grep ajp13 /etc/libapache2-mod-jk/workers.properties
+# - An ajp13 worker that connects to localhost:8009
+worker.list=ajp13_worker
+#------ ajp13_worker WORKER DEFINITION ------------------------------
+# Defining a worker named ajp13_worker and of type ajp13
+worker.ajp13_worker.port=8009
+worker.ajp13_worker.host=localhost
+worker.ajp13_worker.type=ajp13
+worker.ajp13_worker.lbfactor=1
+#worker.ajp13_worker.cachesize
+worker.loadbalancer.balance_workers=ajp13_worker
+```
+
 Esto ultimo lo haremos con el uso adecuado de las rutas para capturar los recursos.
 ```
 root@ip-172-31-33-239:/etc/apache2/sites-available# more tomcat.xavierpoveda.com.conf
@@ -74,6 +89,8 @@ total 12
 ```
 
 Si es una aplicacion java, modificar `/opt/tomcat/conf/server.xml` apuntando en el elemento `<Host>` el subdominio al directorio donde tenemos la webapp.
+
+Aquí podemos ver como hemos definido que `tomcat.xavierpoveda.com` ataque al administrador de tomcat y que `hello.xavierpoveda.com` ataca a otro punto de enlace con las aplicaciones JAVA
 ```
 root@ip-172-31-33-239:/etc/apache2/ssl/tomcat.xavierpoveda.com# more /opt/tomcat/conf/server.xml
 <?xml version="1.0" encoding="UTF-8"?>
