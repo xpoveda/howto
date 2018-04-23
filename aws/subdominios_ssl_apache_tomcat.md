@@ -24,15 +24,15 @@ root@ip-172-31-33-239:/etc/apache2/ssl/tomcat.xavierpoveda.com# dig tomcat.xavie
 tomcat.xavierpoveda.com. 56     IN      A       18.184.116.30
 ```
 
-Creamos el fichero `tomcat.xavierpoveda.com.conf` en `/etc/apache2/sites-available` y definimos en los virtual host que `Apache` apunte a `Tomcat` 
-mediante el `ajp13_worker` que tenemos definido en el `worker.properties`.
+Creamos el fichero `tomcat.xavierpoveda.com.conf` en `/etc/apache2/sites-available` y definimos en los virtual host que `Apache` apunte a `Tomcat` gracias a la libreria de Apache `mod_jk`mediante el `ajp13_worker` que tenemos definido en el `worker.properties`.
 
-Mediante la libreria mod_jk realizamos el enlace de apache con tomcat mediante el uso de workers y el worker.properties.
-Apache actua entonces como un proxy inverso que lo ke hace es capturar las peticiones y redirigirlas. 
+Apache actua entonces como un `proxy inverso` que lo ke hace es capturar las peticiones y redirigirlas. 
 De esta forma puede redirigir el contenido estatico hacia él y el dinamico hacia Tomcat mediante AJP13, resolviendose finalmente la 
-peticion mediante el hostname y el docbase donde estamos apuntando.
+peticion mediante el `hostname` y el `docbase` donde estamos apuntando y que se configura en el `server.xml`.
 
-Unicamente a nivel informativo veremos que el AJP13 lo que hace es redirigir la peticion del puerto donde estemos escuchando del virtualhost hacia el puerto 8009 y despues den el server.xml de Tomcat se redirigirá al 8443.
+Unicamente a nivel informativo veremos que el AJP13 lo que hace es redirigir la peticion del puerto donde estemos escuchando del virtualhost hacia el puerto 8009 y despues en el server.xml de Tomcat se redirigirá al 8443.
+
+La utilización de un proxy inverso tiene muchas ventajas, en el enlace de digital ocean que tenemos al final del documento se relatan todas, entre ellas hacemos que el  uso de certificados SSL se haga siempre en Apache, eliminando la dificicultad de la java keystores propios de Tomcat.
 ```
 ubuntu@ip-172-31-33-239:~$ grep ajp13 /etc/libapache2-mod-jk/workers.properties
 # - An ajp13 worker that connects to localhost:8009
