@@ -182,3 +182,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-
 https://www.digitalocean.com/community/tutorials/how-to-encrypt-tomcat-8-connections-with-apache-or-nginx-on-ubuntu-16-04
 http://docs.lucee.org/guides/installing-lucee/lucee-server-adminstration-windows/utilizing-Tomcat-server-xml-file.html
 ```
+
+Y más (no utilizada aún) pero interesante
+------------------------------------------
+```
+https://rvdb.wordpress.com/2012/04/26/reverse-proxying-tomcat-webapps-behind-apache/
+```
