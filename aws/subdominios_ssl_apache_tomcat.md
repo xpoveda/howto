@@ -26,7 +26,7 @@ tomcat.xavierpoveda.com. 56     IN      A       18.184.116.30
 
 Creamos el fichero `tomcat.xavierpoveda.com.conf` en `/etc/apache2/sites-available` y definimos en los virtual host que `Apache` apunte a `Tomcat` gracias a la libreria de Apache `mod_jk`mediante el `ajp13_worker` que tenemos definido en el `worker.properties`.
 
-Apache actua entonces como un `proxy inverso` que lo ke hace es capturar las peticiones y redirigirlas. 
+Apache actua entonces como un `proxy inverso` que lo que hace es capturar las peticiones y redirigirlas. 
 De esta forma puede redirigir el contenido estatico hacia él y el dinamico hacia Tomcat mediante AJP13, resolviendose finalmente la 
 peticion mediante el `hostname` y el `docbase` donde estamos apuntando y que se configura en el `server.xml`.
 
