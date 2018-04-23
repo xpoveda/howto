@@ -6,7 +6,7 @@ Añadimos el `subdominio` a la `zona DNS` (route 53).
 En este caso hemos añadido el subdominio `tomcat.xavierpoveda.com` que apuntará al administrador de tomcat.
 Los registros `NS` y `SOA` son creados automaticamente por AWS.
 
-Podemos ver estos datos con el uso de la herramienta `dig` de ubuntu.
+Podemos ver esos datos que hemos creado a partir de la consola de amazon con el uso de la herramienta `dig` de ubuntu.
 
 ```
 root@ip-172-31-33-239:/etc/apache2/ssl/tomcat.xavierpoveda.com# dig xavierpoveda.com ANY
