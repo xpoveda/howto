@@ -4,7 +4,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-the-latest-mysql
 https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-16-04
 
 http://xavierpoveda.com/phpmyadmin/
-root/LADESIEMPRE
 
 Creamos usuario y bbdd asociada "test-oapc".
 ```
