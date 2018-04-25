@@ -94,20 +94,6 @@ sudo a2dissite 000-default.conf
 sudo service apache2 reload
 ```
 
-Información que nos ha dado el sslforfree.com
-```
-Installing your SSL Certificate
-The easiest way to is to install the SSL certificate is to contact your host. Most of the time they will install it for free. Follow this guide otherwise.
-
-If you have any issues with certain browsers like Android not recognizing the certificate then test your server SSL configuration on SSL Labs and fix any errors shown.
-
-If you get an error saying the certificate and key do not match then contact your host asking for the key type they accept. If they require the old RSA key type then download OpenSSL and execute the following command on the private key file: openssl rsa -in private.key -out private_rsa.key
-
-If you need the private key in PEM format then install OpenSSL and run the following on the private key file: "openssl rsa -in private.key -text > private.pem"
-
-If you need the multiple certificates in PEM format or everything in PEM format then first convert your private key to PEM format above then follow these instructions.
-```
-
 URLS interesantes
 -----------------
 https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04
