@@ -78,7 +78,6 @@ Recordar que se ha de generar con `sslforfree.com` un certificado para el subdom
 
 En este ejemplo tenemos tambien que las llamadas al puerto `80` redireccionan el mismo puerto `8090`.
 ```
-ubuntu@ip-172-31-33-239:/etc/apache2/sites-available$ more api.xavierpoveda.com.conf
 <VirtualHost *:80>
     ServerName   api.xavierpoveda.com
     ServerAlias  api.xavierpoveda.com
@@ -96,7 +95,8 @@ ubuntu@ip-172-31-33-239:/etc/apache2/sites-available$ more api.xavierpoveda.com.
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 
 </VirtualHost>
-
+```
+```
 <VirtualHost *:443>
     ServerName  api.xavierpoveda.com
     ServerAlias api.xavierpoveda.com
