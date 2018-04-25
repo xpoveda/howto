@@ -144,6 +144,12 @@ sudo nano /etc/vsftpd.conf
 sudo systemctl restart vsftpd
 ```
 
+Si queremos conectarnos contra una maquina EC2 de AWS contra la que solo podemos ir con certificados lo haremos con.
+
+https://stackoverflow.com/questions/16744863/connect-to-amazon-ec2-file-directory-using-filezilla-and-sftp?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+Recordar tambien añadir la conexion de filezilla por el proxy (si fuera necesario) y habilitar en el firewall del servidor el puerto 22 que es el del SFTP.
+
 Node y angular
 --------------
 
