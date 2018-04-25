@@ -148,7 +148,7 @@ Si queremos conectarnos contra una maquina EC2 de AWS contra la que solo podemos
 
 https://stackoverflow.com/questions/16744863/connect-to-amazon-ec2-file-directory-using-filezilla-and-sftp?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 
-Recordar tambien añadir la conexion de filezilla por el proxy (si fuera necesario) y habilitar en el firewall del servidor el puerto 22 que es el del SFTP.
+Recordar tambien añadir la conexion de filezilla por el proxy (si fuera necesario), habilitar en el firewall del servidor el puerto 22 que es el del SFTP, dar permisos a los ficheros cuando los queramos modificar com 777 (y despues dejar como 644) o añadir en la lista del vsftp los usuarios con los que nos queramos conectar.
 
 Node y angular
 --------------
