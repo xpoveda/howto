@@ -3,7 +3,7 @@ SPRINGBOOT AWS
 
 Instalación de mysql
 --------------------
-Instalamos `mysql` en nuestro VPS y securizamos `phpmyadmin` según los siguientes enlaces
+Instalamos `mysql` en nuestro VPS de cualquier hosting o EC2 de AWS y securizamos `phpmyadmin` según los siguientes enlaces
 
 https://www.digitalocean.com/community/tutorials/how-to-install-the-latest-mysql-on-ubuntu-16-04
 
