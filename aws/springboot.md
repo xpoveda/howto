@@ -121,6 +121,11 @@ ubuntu@ip-172-31-33-239:/etc/apache2/sites-available$ more api.xavierpoveda.com.
 
 Si queremos modificar el funcionamiento del puerto 80 podemos hacer que redireccione siempre al 443.
 
+Y siempre para reiniciar apache
+```
+sudo service apache2 reload
+```
+
 
 
 Con este añadido de subdominio lo que hacemos es que las peticiones que se harian mediante: `http://xavierpoveda.com:8090/api/login` ahora se hacen con `http://api.xavierpoveda.com/api/login`.
