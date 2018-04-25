@@ -144,19 +144,18 @@ sudo service apache2 reload
 
 Con este añadido de subdominio lo que hacemos es que las peticiones que se harian mediante: `http://xavierpoveda.com:8090/api/login` ahora se hacen con `http://api.xavierpoveda.com/api/login`.
 
-Pruebas con postman
--------------------
-
 Y con la escucha del puerto 8443 lo que hacemos es poder habilitar el https del API `https://api.xavierpoveda.com/api/login`
 
-Esta seria una `request` si vamos contra el endpoint `login`.
+Pruebas con postman
+-------------------
+Esta seria una `request` si vamos contra el endpoint `login` mediante la URL `https://api.xavierpoveda.com/api/login`.
 ```
 Content-Type:application/json
 Body raw application/json
 {"username":"admin","password":"123"}
 ```
 
-y esta una `response`con el token.
+y esta una `response`con el token que utilizaremos para autenticar cada una de las siguientes llamadas al API.
 ```
 {
     "access_token": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzcHJpbmdib290LW9hcGMtc2VydmVyIiwic3ViIjoiYWRtaW4iLCJhdWQiOiJ3ZWIiLCJpYXQiOjE1MjQ2NDk2NzYsImV4cCI6MTUyNDY1MDI3Nn0.Nu2ESXxrOJmIORJORkGQpc33VJI0j1JN5Q0FFOZkyXy1mE4nlpZPcOkjdTRUzSJZg4qv9RXdsSQExMGhNqW0Aw",
