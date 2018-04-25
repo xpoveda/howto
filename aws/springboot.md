@@ -63,7 +63,7 @@ server.port = 8090
 server.use-forward-headers = true
 ```
 
-Y habilitaremos en apache el modulo de `headers` para que podamos redireccionar las llamadas al puerto 443 contra el puerto 8090 que esta a la escucha, rescatando las cabeceras de seguridad.
+Y habilitaremos en apache el modulo de `headers` para que podamos redireccionar las llamadas al puerto `443` contra el puerto `8090` que esta a la escucha, rescatando las cabeceras de seguridad.
 
 Este cambio tambien implica modificar el fichero `aplication.properties` del springboot con la sentencia `server.use-forward-headers = true` asi como el `api.xavierpoveda.com.conf` en la sección del virtualhost que sirve el 443.
 
@@ -75,6 +75,8 @@ sudo service apache restart
 El fichero de configuracion queda como se muestra a continuacion.
 
 Recordar que se ha de generar con `sslforfree.com` un certificado para el subdominio `api`.
+
+En este ejemplo tenemos tambien que las llamadas al puerto `80` redireccionan el mismo puerto `8090`.
 ```
 ubuntu@ip-172-31-33-239:/etc/apache2/sites-available$ more api.xavierpoveda.com.conf
 <VirtualHost *:80>
@@ -116,6 +118,10 @@ ubuntu@ip-172-31-33-239:/etc/apache2/sites-available$ more api.xavierpoveda.com.
     SSLCertificateChainFile /etc/apache2/ssl/api.xavierpoveda.com/ca_bundle.crt
 </VirtualHost>
 ```
+
+Si queremos modificar el funcionamiento del puerto 80 podemos hacer que redireccione siempre al 443.
+
+
 
 Con este añadido de subdominio lo que hacemos es que las peticiones que se harian mediante: `http://xavierpoveda.com:8090/api/login` ahora se hacen con `http://api.xavierpoveda.com/api/login`.
 
