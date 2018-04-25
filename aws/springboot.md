@@ -10,7 +10,7 @@ Creamos usuario y bbdd asociada "test-oapc".
 ubuntu@ip-172-31-33-239:~/misproyectos/oapc-server$ mvn clean
 ubuntu@ip-172-31-33-239:~/misproyectos/oapc-server$ mvn install
 ubuntu@ip-172-31-33-239:~/misproyectos/oapc-server$ java -jar ./target/spring-boot-oapc-0.1.0-SNAPSHOT.jar
-
+```
 
 ```
 sudo a2enmod headers
@@ -38,6 +38,6 @@ Respuesta:
 https://api.xavierpoveda.com/api/whoami
 Content-Type:application/json
 Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzcHJpbmdib290LW9hcGMtc2VydmVyIiwic3ViIjoiYWRtaW4iLCJhdWQiOiJ3ZWIiLCJpYXQiOjE1MjQ2NDkzMTYsImV4cCI6MTUyNDY0OTkxNn0.ujZy-wdhcn8_4VVPhjTagpcwnYVWxOYG2Ek85cOIuYUQcTp_WEKa3qNJ51Xij55aM3OHVtOyucNLAWNSvIAbJA
-
+```
 
 
