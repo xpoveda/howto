@@ -33,12 +33,16 @@ La forma para autentificarnos es via registros DNS. Crea los registros DNS de ti
 Instala Apache con ssl activado
 -------------------------------
 
+```
 sudo apt-get update
 sudo apt-get install apache2
+```
 
 y habilitamos el ssl
+```
 
 sudo a2enmod ssl
+```
 
 Creamos los virtualhosts
 ------------------------
