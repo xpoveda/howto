@@ -1,7 +1,10 @@
 Frontend y aplicaciones móbiles
 ================================
 
+Introducción
+-------------
 [Angular](https://angular.io/) y [React](https://reactjs.org/) son los dos frameworks mas utilizados para la parte frontend. 
+
 Ambos utilizan [ecmascript6](http://es6-features.org), que es el actual estandar de [javascript](https://es.wikipedia.org/wiki/JavaScript), 
 dialecto de [ecmascript](https://www.ecma-international.org/publications/standards/Ecma-262.htm).
 
@@ -13,27 +16,28 @@ En el caso de Angular además utiliza la versión fuertemente tipada de ecmascri
 
 Aunque de momento lo descartamos, otro de los frameworks mas populares es [Vue.js](https://vuejs.org/), aqui tenemos una [excelente visión general sobre el mundo frontend y comparativa entre Angular vs React vs Vue.js](https://www.youtube.com/watch?v=REmltoDk07g).
 
+Desarrollo móbil: apps híbridas o nativas
+-----------------------------------------
 Para el desarrollo de aplicaciones mobiles podemos utilizar el [enfoque nativo, hibrido o web](https://nubeser.com/tipos-desarrollo-apps-moviles/).
 
 Si el enfoque es híbrido los frameworks que más se utilizan son [Ionic](https://ionicframework.com/) y [React native](https://facebook.github.io/react-native/), aquí tenemos una pequeña [comparativa de Ionic vs React native](https://labs.beeva.com/escogiendo-un-framework-para-desarrollo-h%C3%ADbrido-ionic-vs-react-native-e69406283549).
-`Ionic` se enlaza con el mundo de `Angular` y `React Native` con `React`. Aquí tenemos una opinión muy acertada sobre [que framework frontend elegir](https://www.youtube.com/watch?v=jTtab_rnvic&feature=youtu.be).
 
-Si el enfoque es nativo, en `Android` se suele realizar con [Kotlin](https://kotlinlang.org/) y en `Ios` con [Swift](https://www.apple.com/es/swift/).
+`Ionic` se enlaza con el mundo de `Angular` y `React Native` con `React`. 
+Aquí tenemos una opinión muy acertada sobre [que framework frontend elegir](https://www.youtube.com/watch?v=jTtab_rnvic&feature=youtu.be).
+
+Si el enfoque es nativo, en `Android` se suele desarrollar con [Kotlin](https://kotlinlang.org/) y en `Ios` con [Swift](https://www.apple.com/es/swift/).
 
 Interface de usuario
 ====================
-Además del clasico html5 o bootstrap podemos utilizar interfaces de usuario que ya han estado implementadas por terceros.
+Además del clasico `Html5` o `Bootstrap` podemos utilizar interfaces de usuario que ya han estado implementadas por el própio framework o por terceros.
 
-Para el interface de usuario se suele utilizar el `material design` que define cada plataforma.
+Para el interface de usuario se suele utilizar el `Material design` que define cada plataforma.
 
-Google implementó su especificación de [Material design](https://material.io/guidelines/) del cual tenemos implementación para angular con [Material design para angular](https://material.angular.io/).
+Se llama así porque google implementó su especificación de [Guía de material design](https://material.io/guidelines/) de la cual tenemos implementación particular para Angular con [Material design para angular](https://material.angular.io/) y para React infinidad de posibilidades con [React free UI](https://reactjs.org/community/ui-components.html).
 
-En el caso de React tenemos infinidad de posibles interfaces de usuario, [React free UI](https://reactjs.org/community/ui-components.html).
+Si implementamos con Ionic tenemos [Material design para ionic framework](https://ionicframework.com/docs/components/) por defecto, donde podemos ver en la propia documentación como queda el interfaz de usuario para `Android`, `Ios` y `Windows phone`.
 
-Si implementamos con Ionic, el framework viene con un [Material design para ionic framework](https://ionicframework.com/docs/components/) por defecto, que podemos ver como queda en `Android`, "Ios" y `Windows phone`.
-
-
-
+Con React native, podemos utilizar, por ejemplo, [Native base](https://nativebase.io/).
 
 Cursos youtube
 ==============
