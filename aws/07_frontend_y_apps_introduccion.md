@@ -1,8 +1,6 @@
 Frontend y aplicaciones móbiles
 ================================
 
-Para leer al final pero por su importancia lo pongo al principio de todo, aquí tenemos un **muy interesante** articulo donde se hace una introducción al [ecosistema javascript en 2018](https://www.imaginarycloud.com/blog/a-javascript-ecosystem-overview/). 
-
 [Angular](https://angular.io/) y [React](https://reactjs.org/) son los dos frameworks mas utilizados para la parte frontend. 
 Ambos utilizan [ecmascript6](http://es6-features.org), que es el actual estandar de [javascript](https://es.wikipedia.org/wiki/JavaScript), 
 dialecto de [ecmascript](https://www.ecma-international.org/publications/standards/Ecma-262.htm).
@@ -21,6 +19,21 @@ Si el enfoque es híbrido los frameworks que más se utilizan son [Ionic](https:
 `Ionic` se enlaza con el mundo de `Angular` y `React Native` con `React`. Aquí tenemos una opinión muy acertada sobre [que framework frontend elegir](https://www.youtube.com/watch?v=jTtab_rnvic&feature=youtu.be).
 
 Si el enfoque es nativo, en `Android` se suele realizar con [Kotlin](https://kotlinlang.org/) y en `Ios` con [Swift](https://www.apple.com/es/swift/).
+
+Interface de usuario
+====================
+Además del clasico html5 o bootstrap podemos utilizar interfaces de usuario que ya han estado implementadas por terceros.
+
+Para el interface de usuario se suele utilizar el `material design` que define cada plataforma.
+
+Google implementó su especificación de [Material design](https://material.io/guidelines/) del cual tenemos implementación para angular con [Material design para angular](https://material.angular.io/).
+
+En el caso de React tenemos infinidad de posibles interfaces de usuario, [React free UI](https://reactjs.org/community/ui-components.html).
+
+Si implementamos con Ionic, el framework viene con un [Material design para ionic framework](https://ionicframework.com/docs/components/) por defecto, que podemos ver como queda en `Android`, "Ios" y `Windows phone`.
+
+
+
 
 Cursos youtube
 ==============
@@ -44,6 +57,8 @@ Nativo
 
 Ecosistema
 ===========
+
+Aquí tenemos un **muy interesante** articulo donde se hace una introducción al [ecosistema javascript en 2018](https://www.imaginarycloud.com/blog/a-javascript-ecosystem-overview/). 
 
 Tecnologias relacionadas
 -------------------------
