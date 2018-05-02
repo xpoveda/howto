@@ -1,6 +1,8 @@
 Frontend y aplicaciones móbiles
 ================================
 
+Para leer al final pero por su importancia lo pongo al principio de todo, aquí tenemos un **muy interesante** articulo donde se hace una introducción al [ecosistema javascript en 2018](https://www.imaginarycloud.com/blog/a-javascript-ecosystem-overview/). 
+
 [Angular](https://angular.io/) y [React](https://reactjs.org/) son los dos frameworks mas utilizados para la parte frontend. 
 Ambos utilizan [ecmascript6](http://es6-features.org), que es el actual estandar de [javascript](https://es.wikipedia.org/wiki/JavaScript), 
 dialecto de [ecmascript](https://www.ecma-international.org/publications/standards/Ecma-262.htm).
@@ -40,9 +42,8 @@ Nativo
 * [Kotlin con android desde 0](https://www.youtube.com/playlist?list=PLfkODrpjGnhmzRSUC5L-M_BjkyavnSKXS)
 * [Ios 11 con swift 4](https://www.youtube.com/playlist?list=PLO2KKTlztSAREq51-8QVmmsxe1KGEshyP)
 
-Ecosistema javascript
-=====================
-Aquí tenemos un **muy interesante** articulo donde se hace una introducción al [ecosistema javascript en 2018](https://www.imaginarycloud.com/blog/a-javascript-ecosystem-overview/).
+Ecosistema
+===========
 
 Ecmascript6 y Typescript
 ------------------------
