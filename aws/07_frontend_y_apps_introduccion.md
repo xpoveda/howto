@@ -20,7 +20,7 @@ Para el desarrollo de aplicaciones mobiles podemos utilizar el [enfoque nativo, 
 Si el enfoque es híbrido los frameworks que más se utilizan son [Ionic](https://ionicframework.com/) y [React native](https://facebook.github.io/react-native/), aquí tenemos una pequeña [comparativa de Ionic vs React native](https://labs.beeva.com/escogiendo-un-framework-para-desarrollo-h%C3%ADbrido-ionic-vs-react-native-e69406283549).
 `Ionic` se enlaza con el mundo de `Angular` y `React Native` con `React`. Aquí tenemos una opinión muy acertada sobre [que framework frontend elegir](https://www.youtube.com/watch?v=jTtab_rnvic&feature=youtu.be).
 
-Si el enfoques es nativo, en `Android` se suele realizar con [Kotlin](https://kotlinlang.org/) y en `Ios` con [Swift](https://www.apple.com/es/swift/).
+Si el enfoque es nativo, en `Android` se suele realizar con [Kotlin](https://kotlinlang.org/) y en `Ios` con [Swift](https://www.apple.com/es/swift/).
 
 Cursos youtube
 ==============
@@ -45,12 +45,6 @@ Nativo
 Ecosistema
 ===========
 
-Ecmascript6 y Typescript
-------------------------
-* [Curso de ecmascript6](https://www.youtube.com/playlist?list=PLIddmSRJEJ0tYYrHQAAeTAmXzj36jxXoF)
-* [Typescript desde 0](https://www.youtube.com/watch?v=Xxqh0RoWxNc)
-* [Typescript a mano](https://www.youtube.com/playlist?list=PLCKuOXG0bPi2J-C0WPRZdHTG6pareIvV2)
-
 Tecnologias relacionadas
 -------------------------
 * [Node.js](https://nodejs.org/es/)
@@ -67,5 +61,11 @@ Cli's (constructores de esqueletos)
 * [Ionic cli](https://ionicframework.com/docs/cli/)
 * [Create react app](https://github.com/facebook/create-react-app)
 * [React native cli](https://facebook.github.io/react-native/docs/understanding-cli.html)
+
+Ecmascript6 y Typescript
+------------------------
+* [Curso de ecmascript6](https://www.youtube.com/playlist?list=PLIddmSRJEJ0tYYrHQAAeTAmXzj36jxXoF)
+* [Typescript desde 0](https://www.youtube.com/watch?v=Xxqh0RoWxNc)
+* [Typescript a mano](https://www.youtube.com/playlist?list=PLCKuOXG0bPi2J-C0WPRZdHTG6pareIvV2)
 
 
