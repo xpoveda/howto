@@ -55,8 +55,12 @@ Tecnologias relacionadas
 
 Cli's (constructores de esqueletos)
 ------------------------------------
+[Comparativa cli's](https://medium.jonasbandi.net/angular-vs-react-the-cli-d8af18063006) oficiales de Angular y React.
+
 * [Angular cli](https://cli.angular.io/)
 * [Yeoman](http://yeoman.io/)
 * [Ionic cli](https://ionicframework.com/docs/cli/)
+* [Create react app](https://github.com/facebook/create-react-app)
+* [React native cli](https://facebook.github.io/react-native/docs/understanding-cli.html)
 
 
