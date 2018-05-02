@@ -40,6 +40,10 @@ Nativo
 * [Kotlin con android desde 0](https://www.youtube.com/playlist?list=PLfkODrpjGnhmzRSUC5L-M_BjkyavnSKXS)
 * [Ios 11 con swift 4](https://www.youtube.com/playlist?list=PLO2KKTlztSAREq51-8QVmmsxe1KGEshyP)
 
+Ecosistema javascript
+=====================
+Aquí tenemos un **muy interesante** articulo donde se hace una introducción al [ecosistema javascript en 2018](https://www.imaginarycloud.com/blog/a-javascript-ecosystem-overview/).
+
 Ecmascript6 y Typescript
 ------------------------
 * [Curso de ecmascript6](https://www.youtube.com/playlist?list=PLIddmSRJEJ0tYYrHQAAeTAmXzj36jxXoF)
