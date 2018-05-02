@@ -9,7 +9,7 @@ dialecto de [ecmascript](https://www.ecma-international.org/publications/standar
 
 En el caso de Angular además utiliza la versión fuertemente tipada de ecmascript, denominada [typescript](https://www.typescriptlang.org/).
 
-Aunque de momento lo descartamos, otro de los frameworks mas populares es [Vue.js](https://vuejs.org/), aqui tenemos una [comparativa entre Angular vs React vs Vue.js](https://www.youtube.com/watch?v=REmltoDk07g).
+Aunque de momento lo descartamos, otro de los frameworks mas populares es [Vue.js](https://vuejs.org/), aqui tenemos una [excelente visión general sobre el mundo frontend y comparativa entre Angular vs React vs Vue.js](https://www.youtube.com/watch?v=REmltoDk07g).
 
 Para el desarrollo de aplicaciones mobiles podemos utilizar el [enfoque nativo, hibrido o web](https://nubeser.com/tipos-desarrollo-apps-moviles/).
 
