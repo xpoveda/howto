@@ -16,6 +16,8 @@ En el caso de Angular además utiliza la versión fuertemente tipada de ecmascri
 
 Aunque de momento lo descartamos, otro de los frameworks mas populares es [Vue.js](https://vuejs.org/), aqui tenemos una [excelente visión general sobre el mundo frontend y comparativa entre Angular vs React vs Vue.js](https://www.youtube.com/watch?v=REmltoDk07g).
 
+No nos olvidemos de [Flutter](https://codearmy.co/qu%C3%A9-es-flutter-y-por-qu%C3%A9-2018-puede-ser-su-a%C3%B1o-ed1c8d8ce4d3).
+
 Desarrollo móbil: apps híbridas o nativas
 -----------------------------------------
 Para el desarrollo de aplicaciones mobiles podemos utilizar el [enfoque nativo, hibrido o web](https://nubeser.com/tipos-desarrollo-apps-moviles/).
