@@ -16,6 +16,8 @@ Si el enfoque es híbrido los frameworks que más se utilizan son [Ionic](https:
 
 Si el enfoques es nativo, en `Android` se suele realizar con [Kotlin](https://kotlinlang.org/) y en `Ios` con [Swift](https://www.apple.com/es/swift/).
 
+Cursos youtube
+==============
 
 React and React native
 ----------------------
