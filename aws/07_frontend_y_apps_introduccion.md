@@ -31,9 +31,11 @@ Interface de usuario
 ====================
 Además del clasico `Html5` o `Bootstrap` podemos utilizar interfaces de usuario que ya han estado implementadas por el própio framework o por terceros.
 
-Para el interface de usuario se suele utilizar el `Material design` que define cada plataforma.
+Para el interface de usuario se suele utilizar el `Material design` que define cada plataforma, se llama así porque google implementó su especificación de [Guía de material design](https://material.io/guidelines/).
 
-Se llama así porque google implementó su especificación de [Guía de material design](https://material.io/guidelines/) de la cual tenemos implementación particular para Angular con [Material design para angular](https://material.angular.io/) y para React infinidad de posibilidades con [React free UI](https://reactjs.org/community/ui-components.html).
+Para Angular tenemos implementación directa del Material design con [Material design para angular](https://material.angular.io/), la fantástica [Primefaces ng](https://www.primefaces.org/primeng), [NgxBootstrap](https://valor-software.com/ngx-bootstrap/#/), etc.
+
+Para React infinidad de posibilidades con [React free UI](https://reactjs.org/community/ui-components.html).
 
 Si implementamos con Ionic tenemos [Material design para ionic framework](https://ionicframework.com/docs/components/) por defecto, donde podemos ver en la propia documentación como queda el interfaz de usuario para `Android`, `Ios` y `Windows phone`.
 
