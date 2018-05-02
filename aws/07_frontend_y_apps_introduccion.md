@@ -5,9 +5,11 @@ Frontend y aplicaciones móbiles
 Ambos utilizan [ecmascript6](http://es6-features.org), que es el actual estandar de [javascript](https://es.wikipedia.org/wiki/JavaScript), 
 dialecto de [ecmascript](https://www.ecma-international.org/publications/standards/Ecma-262.htm).
 
-[Entender que es javascript y su estandar actual ecmascript6 es importante](https://carlosazaustre.es/ecmascript-6-el-nuevo-estandar-de-javascript/). Nos podemos apoyar tambien en este articulo de medium sobre las [diferencias entre javascript y ecmascript](https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5).
+[Entender que es javascript y su estandar actual ecmascript6 es importante](https://carlosazaustre.es/ecmascript-6-el-nuevo-estandar-de-javascript/). Nos podemos apoyar tambien en este articulo de medium sobre las [diferencias entre javascript y ecmascript](https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5)
 
 En el caso de Angular además utiliza la versión fuertemente tipada de ecmascript, denominada [typescript](https://www.typescriptlang.org/).
+
+Aunque de momento lo descartamos, otro de los frameworks mas populares es [Vue.js](https://vuejs.org/), aqui tenemos una [comparativa entre Angular vs React vs Vue.js](https://www.youtube.com/watch?v=REmltoDk07g).
 
 Para el desarrollo de aplicaciones mobiles podemos utilizar el [enfoque nativo, hibrido o web](https://nubeser.com/tipos-desarrollo-apps-moviles/).
 
