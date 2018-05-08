@@ -4,7 +4,7 @@ Spring Cloud Netflix
 
 Introducción
 ------------
-Recordar que la web de referencia para todo lo referente a `microservicios` es la web de [Martin Fowler](https://martinfowler.com/microservices/).
+Recordar que la web de referencia para todo lo referente a `microservicios` es la web de [Martin Fowler](https://martinfowler.com/microservices/), aunque hay muchos escritos como este de [Kenny Bastani](http://www.kennybastani.com/2017/07/microservices-to-service-blocks-spring-cloud-function-aws-lambda.html).
 
 En el canal de youtube de `Paradigma digital` hay mucha informacion sobre estos temas.
 
