@@ -15,6 +15,8 @@ EXCELENTE Referencia tambien es la web de [overclockyourself](https://overclocky
 
 Y nuestro omnipresente ejemplo de [PiggyMetrics](https://github.com/sqshq/PiggyMetrics) donde podemos ver la arquitectura de spring cloud netflix dockerizada.
 
+Muy buena documentación de [Pivotal devops workshop](https://github.com/Pivotal-Field-Engineering/devops-workshop)
+
 Ejemplos de concepto
 --------------------
 En este repositorio de github tenemos un monton de pequeños ejemplos con la arquitectura de spring cloud netflix.
