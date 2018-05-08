@@ -4,7 +4,7 @@ Probando la arquitectura de Netflix
 
 En este repositorio de github tenemos un monton de pequeños ejemplos con la arquitectura de spring cloud netflix.
 
-[Ejemplos de Spring Cloud](http://https://github.com/ityouknow/spring-cloud-examples)
+[Ejemplos de Spring Cloud](https://github.com/ityouknow/spring-cloud-examples)
 
 Nos podemos bajar este por ejemplo que muestra la interacción de `Eureka` con `Zuul`, `Sleuth` y `Zipkin`.
 Para ello hemos de hacer un `git clone` del repositorio inicial y despues hacer desde spring tool suite  un `import maven project`
