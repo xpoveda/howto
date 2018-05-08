@@ -21,6 +21,8 @@ Muy buena documentación de [Pivotal devops workshop](https://github.com/Pivotal
 
 Ejemplos de concepto
 --------------------
+<img src="https://www.adictosaltrabajo.com/wp-content/uploads/2017/03/ModeloReferencia.png"/>
+
 En este repositorio de github tenemos un monton de pequeños ejemplos con la arquitectura de spring cloud netflix.
 
 [Ejemplos de Spring Cloud](https://github.com/ityouknow/spring-cloud-examples)
