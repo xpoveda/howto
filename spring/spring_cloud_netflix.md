@@ -11,7 +11,9 @@ En el canal de youtube de `Paradigma digital` hay mucha informacion sobre estos 
 * [Introducción a Arquitecturas basadas en Microservicios](https://www.youtube.com/watch?v=2SnWpn1pCOs)
 * [Arquitectura de microservicios de Spring-Cloud-NetFlix](https://www.youtube.com/watch?v=uWWKQhpGWPw)
 
-EXCELENTE Referencia tambien es la web de [overclockyourself](https://overclockyourself.wordpress.com/).
+EXCELENTE Referencia tambien es la web de [overclockyourself](https://overclockyourself.wordpress.com/2015/10/28/quien-es-quien-en-la-arquitectura-de-microservicios-de-spring-cloud-netflix/).
+
+INICIAL en [Spring cloud en Autentia](https://www.adictosaltrabajo.com/tutoriales/introduccion-a-la-gestion-de-servicios-web-con-spring-cloud-y-netflix-oss/)
 
 Y nuestro omnipresente ejemplo de [PiggyMetrics](https://github.com/sqshq/PiggyMetrics) donde podemos ver la arquitectura de spring cloud netflix dockerizada.
 
