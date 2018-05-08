@@ -1,14 +1,29 @@
 
-Probando la arquitectura de Netflix
-===================================
+Spring Cloud Netflix
+====================
 
+Introducción
+------------
+Recordar que la web de referencia para todo lo referente a `microservicios` es la web de [Martin Fowler](https://martinfowler.com/microservices/).
 
+En el canal de youtube de `Paradigma digital` hay mucha informacion sobre estos temas.
 
+* [Introducción a Arquitecturas basadas en Microservicios](https://www.youtube.com/watch?v=2SnWpn1pCOs)
+* [Arquitectura de microservicios de Spring-Cloud-NetFlix](https://www.youtube.com/watch?v=uWWKQhpGWPw)
+
+EXCELENTE Referencia tambien es la web de [overclockyourself](https://overclockyourself.wordpress.com/).
+
+Y nuestro omnipresente ejemplo de [PiggyMetrics](https://github.com/sqshq/PiggyMetrics) donde podemos ver la arquitectura de spring cloud netflix dockerizada.
+
+Ejemplos de concepto
+--------------------
 En este repositorio de github tenemos un monton de pequeños ejemplos con la arquitectura de spring cloud netflix.
 
 [Ejemplos de Spring Cloud](https://github.com/ityouknow/spring-cloud-examples)
 
 Nos podemos bajar este por ejemplo que muestra la interacción de [Zuul](https://github.com/Netflix/zuul), [Eureka](https://github.com/Netflix/eureka), [Sleuth](https://cloud.spring.io/spring-cloud-sleuth/) y [Zipkin](https://github.com/openzipkin/zipkin).
+
+Recordamos que la arquitectura de Netflix tambien esta compuesta por [Turbine](https://github.com/Netflix/Turbine), [Ribbon](https://github.com/Netflix/ribbon), [Spring cloud config](https://github.com/spring-cloud/spring-cloud-config) o su maravilloso [Hystrix](https://github.com/Netflix/Hystrix).
 
 Para ello hemos de hacer un `git clone https://github.com/ityouknow/spring-cloud-examples` despues hacer desde spring tool suite  un `import maven project` con la carpeta del proyecto concreto que nos interese. 
 
