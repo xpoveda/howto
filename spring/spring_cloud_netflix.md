@@ -33,6 +33,8 @@ Nos podemos bajar este por ejemplo que muestra la interacción de [Zuul](https:/
 
 Recordamos que la arquitectura de Netflix tambien esta compuesta por [Turbine](https://github.com/Netflix/Turbine), [Ribbon](https://github.com/Netflix/ribbon), [Spring cloud config](https://github.com/spring-cloud/spring-cloud-config) o su maravilloso [Hystrix](https://github.com/Netflix/Hystrix).
 
+[Aquí](https://www.youtube.com/watch?v=pmwoU1NmuiU) tenemos un ejemplo MUY SENCILLO en youtube donde se explican como realizar los `fallbacks` de Hystrix.
+
 Para ello hemos de hacer un `git clone https://github.com/ityouknow/spring-cloud-examples` despues hacer desde spring tool suite  un `import maven project` con la carpeta del proyecto concreto que nos interese. 
 
 En nuestro caso `C:\proyectos\spring-cloud-examples\spring-cloud-sleuth-zipkin`.
