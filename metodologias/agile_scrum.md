@@ -68,9 +68,11 @@ El sprint
 ---------
 En scrum es esencial la idea de `prototipo` y  `desarrollo incremental` como desarrollo y mejora del software en cada iteración (sprint).
 
-A los stackeholder siempre se les entrega el prototipo. Podemos ver las diferentes fases sobre las que ha pasado un determinado fuente con [git flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html).
+A los stackeholder siempre se les entregará un prototipo. Podemos ver las diferentes fases sobre las que ha pasado un determinado fuente con [git flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html).
 
-Al finalizar el sprint siempre `retrospectiva` de cosas bien y mal y a por el siguiente sprint.
+La reunión con los stakeholder's se denomina `spring review` y en ella se analizará el incremento terminado y se adaptará el `product backlog` si fuera necesario.
+
+Al finalizar esa reunión también se realizará una  `retrospectiva` o `sprint retrospective` con el equipo para analizar las cosas que se han hecho bien y mal para poder hacer mejor el siguiente sprint.
 
 En cada sprint es importante:
 
