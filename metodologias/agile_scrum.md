@@ -1,6 +1,6 @@
 Agile
 =====
-En el [manifiesto agil](http://agilemanifesto.org/iso/es/principles.html) tenemos los principios más importante sobre esta forma de trabajo.
+En el [manifiesto agil](http://agilemanifesto.org/iso/es/principles.html) tenemos los principios más importantes sobre esta forma de trabajo.
 
 Scrum
 =====
