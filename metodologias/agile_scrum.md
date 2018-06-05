@@ -37,7 +37,7 @@ La forma más ágil de avance es la `comunicación directa`.
 
 La primera reunión
 -------------------
-Iniciaremos el proyecto con una reunion de planificacion y reparto de tareas del backlog con un cálculo de horas.
+Al inicio de cada sprint, haremos un `sprint planning meeting` que consiste en una reunión para la planificacion y reparto de tareas del backlog.
 
 Ese cálculo lo haremos mediante `poker planning` que consiste en utilizar cartas con horas (o dificultades extrapolables a horas) 
 (sucesion fibonacci) para que todo el equipo, sin que el otro lo vea y a la vez, diga las horas que cree.
@@ -50,7 +50,7 @@ conocimiento para poderlo acometer.
 
 Las reuniones diarias
 ---------------------
-Reuniones mismo sitio, misma hora, de pie y sin apoyarse. Pago de prenda si se llega tarde.
+Se realizará una `sprint daily meeting` en el mismo sitio, misma hora, de pie y sin apoyarse. Pago de prenda si se llega tarde.
 
 Reunión diaria para hablar de que se ha hecho y los proximos pasos para detectar problemas en la planificación lo antes posible. 
 Conocimiento general del proyecto para todo el equipo.
