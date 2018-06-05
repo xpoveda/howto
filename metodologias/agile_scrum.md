@@ -19,6 +19,7 @@ Los actores principales son el `stackeholder`, el `product owner`, el `developer
 El product backlog y las user story
 ------------------------------------
 Partimos de un `product backlog` con las `user story` (yo como *X* voy a hacer *Y* para conseguir *Z*).
+
 El proceso será iterativo mediante una serie de `sprints` que congelarán las diferentes fases de desarrollo del software 
 durante un tiempo acotado. 
 
@@ -26,19 +27,24 @@ Al finalizar el sprint se evaluará lo que se ha hecho y lo que se va a hacer en
 
 Ideas más importantes
 ---------------------
-Se prima la *entrega de software* al cliente (continua mejora del prototipo inicial) en lugar de la generacion continua de documentación.
-La forma más ágil de avance es la *comunicación directa*.
-Éxito *siempre* a nivel de *equipo* y control para ayudarse, *nunca* para señalar con el dedo.
+Se prima la `entrega de software` al cliente (continua mejora del prototipo inicial) en lugar de la generacion continua de documentación.
+
+La forma más ágil de avance es la `comunicación directa`.
+
+Éxito siempre a nivel de `equipo`.
+
+`Control para ayudarse`, nunca para señalar con el dedo.
 
 La primera reunión
 -------------------
 Iniciaremos el proyecto con una reunion de planificacion y reparto de tareas del backlog con un cálculo de horas.
+
 Ese cálculo lo haremos mediante `poker planning` que consiste en utilizar cartas con horas (o dificultades extrapolables a horas) 
-(sucesion fibonacci) para que todo el equipo, sin que el otro lo vea y a la vez, diga las horas que cree. 
+(sucesion fibonacci) para que todo el equipo, sin que el otro lo vea y a la vez, diga las horas que cree.
+
 Despues los que menos o más horas han dicho exponen su opinión de su estimacion de forma ordenada y así se llega a un consenso.
 
-Poner siempre horas para hacer ejercicio de calculo y para dar tambien otras visiones en el proyecto si se tienen.
-
+Poner siempre horas para hacer ejercicio de cálculo y para dar tambien otras visiones en el proyecto si se tienen.
 Es importante asignar las distintas tareas que surgen de las historias de usuario al perfil de persona con el suficiente 
 conocimiento para poderlo acometer. 
 
@@ -46,7 +52,7 @@ Las reuniones diarias
 ---------------------
 Reuniones mismo sitio, misma hora, de pie y sin apoyarse. Pago de prenda si se llega tarde.
 
-Reunión diaria para hablar de que se ha hecho y los proximos pasos para detectar problemas con la planificación lo antes posible. 
+Reunión diaria para hablar de que se ha hecho y los proximos pasos para detectar problemas en la planificación lo antes posible. 
 Conocimiento general del proyecto para todo el equipo.
 
 Factores de corrección para calcular la `velocidad del equipo` (por ejemplo 275 horas reales son 400 estimadas, o al revés). 
@@ -54,27 +60,27 @@ Cálculo basado en la experiencia y tambien empíricamente con proyectos parecid
 
 El tablero de scrum
 --------------------
-Suele ser un tablero físico con columnas: user stories, to do, testing, finish.
-Aunque tambien se pueden utilizar tableros online.
+Suele ser un tablero físico con columnas: user stories, to do, testing, finish, aunque tambien se pueden utilizar tableros online.
 
 Postits con tareas y pequeñas marcas adhesivas en esos post-its con persona asignada.
 
 El sprint
 ---------
-En scrum es esencial la idea de prototipo, desarrollo incremental, sprints.
+En scrum es esencial la idea de `prototipo` y  `desarrollo incremental` como desarrollo y mejora del software en cada iteración (sprint).
 
-A los stackeholder siempre se les entrega el prototipo.
-Podemos ver las diferentes fases sobre las que ha pasado un determinado fuente con [git flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html).
+A los stackeholder siempre se les entrega el prototipo. Podemos ver las diferentes fases sobre las que ha pasado un determinado fuente con [git flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html).
 
-Al finalizar el sprint siempre *retrospectiva* de cosas bien y mal y a por el siguiente sprint.
+Al finalizar el sprint siempre `retrospectiva` de cosas bien y mal y a por el siguiente sprint.
 
-Scrum está diseñado para muchos desarrolladores haciendo 1 solo proyecto.
-Los sprints son muy exigentes, pero el equipo es quien te arropa.
-Se han de controlar las interrupciones ya que afectan a la velocidad del equipo.
+En cada sprint es importante:
+
+* Scrum está diseñado para muchos desarrolladores haciendo 1 solo proyecto.
+* Los sprints son muy exigentes, pero el equipo es quien te arropa.
+* Se han de controlar las interrupciones ya que afectan a la velocidad del equipo.
 
 Burn-down/up chart
 ------------------
-sprint burn-down chart: gráfico de tareas completadas (horas que quedan para acabar todas las tareas del sprint).
+Es el gráfico de tareas completadas, es decir, las horas que quedan para acabar todas las tareas del sprint.
 
 Se puede generar sin problema en [excel](https://www.extendoffice.com/documents/excel/2446-excel-burndown-chart-or-burn-up-chart.html).
 
@@ -82,7 +88,7 @@ Nuestros primeros proyectos con SCRUM
 -------------------------------------
 Se aprende haciendo.
 
-Scrum master ha de ser el ejemplo.
+El Scrum master ha de ser el ejemplo.
 
 Primer proyecto hacer todas las cosas que scrum pide y a partir de ahi la experiencia nos dirá con que nos quedamos y con que no.
 O quedarse con temas que scrum dice (tablero, burndown, etc).
