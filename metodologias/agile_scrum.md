@@ -60,6 +60,7 @@ Cálculo basado en la experiencia y tambien empíricamente con proyectos parecid
 
 El tablero de scrum
 --------------------
+Implmentará el `sprint backlog` o las tareas a realizar en el sprint en curso.
 Suele ser un tablero físico con columnas: user stories, to do, testing, finish, aunque tambien se pueden utilizar tableros online.
 
 Postits con tareas y pequeñas marcas adhesivas en esos post-its con persona asignada.
