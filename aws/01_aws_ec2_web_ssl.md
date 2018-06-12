@@ -107,6 +107,7 @@ Acceso via putty
 ----------------
 
 El acceso via putty será mediante SSH atacando el usuario@dns que aparece en al apartado de propiedades de la EC2.
+
 En el caso de ejemplo de una de las VM que hemos creado seria: 
 
 ubuntu@ec2-52-57-103-104.eu-central-1.compute.amazonaws.com
