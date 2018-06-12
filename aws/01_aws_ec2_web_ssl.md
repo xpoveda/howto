@@ -107,7 +107,9 @@ Acceso via putty
 ----------------
 
 El acceso via putty será mediante SSH atacando el usuario@dns que aparece en al apartado de propiedades de la EC2.
-En el caso de ejemplo de una de las VM que hemos creado seria: ubuntu@ec2-52-57-103-104.eu-central-1.compute.amazonaws.com
+En el caso de ejemplo de una de las VM que hemos creado seria: 
+
+ubuntu@ec2-52-57-103-104.eu-central-1.compute.amazonaws.com
 
 Recordar que en el apartado `Connection\SSH\Auth` hemos de utilizar la clave privada (*.ppk) que hemos generado con el puttygen a partir de la clave publica que nos ha dado AMAZON cuando hemos creado la maquina.
 
