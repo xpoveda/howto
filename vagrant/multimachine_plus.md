@@ -2,11 +2,11 @@
 
 Instalando vagrant y virtualbox
 -------------------------------
-Antes de nada hay que instalar `vagrant` y `virtualbox` en windows.
+Antes de nada hay que instalar `vagrant` y `virtualbox` según se indica en https://github.com/xpoveda/howto/blob/master/vagrant/vagrant.md.
 
 Añadiendo el plugin para poder ir a traves de proxy
 ---------------------------------------------------
-Mediante la instalación de este plugin `http://tmatilai.github.io/vagrant-proxyconf/` es posible trabajar a través de proxy corporativo, sin tener que tocar nada en la configuración de las maquinas virtuales, unicamente modificando el `Vagrantfile`.
+Mediante la instalación de este plugin http://tmatilai.github.io/vagrant-proxyconf/ es posible trabajar a través de proxy corporativo, sin tener que tocar nada en la configuración de las maquinas virtuales, unicamente modificando el `Vagrantfile`.
 
 Cómo funciona Vagrant
 ----------------------
