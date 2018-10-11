@@ -42,7 +42,7 @@ Este fichero crea una configuración de 2 maquinas virtuales dentro de una red p
 
 Además de que son accesibles entre si pueden ser atacadas desde windows desde un determinado puerto (en este caso el 8080 que redirigirá hacia el puerto 80 en el que tendremos instalado un apache.
 
-En este ejemplo la red que se configurará sera una 10.10.1.0/24
+En este ejemplo la red que se configurará sera una 10.10.1.0/24 y a cada una de las maquinas ademas del interface "lo" se le añadiran otros dos interfaces, uno para la conectividad con internet y otro para la conectividad dentro de la red privada.
 
 ```
 # -*- mode: ruby -*-
