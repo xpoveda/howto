@@ -19,7 +19,7 @@ Cómo funciona Vagrant
 Vagrant nos ayuda a construir un entorno virtualizado a partir de la definición del fichero de configuración `Vagrantfile`.
 Para ello hará uso de imagenes de maquinas virtuales (a los que llamaremos boxes) que estan en la propia web de Hashicorp y de las sentencias del fichero de configuracion. Con todo esto podremos crear redes privadas y publicas virtuales, y a partir de aquí clusteres para constituir un primer entorno de desarrollo para nuestra aplicación.
 
-Los boxes se bajarána automáticamente la primera vez que intentemos ejecutar el fichero de configuración.
+Los boxes se bajarán automáticamente la primera vez que intentemos ejecutar el fichero de configuración.
 Sino tambien los podemos bajar directamente con, por ejemplo, `vagrant box add bento/ubuntu-16.04`. Con `vagrant box list` veremos los boxes que tenemos instalados.
 
 Virtualbox
