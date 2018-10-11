@@ -40,9 +40,9 @@ Vagrantfile
 -----------
 Este fichero crea una configuración de 2 maquinas virtuales dentro de una red privada.
 
-Además de que son accesibles entre si pueden ser atacadas desde windows desde un determinado puerto (en este caso el 8080 que redirigirá hacia el puerto 80 en el que tendremos instalado un apache.
+Además de que son accesibles entre si pueden ser atacadas desde windows desde un determinado puerto (en este caso el 8080 que redirigirá hacia el puerto 80 en el que tendremos instalado un apache si se habilita la linea comentada).
 
-En este ejemplo la red que se configurará sera una 10.10.1.0/24 y a cada una de las maquinas ademas del interface "lo" se le añadiran otros dos interfaces, uno para la conectividad con internet y otro para la conectividad dentro de la red privada.
+En este ejemplo la red que se configurará sera una 10.0.1.0/24 y a cada una de las maquinas ademas del interface "lo" se le añadiran otros dos interfaces, uno para la conectividad con internet y otro para la conectividad dentro de la red privada.
 
 ```
 # -*- mode: ruby -*-
@@ -52,27 +52,29 @@ BOX_IMAGE = "bento/ubuntu-16.04"
 
 Vagrant.configure("2") do |config|
 
-  config.vm.define "ma1" do |subconfig|
-      subconfig.vm.box = BOX_IMAGE
-      subconfig.vm.hostname = "ma1"
-      subconfig.vm.network :private_network, ip: "10.10.1.1"
-
-      #host es windows, guest es linux
-      subconfig.vm.network :forwarded_port, host: 8080, guest: 80, auto_correct: true
+  config.vm.define "master" do |master|
+      master.vm.box = BOX_IMAGE
+      master.vm.hostname = "master"
+      master.vm.network :private_network, ip: "10.0.1.50"
+      #master.vm.network :forwarded_port, host: 8080, guest: 80, auto_correct: true
   end
 
-  config.vm.define "ma2" do |subconfig|
-      subconfig.vm.box = BOX_IMAGE
-      subconfig.vm.hostname = "ma2"
-      subconfig.vm.network :private_network, ip: "10.10.1.2"
-      subconfig.vm.network :forwarded_port, host: 8081, guest: 80, auto_correct: true
+  config.vm.define "node1" do |node1|
+      node1.vm.box = BOX_IMAGE
+      node1.vm.hostname = "node1"
+      node1.vm.network :private_network, ip: "10.0.1.51"
   end  
-
-
+  
+  config.vm.define "node2" do |node2|
+      node2.vm.box = BOX_IMAGE
+      node2.vm.hostname = "node1"
+      node2.vm.network :private_network, ip: "10.0.1.52"
+  end  
+   
   if Vagrant.has_plugin?("vagrant-proxyconf")
-    config.proxy.http     = "http://PROXY:PORT
+    config.proxy.http     = "http://PROXY:PORT"
     config.proxy.https    = "http://PROXY:PORT"
-    config.proxy.no_proxy = "localhost,127.0.0.1,10.10.1.1,10.10.1.2"
+    config.proxy.no_proxy = "localhost,127.0.0.1,10.0.1.50,10.0.1.51,10.0.1.52"
   end
   	
   # Install avahi on all machines 
@@ -83,7 +85,7 @@ end
 ```
 Añadiendo la regla en el proxy de windows
 -----------------------------------------
-En el proxy de windows hay que indicar que NO coja los elementos 10.10.1.1 ni 10.10.1.2, ya que forman parte de nuestro sistema local.
+En el proxy de windows hay que indicar que NO coja el elemento 10.0.1.50 ya que forma parte de nuestro sistema local.
 
 Instalando apache y lynx en linux
 ---------------------------------
@@ -99,39 +101,39 @@ Comprobando la conectividad con nc
 ----------------------------------
 La herramienta `nc` de linux nos permite comprobar la conectividad entre maquinas de una forma muy poderosa https://linux.die.net/man/1/nc.
 
-Nos ponemos a escuchar en el puerto 1234 en la maquina `ma2`
+Nos ponemos a escuchar en el puerto 1234 en la maquina `node1`
 ```
-#root@ma2:~# nc -l 1234
+#root@node1:~# nc -l 1234
 
 ```
 
-En la maquina `ma1` hemos escrito un fichero y se lo enviamos a la maquina `ma2`.
+En la maquina `master` hemos escrito un fichero y se lo enviamos a la maquina `node1`.
 ```
-root@ma1:~# nc 10.10.1.2 1234 < hola.txt
+root@master:~# nc 10.0.1.51 1234 < hola.txt
 ```
 
-El resultado es que, como hay conectividad, llegará el contenido del fichero a la maquina `ma2`
+El resultado es que, como hay conectividad, llegará el contenido del fichero a la maquina `node1`
 ```
-root@ma2:~# nc -l 1234
+root@node1:~# nc -l 1234
 
 hola
 ```
 
 Más comandos para comprobar la conectividad
 ```
-ping 10.10.1.1
+ping 10.0.1.50
 
 dig sudandomarketing.com
 
 telnet google.com 80
 
-telnet 10.10.1.1 22
-Trying 10.10.1.1...
-Connected to 10.10.1.1.
+telnet 10.0.1.50 22
+Trying 10.0.1.50...
+Connected to 10.0.1.50.
 Escape character is '^]'.
 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.4
 ```
 
 Accediendo via http al servidor
 -------------------------------
-Accedemos desde el navegador de windows con `http://10.10.1.1:8080` o desde ssh de cada una de las maquinas con `lynx http://10.10.1.1` o `curl http://10.10.1.1`.
+Accedemos desde el navegador de windows con `http://10.0.1.50` o desde ssh de cada una de las maquinas con `lynx http://10.0.1.50` o `curl http://10.0.1.50`. Probar con el puerto 8080 si hay problemas y habilitar la linea comentada del Vagrantfile.
