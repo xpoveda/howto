@@ -28,7 +28,7 @@ Vagrant se basa en la ejecución de maquinas virtuales en múltiples sistemas, u
 
 A continuación haremos un `Machine + add` en Virtuabox localizando el fichero `*.box` donde está situado la máquina. Habitualmente estará en `C:\Users\XXXXXXXX\VirtualBox VMs`.
 
-Para eliminar una maquina de virtualbox (pero no del sistema) haremos un "delete machine` pero contestaremos con un `remove only`.
+Para eliminar una maquina de virtualbox (pero no del sistema) haremos un `delete machine` pero contestaremos con un `remove only`.
 
 Instalando una maquina
 -----------------------
