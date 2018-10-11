@@ -11,6 +11,8 @@ Mediante la instalación de este plugin http://tmatilai.github.io/vagrant-proxyc
 
 Si existe cualquier otro problema que nos indique que es un problema de proxy podemos visitar https://github.com/xpoveda/howto/tree/master/proxy.
 
+Para deshabilitar el proxy haremos un `vagrant reload` despues de haber comentado la parte del proxy.
+
 
 Cómo funciona Vagrant
 ----------------------
