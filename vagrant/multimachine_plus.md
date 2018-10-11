@@ -44,7 +44,7 @@ Vamos a `c:\Hashicorp\Vagrant\bin` y ahi haremos un `vagrant init` lo cual nos c
 
 Vagrantfile
 -----------
-Este fichero crea una configuración de 2 maquinas virtuales dentro de una red privada.
+Este fichero crea una configuración de 3 maquinas virtuales dentro de una red privada.
 
 Además de que son accesibles entre si pueden ser atacadas desde windows desde un determinado puerto (en este caso el 8080 que redirigirá hacia el puerto 80 en el que tendremos instalado un apache si se habilita la linea comentada).
 
