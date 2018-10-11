@@ -24,7 +24,7 @@ Sino tambien los podemos bajar directamente con, por ejemplo, `vagrant box add b
 
 Virtualbox
 ----------
-Vagrant se basa en la ejecución de maquinas virtuales en múltiples sistemas, uno de ellos es `Virtualbox`, que será con el que trabajaremos aquí. Se hace notar que el refresco en Virtualbox no es demasiado bueno en la versión de windows por lo que la forma de poder trabajar con las maquinas virtuales creadas desde Virtualbox será que estén paradas primero de todo en vagrant con el comando `vagrant halt nombre_maquina` y comprobandolo posteriormente con `vagrant status`. Si quisieramos destruir una maquina utilizariamos `vagrant destroy VM`.
+Vagrant se basa en la ejecución de maquinas virtuales en múltiples sistemas, uno de ellos es `Virtualbox`, que será con el que trabajaremos aquí. Se hace notar que el refresco en Virtualbox no es demasiado bueno en la versión de windows por lo que la forma de poder trabajar con las maquinas virtuales creadas desde Virtualbox será que estén paradas primero de todo en vagrant con el comando `vagrant halt nombre_maquina` y comprobandolo posteriormente con `vagrant status`. Si quisieramos destruir una maquina utilizariamos `vagrant destroy nombre_maquina`.
 
 A continuación haremos un `Machine + add` en Virtuabox localizando el fichero `*.box` donde está situado la máquina. Habitualmente estará en `C:\Users\XXXXXXXX\VirtualBox VMs`.
 
