@@ -9,6 +9,8 @@ Añadiendo el plugin para poder ir a traves de proxy
 ---------------------------------------------------
 Mediante la instalación de este plugin http://tmatilai.github.io/vagrant-proxyconf/ es posible trabajar a través de proxy corporativo, sin tener que tocar nada en la configuración de las maquinas virtuales, unicamente modificando el `Vagrantfile`. Con esto tendremos modificación a nivel de proxy de lo habitual para poder bajarnos paquetes con `apt-get` o navegar con `lynx`.
 
+Se hace notar que no funcionan los wildcards si queremos indicar un rango de ips con la variable de entorno `no_proxy`.
+
 Si existe cualquier otro problema que nos indique que es un problema de proxy podemos visitar https://github.com/xpoveda/howto/tree/master/proxy.
 
 Para deshabilitar el proxy haremos un `vagrant reload` despues de haber comentado la parte del proxy.
