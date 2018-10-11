@@ -15,6 +15,12 @@ Si existe cualquier otro problema que nos indique que es un problema de proxy po
 
 Para deshabilitar el proxy haremos un `vagrant reload` despues de haber comentado la parte del proxy.
 
+Añadiendo el plugin para actualizar /etc/hosts automaticamente
+---------------------------------------------------------------
+```
+c:\HashiCorp\Vagrant\bin>vagrant plugin install vagrant-hostsupdater
+```
+
 
 Cómo funciona Vagrant
 ----------------------
