@@ -147,3 +147,14 @@ SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.4
 Accediendo via http al servidor
 -------------------------------
 Accedemos desde el navegador de windows con `http://10.0.1.50` o desde ssh de cada una de las maquinas con `lynx http://10.0.1.50` o `curl http://10.0.1.50`. Probar con el puerto 8080 si hay problemas y habilitar la linea comentada del Vagrantfile.
+
+Como funciona en MAC
+--------------------
+Instalar la ultima version de vagrant y la virtualbox.
+Modificar el box por `ubuntu/xenial`.
+```
+vagrant status
+vagrant ssh master
+vagrant ssh node1
+vagrant ssh node2
+```
