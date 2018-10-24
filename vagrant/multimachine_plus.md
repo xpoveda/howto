@@ -17,6 +17,11 @@ Se hace notar que no funcionan los wildcards si queremos indicar un rango de ips
 
 Si existe cualquier otro problema que nos indique que es un problema de proxy podemos visitar https://github.com/xpoveda/howto/tree/master/proxy.
 
+Mas cosas para ir por proxy
+---------------------------
+Asegurarse que las variables de entorno HTTP_PROXY y HTTPS_PROXY estan fijadas en windows.
+Tambien la variable de proxy de docker que se comenta en el apartado de `proxy` de la carpeta de `HOWTO` de este github.
+
 Deshabilitando el proxy
 -----------------------
 Para deshabilitar el proxy haremos un `vagrant reload` despues de haber eliminado las variables de entorno de windows de proxy y puesto a espacios la parte del proxy en el `Vagrantfile`
@@ -27,6 +32,7 @@ Para deshabilitar el proxy haremos un `vagrant reload` despues de haber eliminad
     config.proxy.no_proxy = ""
   end
 ```
+Eliminar el fichero .conf de docker para tener habilitado el proxy.
 
 Añadiendo el plugin para actualizar /etc/hosts automaticamente
 ---------------------------------------------------------------
