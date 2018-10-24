@@ -17,11 +17,15 @@ Se hace notar que no funcionan los wildcards si queremos indicar un rango de ips
 
 Si existe cualquier otro problema que nos indique que es un problema de proxy podemos visitar https://github.com/xpoveda/howto/tree/master/proxy.
 
-Para deshabilitar el proxy haremos un `vagrant reload` despues de haber comentado la parte del proxy y haberlo desinstalado.
+Deshabilitando el proxy
+-----------------------
+Para deshabilitar el proxy haremos un `vagrant reload` despues de haber eliminado las variables de entorno de windows de proxy y puesto a espacios la parte del proxy en el `Vagrantfile`
 ```
-c:\HashiCorp\Vagrant\bin>vagrant plugin uninstall vagrant-proxyconf
-Uninstalling the 'vagrant-proxyconf' plugin...
-Successfully uninstalled vagrant-proxyconf-1.5.2
+  if Vagrant.has_plugin?("vagrant-proxyconf")
+    config.proxy.http     = ""
+    config.proxy.https    = ""
+    config.proxy.no_proxy = ""
+  end
 ```
 
 Añadiendo el plugin para actualizar /etc/hosts automaticamente
