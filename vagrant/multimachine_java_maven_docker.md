@@ -1,6 +1,6 @@
 
-Multi-máquina con java y docker
-==============================
+Multi-máquina con java, maven y docker
+======================================
 Esta es la configuracion minima para poder trabajar con java, maven y docker.
 
 Si estamos trabajando con vmware tenemos que habilitar el `ssh`. Si lo hacemos con vagrant no hace falta ya que siempre se va contra localhost
