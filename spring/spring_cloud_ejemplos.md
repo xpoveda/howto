@@ -11,6 +11,11 @@ piggymetrics
 
 https://github.com/sqshq/PiggyMetrics y su gitter ya que no se le pueden añadir issues https://gitter.im/sqshq/PiggyMetrics
 
+spring-cloud-samples
+--------------------
+
+https://github.com/spring-cloud-samples
+
 spring-cloud-examples
 ---------------------
 
