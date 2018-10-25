@@ -1,12 +1,16 @@
 Trabajando con spring-cloud-examples
 ====================================
-Nos descargamos el repositorio
+En la pagina https://github.com/ityouknow/spring-cloud-examples tenemos los repositorios y acceso a la documentacion en formato
+web donde se explica cada uno de ellos. Esta en chino por lo que tendremos que hacer un traducir pagina con chrome.
+
+Nos descargamos el repositoriO
 ```
 git clone https://github.com/ityouknow/spring-cloud-examples
 ```
-Instalamos uno de ellos 
+Instalamos uno de ellos, por ejemplo `spring-cloud-sleuth-zipkin` y podemos ver la documentacion.
 ```
 ubuntu@ubuntu:~/proyectos/spring-cloud-examples/spring-cloud-sleuth-zipkin$ mvn install
+http://www.ityouknow.com/springcloud/2018/02/02/spring-cloud-sleuth-zipkin.html
 ```
 Y buscamos los jar para ver que elementos ejecutar con `java -jar`
 ```
@@ -22,9 +26,11 @@ Desde la maquina host podemos lanzar los diferentes elementos, en este caso un `
 traves de `zuul` y se tracea con `zipkin`. Cuando levantamos zuul en el `application.yaml` del directorio `resources` tenemos la
 configuracion de donde esta el cliente eureka.
 
+```
 http://192.168.18.130:8761/
 http://192.168.18.130:9001/hello?name=xavier
 http://192.168.18.130:9000/zipkin/
+```
 
 ```
 vagrant@master:~/proyectos/spring-cloud-examples/spring-cloud-sleuth-zipkin/spring-cloud-zuul/src/main/resources$ more application.yml
