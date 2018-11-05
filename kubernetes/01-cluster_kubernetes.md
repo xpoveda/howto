@@ -5,9 +5,7 @@ Creando nuestra infraestructura en Azure
 * Creamos la clave publicas con puttygen y tambien la privada con passphrase
 * Nos las guardamos las dos
 
-Creamos n-maquinas con el sistema operativo Centos.
-
-* Creamos la maquina
+Creamos n-maquinas con el sistema operativo Centos y para cada una de ellas
 * Creamos el dns
 * Habilitamos el autoshutdown
 * Accedemos a la maquina via putty
