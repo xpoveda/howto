@@ -128,3 +128,40 @@ Events:
   Normal  Created    14m   kubelet, node2     Created container
   Normal  Started    14m   kubelet, node2     Started container
 ```
+
+Ver todo lo que hay levantado
+-----------------------------
+```
+[root@master deployments]# kubectl get all --namespace=kube-system
+NAME                                        READY   STATUS    RESTARTS   AGE
+pod/coredns-576cbf47c7-hbc5c                1/1     Running   6          6d1h
+pod/coredns-576cbf47c7-hhm2l                1/1     Running   6          6d1h
+pod/etcd-master                             1/1     Running   7          6d1h
+pod/kube-apiserver-master                   1/1     Running   7          6d1h
+pod/kube-controller-manager-master          1/1     Running   11         6d1h
+pod/kube-proxy-4lbb5                        1/1     Running   3          6d1h
+pod/kube-proxy-4rp9f                        1/1     Running   3          6d
+pod/kube-proxy-s6ltj                        1/1     Running   7          6d1h
+pod/kube-scheduler-master                   1/1     Running   11         6d1h
+pod/kubernetes-dashboard-77fd78f978-nwfxk   1/1     Running   3          6d
+pod/weave-net-56bdj                         2/2     Running   19         6d1h
+pod/weave-net-b8sfj                         2/2     Running   8          6d1h
+pod/weave-net-c2t5d                         2/2     Running   9          6d
+
+NAME                           TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)         AGE
+service/kube-dns               ClusterIP   10.96.0.10     <none>        53/UDP,53/TCP   6d1h
+service/kubernetes-dashboard   ClusterIP   10.102.72.18   <none>        443/TCP         6d
+
+NAME                        DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+daemonset.apps/kube-proxy   3         3         3       3            3           <none>          6d1h
+daemonset.apps/weave-net    3         3         3       3            3           <none>          6d1h
+
+NAME                                   DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/coredns                2         2         2            2           6d1h
+deployment.apps/kubernetes-dashboard   1         1         1            1           6d
+
+NAME                                              DESIRED   CURRENT   READY   AGE
+replicaset.apps/coredns-576cbf47c7                2         2         2       6d1h
+replicaset.apps/kubernetes-dashboard-77fd78f978   1         1         1       6d
+
+```
