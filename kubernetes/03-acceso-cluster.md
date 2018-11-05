@@ -1,6 +1,11 @@
 Acceso al cluster de kubernetes
 ===============================
 
+* Acceso a los pods internamente via IP interna dinamica
+* Acceso a los servicios internamente via IP cluster interna
+* Acceso externo via IP externa estatica y nodeport
+* Acceso a los servicios vía DNS
+
 Acceso a los pods internamente via IP interna dinamica
 -------------------------------------------------------
 Creamos un pod con una imagen que nos devuelve el hostname donde se está ejecutando.
@@ -189,8 +194,8 @@ node2:  curl http://************:31704 && echo "\n"
 {"hostname":"nginx-deployment-5dd98684f6-sjf4f","time":"2018-11-02T13:02:40Z","language":"Scala"}\n
 ```
 
-Acceso vía DNS
---------------
+Acceso a los servicios vía DNS
+------------------------------
 Cuando definimos un servicio kubernetes habilita automaticamente un servicio de dns que hace que haya resolucion de nombres de ese servicio. Es decir tenemos un "service discovery" automaticamente habilitado en kubernetes.
 
 De esta forma hay visililidad entre los pods de un mismo cluster.
