@@ -66,16 +66,16 @@ Events:
   Type    Reason             Age   From                   Message
   ----    ------             ----  ----                   -------
   Normal  ScalingReplicaSet  73s   deployment-controller  Scaled up replica set nginx-deployment-5c689d88bb to 2
-
-
+```
+Y sus pods asociados
+```
 [root@master ~]# kubectl get pods -l app=nginx
 NAME                                READY   STATUS    RESTARTS   AGE
 nginx-deployment-5c689d88bb-2c9ch   1/1     Running   0          9m1s
 nginx-deployment-5c689d88bb-bpswp   1/1     Running   0          9m1s
 ```
 
-El deployment puede definir pods, servicios, controladores, etc. 
-En este caso tenemos un pod que se ha replicado 2 veces dentro del cluster de kubernetes.
+Para ver una replica en concreto
 ```
 [root@master ~]# kubectl describe pod nginx-deployment-5c689d88bb-2c9ch
 Name:               nginx-deployment-5c689d88bb-2c9ch
