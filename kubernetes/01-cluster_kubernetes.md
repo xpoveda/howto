@@ -2,7 +2,7 @@ Creando nuestra infraestructura en Azure
 ========================================
 
 * Creamos el resource manager
-* Creamos la clave publicas con puttygen y tambien la privada con passphrase
+* Creamos la clave publica RSA-2048 con puttygen y tambien la privada con passphrase
 * Nos las guardamos las dos
 
 Creamos n-maquinas con el sistema operativo Centos y para cada una de ellas
