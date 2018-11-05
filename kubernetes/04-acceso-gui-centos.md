@@ -23,3 +23,7 @@ https://www.tecmint.com/install-and-configure-vnc-server-in-centos-7/
 vía XMING
 ---------
 
+
+Dashboard
+---------
+https://8gwifi.org/docs/kube-dash.jsp
