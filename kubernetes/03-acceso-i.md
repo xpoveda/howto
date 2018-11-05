@@ -1,5 +1,5 @@
-Acceso al cluster dek kubernetes
-================================
+Acceso al cluster de kubernetes
+===============================
 
 Acceso a los pods internamente
 ------------------------------
