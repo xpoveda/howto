@@ -1,8 +1,8 @@
 Acceso al cluster de kubernetes
 ===============================
 
-Acceso a los pods internamente
-------------------------------
+Acceso a los pods internamente via IP interna dinamica
+-------------------------------------------------------
 Creamos un pod con una imagen que nos devuelve el hostname donde se está ejecutando.
 Aunque se llame nginx no tiene nada que ver con el servidor web.
 ```
@@ -88,8 +88,8 @@ nginx-deployment-5dd98684f6-sjf4f   1/1     Running   0          8m4s   10.44.0.
 [root@master ~]#
 ```
 
-Acceso a los servicios internamente
------------------------------------
+Acceso a los servicios internamente via IP cluster interna
+-----------------------------------------------------------
 Creamos el servicio
 ```
 [root@master ~]# more nginx-service.yaml
@@ -143,8 +143,8 @@ Events:            <none>
 {"hostname":"nginx-deployment-5dd98684f6-lh6zv","time":"2018-11-02T12:37:32Z","language":"Scala"}
 ```
 
-Acceso externo via nodeport
----------------------------
+Acceso externo via IP externa estatica y nodeport
+-------------------------------------------------
 ```
 [root@master ~]# more nginx-service-nodeport.yaml
 apiVersion: v1
@@ -187,4 +187,64 @@ node2:  curl http://************:31704 && echo "\n"
 {"hostname":"nginx-deployment-5dd98684f6-sjf4f","time":"2018-11-02T13:02:40Z","language":"Scala"}\n
 [root@master ~]# curl http://*****************:31704 && echo "\n"
 {"hostname":"nginx-deployment-5dd98684f6-sjf4f","time":"2018-11-02T13:02:40Z","language":"Scala"}\n
+```
+
+Acceso vía DNS
+--------------
+Cuando definimos un servicio kubernetes habilita automaticamente un servicio de dns que hace que haya resolucion de nombres de ese servicio. Es decir tenemos un "service discovery" automaticamente habilitado en kubernetes.
+
+De esta forma hay visililidad entre los pods de un mismo cluster.
+```
+[root@master ~]# kubectl get services nginx-service
+NAME            TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+nginx-service   ClusterIP   10.107.30.96   <none>        80/TCP    45h
+```
+
+Este servicio lo tendriamos accesible via IP desde cualquiera de nuestros nodos.
+```
+[root@master ~]# curl http://10.107.30.96 && echo "\n"
+{"hostname":"nginx-deployment-5dd98684f6-84dzs","time":"2018-11-04T10:14:50Z","language":"Scala"}\n
+```
+
+Pero no via dns porque NO estamos dentro de un pod. Comprobamos que el servicio de kube-dns funciona correctamente.
+```
+[root@master ~]# kubectl get services kube-dns --namespace=kube-system
+NAME       TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
+kube-dns   ClusterIP   10.96.0.10   <none>        53/UDP,53/TCP   4d19h
+```
+
+Lo que hacemos es acceder a un pod que nos permita entrada por interprete de comandos.
+Ahi se abrirá una sesion unix y haremos un `nslookup` para ver donde resuelve.
+```
+[root@master ~]# kubectl run curl --image=radial/busyboxplus:curl -i --tty
+kubectl run --generator=deployment/apps.v1beta1 is DEPRECATED and will be removed in a future version. Use kubectl create instead.
+If you don't see a command prompt, try pressing enter.
+
+[ root@curl-5cc7b478b6-n28vn:/ ]$ nslookup nginx-service
+Server:    10.96.0.10
+Address 1: 10.96.0.10 kube-dns.kube-system.svc.cluster.local
+
+Name:      nginx-service
+Address 1: 10.107.30.96 nginx-service.default.svc.cluster.local
+```
+
+Ahi podemos hacer llamadas al servicio que hemos habilitado y vemos como se va balanceando correctamente.
+```
+[ root@curl-5cc7b478b6-n28vn:/ ]$ curl http://nginx-service.default.svc.cluster.local
+{"hostname":"nginx-deployment-5dd98684f6-5j2h4","time":"2018-11-04T10:09:54Z","language":"Scala"}[ root@curl-5cc7b478b6-n28vn:/ ]$
+[ root@curl-5cc7b478b6-n28vn:/ ]$
+[ root@curl-5cc7b478b6-n28vn:/ ]$ curl http://nginx-service.default.svc.cluster.local
+{"hostname":"nginx-deployment-5dd98684f6-5j2h4","time":"2018-11-04T10:10:06Z","language":"Scala"}[ root@curl-5cc7b478b6-n28vn:/ ]$
+[ root@curl-5cc7b478b6-n28vn:/ ]$
+[ root@curl-5cc7b478b6-n28vn:/ ]$ curl http://nginx-service.default.svc.cluster.local
+{"hostname":"nginx-deployment-5dd98684f6-qrd6q","time":"2018-11-04T10:10:08Z","language":"Scala"}[ root@curl-5cc7b478b6-n28vn:/ ]$
+```
+
+Podemos salir y volver a entrar en el pod de shell que habiamos creado.
+```
+[ root@curl-5cc7b478b6-n28vn:/ ]$ exit
+Session ended, resume using 'kubectl attach curl-5cc7b478b6-n28vn -c curl -i -t' command when the pod is running
+[root@master ~]# kubectl attach curl-5cc7b478b6-n28vn -c curl -i -t
+If you don't see a command prompt, try pressing enter.
+[ root@curl-5cc7b478b6-n28vn:/ ]$
 ```
