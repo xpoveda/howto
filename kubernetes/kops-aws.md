@@ -6,8 +6,9 @@ Creando un cluster de kubernetes con kops en AWS
 Mediante kops podemos crear un cluster de kubernetes en AWS y operar con él.
 La documentación principal de instalación se encuentra en: https://github.com/kubernetes/kops/blob/master/docs/install.md
 
-En ella se comentan los siguientes pasos que tambien se comentan aquí a continuación, aunque en este documento la información es mucho mas
-concreta.
+En ella se comentan los siguientes pasos que tambien se comentan aquí a continuación, aunque en este documento la información es mucho más concreta.
+
+Tenemos su repositorio principal en: https://github.com/kubernetes/kops
 
 Preparando kops
 ===============
