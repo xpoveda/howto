@@ -271,7 +271,7 @@ aws s3 rm s3://k8s.escalamas.com --recursive
 
 Recursos
 ========
-https://github.com/kubernetes/kops/blob/master/docs/aws.md
-https://aws.amazon.com/blogs/compute/kubernetes-clusters-aws-kops/
-https://medium.com/containermind/how-to-create-a-kubernetes-cluster-on-aws-in-few-minutes-89dda10354f4
-https://www.youtube.com/watch?v=4YBzMZY4QX4&list=PLaGfdei15ACdNcOjKELO79vnt89RhVKrm
+* https://github.com/kubernetes/kops/blob/master/docs/aws.md
+* https://aws.amazon.com/blogs/compute/kubernetes-clusters-aws-kops/
+* https://medium.com/containermind/how-to-create-a-kubernetes-cluster-on-aws-in-few-minutes-89dda10354f4
+* https://www.youtube.com/watch?v=4YBzMZY4QX4&list=PLaGfdei15ACdNcOjKELO79vnt89RhVKrm
