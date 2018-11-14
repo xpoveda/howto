@@ -264,7 +264,7 @@ ip-172-20-55-7.ec2.internal     Ready    master   1h    v1.10.6
 Borrando el cluster
 ===================
 Si queremos empezar desde cero la instalacion borraremos el cluster que hemos creado y el bucket que se necesita para almacenar su configuracion.
-````
+```
 kops delete cluster --name k8s.escalamas.com --yes
 aws s3 rm s3://k8s.escalamas.com --recursive
 ```
