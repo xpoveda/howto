@@ -152,6 +152,10 @@ Instalando el cluster
 =====================
 Instalaremos nuestro cluster en la region `us-east-1`. Podemos hacerla en aquella que creamos conveniente.
 
+Aqui tenemos un listado con las regiones donde podemos ubicar los distintos servicios https://docs.aws.amazon.com/general/latest/gr/rande.html
+
+Para kops creo que solo es valido en las regiones que marca el `Amazon Elastic Container Service for Kubernetes (Amazon EKS)`.
+
 ```
 [ec2-user@ip-172-31-22-115 ~]$ aws configure
 AWS Access Key ID [None]: XXXXXXXXXXXXXXXXXX
@@ -189,6 +193,7 @@ Creamos el cluster. Nos dará un error por no tener definida una secret donde é
 
 Creamos la secret mediante una clave publica que ya teniamos en ~/.ssh/authorized_keys.
 Ahi tenemos la clave publica con la que generamos nuestra EC2 y a la que accedemos via putty con la clave privada.
+En este caso la aprovechamos pero bien podriamos crear una nueva con herramientas como `putty-gen` o `ssh-keygen`.
 ```
 [ec2-user@ip-172-31-22-115 .ssh]$ kops create secret --name k8s.escalamas.com sshpublickey admin -i ~/.ssh/authorized_keys
 ```
@@ -227,10 +232,8 @@ Suggestions:
  * read about installing addons at: https://github.com/kubernetes/kops/blob/master/docs/addons.md.
 ```
 
-Pasaran unos cuantos minutos y kops generará automaticamente toda la infraestructura que compone en cluster.
+Pasaran unos cuantos minutos y kops generará automaticamente toda la infraestructura que compone el cluster.
 En nuestro caso estará en la region de Virginia. 
-
-Aqui tenemos un listado con las regiones donde podemos ubicar los distintos servicios https://docs.aws.amazon.com/general/latest/gr/rande.html
 ```
 [ec2-user@ip-172-31-22-115 ~]$ kops validate cluster
 Validating cluster k8s.escalamas.com
