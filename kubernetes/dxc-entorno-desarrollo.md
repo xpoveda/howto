@@ -125,7 +125,14 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt-get install ansible
 ```
 
+Sonarqube
+---------
 
+https://hub.docker.com/_/sonarqube/
+
+```
+root@master:~#  docker run -d --name sonarqube -p 9000:9001 -p 9092:9092 sonarqube
+```
 
 Borrar todos los contenedores e imagenes
 ----------------------------------------
