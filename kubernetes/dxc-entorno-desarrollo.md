@@ -131,7 +131,20 @@ Sonarqube
 https://hub.docker.com/_/sonarqube/
 
 ```
-root@master:~#  docker run -d --name sonarqube -p 9000:9001 -p 9092:9092 sonarqube
+root@master:~#  docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+
+root@master:~# docker ps -a
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS                     PORTS                                            NAMES
+20a3527243a3        sonarqube                "./bin/run.sh"           12 seconds ago      Up 10 seconds              0.0.0.0:9000->9000/tcp, 0.0.0.0:9092->9092/tcp   sonarqube
+b6b197127144        portainer/portainer      "/portainer"             About an hour ago   Exited (2) 5 minutes ago                                                    trusting_johnson
+fb0344239f35        grafana/grafana          "/run.sh"                About an hour ago   Up About an hour           0.0.0.0:3000->3000/tcp                           wizardly_chatterjee
+38265ce3918d        prom/prometheus:latest   "/bin/prometheus --c…"   About an hour ago   Up About an hour           0.0.0.0:9090->9090/tcp                           prometheus
+8482bfb097e1        google/cadvisor:latest   "/usr/bin/cadvisor -…"   About an hour ago   Up About an hour           0.0.0.0:8080->8080/tcp                           cadvisor
+ddd30ff8b26c        redis:latest             "docker-entrypoint.s…"   About an hour ago   Up About an hour           0.0.0.0:6379->6379/tcp                           redis
+f5ebfa18962f        hello-world              "/hello"                 2 hours ago         Exited (0) 2 hours ago                                                      vigorous_perlman
+262e42b16922        hello-world              "/hello"                 2 hours ago         Exited (0) 2 hours ago                                                      xenodochial_hopper
+37bd0a0d4399        hello-world              "/hello"                 4 weeks ago         Exited (0) 4 weeks ago                                                      awesome_sinoussi
+
 ```
 
 Borrar todos los contenedores e imagenes
