@@ -114,6 +114,17 @@ fb0344239f35        grafana/grafana          "/run.sh"                21 minutes
 ddd30ff8b26c        redis:latest             "docker-entrypoint.s…"   34 minutes ago      Up 25 minutes       0.0.0.0:6379->6379/tcp   redis
 ```
 
+Ansible
+-------
+https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-the-control-machine
+
+```
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt-get install ansible
+```
+
 
 
 Borrar todos los contenedores e imagenes
