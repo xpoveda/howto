@@ -2,7 +2,7 @@ Entorno de desarrollo en local
 ==============================
 
 Prometheus
------------
+==========
 
 https://prometheus.io/docs/prometheus/latest/installation/
 
@@ -11,7 +11,7 @@ docker pull prom/prometheus
 ```
 
 Cadvisor
---------
+========
 
 https://prometheus.io/docs/guides/cadvisor/
 
@@ -64,8 +64,8 @@ root@master:~/proyectos/cadvisor# docker-compose up -d
 ```
 
 
-Instamos grafana
-----------------
+Grafana
+==========
 ```
 root@master:~# docker run -d -p 3000:3000 grafana/grafana
 ```
@@ -79,7 +79,7 @@ root@master:~# docker run -d -p 3000:3000 grafana/grafana
 4) Vamos a Dashboard + Manage y hacemos un import.
 
 Portainer
----------
+=========
 ```
 root@master:~# docker volume create portainer_data
 portainer_data
@@ -121,7 +121,10 @@ root@master:~#  docker run -d -p 9001:9000 -v /var/run/docker.sock:/var/run/dock
 ```
 
 Ansible
--------
+=======
+
+Instalando Ansible
+------------------
 https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-the-control-machine
 
 ```
@@ -131,6 +134,8 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt-get install ansible
 ```
 
+Conectandonos con los nodos
+---------------------------
 Intentamos conectarnos con el resto de nodos pero no hemos hecho nada para conectarlos por lo que dará error.
 ```
 vagrant@master:~$ ansible all -m ping
@@ -208,8 +213,65 @@ Are you sure you want to continue connecting (yes/no)? yes
 }
 ```
 
+En el fichero hosts tenemos la definicion de los hosts accesibles y los podemos agrupar.
+```
+vagrant@master:/etc/ansible$ more hosts
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+10.0.100.51
+
+# Ex 1: Ungrouped hosts, specify before any group headers.
+
+## green.example.com
+## blue.example.com
+## 192.168.100.1
+## 192.168.100.10
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group
+
+## [webservers]
+## alpha.example.org
+## beta.example.org
+## 192.168.1.100
+## 192.168.1.110
+```
+
+Ejecutando sentencias remotas
+------------------------------
+
+Y a partir de ahi podemos lanzar ejecuciones remotas
+```
+vagrant@master:/etc/ansible$ ansible --inventory-file=/etc/ansible/hosts 10.0.100.51 -m command -a 'ls -lt'
+10.0.100.51 | CHANGED | rc=0 >>
+total 4
+-rw-rw-r-- 1 vagrant vagrant 5 Nov 22 15:07 hola.txt
+
+
+vagrant@master:/etc/ansible$ ansible all -m command -a 'ls -lt'
+10.0.100.51 | CHANGED | rc=0 >>
+total 4
+-rw-rw-r-- 1 vagrant vagrant 5 Nov 22 15:07 hola.txt
+
+vagrant@master:/etc/ansible$ ansible 10.0.100.51 -m command -a 'ls -lt'
+10.0.100.51 | CHANGED | rc=0 >>
+total 4
+-rw-rw-r-- 1 vagrant vagrant 5 Nov 22 15:07 hola.txt
+
+
+vagrant@node1:~$ ls -lt hola.txt
+-rw-rw-r-- 1 vagrant vagrant 5 Nov 22 15:07 hola.txt
+```
+
 Sonarqube
----------
+=========
 
 https://hub.docker.com/_/sonarqube/
 
