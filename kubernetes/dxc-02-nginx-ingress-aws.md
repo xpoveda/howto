@@ -252,3 +252,9 @@ Address: YYYYYYYYYYYYYY
 </body>
 </html>
 ```
+
+Instalando ejemplo tea y cafe
+-----------------------------
+
+https://github.com/nginxinc/kubernetes-ingress/issues/450
+
