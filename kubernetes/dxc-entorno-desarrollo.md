@@ -347,9 +347,7 @@ root@master:~/apache1# curl http://localhost:8082
 
 Traefik
 =======
-```
-root@master:~# docker run -d --name traefik -p 8080:8080 -p 80:80 -v $PWD/traefik.toml:/etc/traefik/traefik.toml traefik
-```
+https://docs.traefik.io/user-guide/docker-and-lets-encrypt/
 
 
 
