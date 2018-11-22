@@ -292,6 +292,74 @@ f5ebfa18962f        hello-world              "/hello"                 2 hours ag
 
 ```
 
+Nginx
+=====
+https://hub.docker.com/_/nginx/
+```
+root@master:~/nginx1# cat index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NGINX1</title>
+</head>
+<body>
+    <h1>NGINX1</h1>
+</body>
+</html>
+```
+
+```
+root@master:~/nginx1# docker run --name nginx1 -p 8081:80 -v "$PWD":/usr/share/nginx/html:ro -d nginx
+
+root@master:~/nginx1# curl http://localhost:8081
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NGINX1</title>
+</head>
+<body>
+    <h1>NGINX1</h1>
+</body>
+</html>
+```
+
+Apache
+======
+https://hub.docker.com/_/httpd/
+
+```
+root@master:~/apache1# cat index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APACHE1</title>
+</head>
+<body>
+    <h1>APACHE1</h1>
+</body>
+</html>
+```
+```
+root@master:~/apache1# docker run -dit --name apache1 -p 8082:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
+
+root@master:~/apache1# curl http://localhost:8082
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APACHE1</title>
+</head>
+<body>
+    <h1>APACHE1</h1>
+</body>
+</html>
+```
+
+
+
 Borrar todos los contenedores e imagenes
 ----------------------------------------
 ```
