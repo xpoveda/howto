@@ -67,7 +67,7 @@ root@master:~/proyectos/cadvisor# docker-compose up -d
 Grafana
 ==========
 ```
-root@master:~# docker run -d -p 3000:3000 grafana/grafana
+root@master:~# docker run -d --name grafana -p 3000:3000 grafana/grafana
 ```
 
 1) Accedemos a grafana por la IP y el puerto 3000. El usuario sera admin/admin y despues lo modificaremos.
@@ -84,7 +84,7 @@ Portainer
 root@master:~# docker volume create portainer_data
 portainer_data
 
-root@master:~# docker run -d -p 9001:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+root@master:~# docker run -d --name portainer -p 9001:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 Unable to find image 'portainer/portainer:latest' locally
 latest: Pulling from portainer/portainer
 d1e017099d17: Pull complete
