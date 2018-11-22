@@ -84,7 +84,7 @@ Portainer
 root@master:~# docker volume create portainer_data
 portainer_data
 
-root@master:~# docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+root@master:~# docker run -d -p 9001:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 Unable to find image 'portainer/portainer:latest' locally
 latest: Pulling from portainer/portainer
 d1e017099d17: Pull complete
@@ -107,17 +107,11 @@ google/cadvisor       latest              75f88e3ec333        11 months ago     
 
 root@master:~# docker ps
 CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                    NAMES
-b6b197127144        portainer/portainer      "/portainer"             9 minutes ago       Up 9 minutes        0.0.0.0:9000->9000/tcp   trusting_johnson
+b6b197127144        portainer/portainer      "/portainer"             9 minutes ago       Up 9 minutes        0.0.0.0:9001->9000/tcp   trusting_johnson
 fb0344239f35        grafana/grafana          "/run.sh"                21 minutes ago      Up 21 minutes       0.0.0.0:3000->3000/tcp   wizardly_chatterjee
 38265ce3918d        prom/prometheus:latest   "/bin/prometheus --c…"   34 minutes ago      Up 25 minutes       0.0.0.0:9090->9090/tcp   prometheus
 8482bfb097e1        google/cadvisor:latest   "/usr/bin/cadvisor -…"   34 minutes ago      Up 25 minutes       0.0.0.0:9091->8080/tcp   cadvisor
 ddd30ff8b26c        redis:latest             "docker-entrypoint.s…"   34 minutes ago      Up 25 minutes       0.0.0.0:6379->6379/tcp   redis
-```
-
-Existen conflictos del puerto de portainer con el de sonarqube.
-Hacemos un `docker ps -a` para ver los contenedores, con `docker rm` borraremos el contenedor que queramos y con el siguiente comando atacaremos desde navegador contra el puerto 9001 en lugar del 9000.
-```
-root@master:~#  docker run -d -p 9001:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 ```
 
 Ansible
