@@ -114,6 +114,12 @@ fb0344239f35        grafana/grafana          "/run.sh"                21 minutes
 ddd30ff8b26c        redis:latest             "docker-entrypoint.s…"   34 minutes ago      Up 25 minutes       0.0.0.0:6379->6379/tcp   redis
 ```
 
+Existen conflictos del puerto de portainer con el de sonarqube.
+Hacemos un `docker ps -a` para ver los contenedores, con `docker rm` borraremos el contenedor que queramos y con el siguiente comando atacaremos desde navegador contra el puerto 9001 en lugar del 9000.
+```
+root@master:~#  docker run -d -p 9001:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+```
+
 Ansible
 -------
 https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-the-control-machine
