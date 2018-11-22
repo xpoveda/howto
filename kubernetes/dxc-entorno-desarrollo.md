@@ -16,7 +16,7 @@ Cadvisor
 https://prometheus.io/docs/guides/cadvisor/
 
 ```
-root@master:~/proyectos/cadvisor# cat prometheus.yml
+root@master:~/cadvisor# cat prometheus.yml
 scrape_configs:
 - job_name: cadvisor
   scrape_interval: 5s
@@ -26,7 +26,7 @@ scrape_configs:
 ```
 
 ```
-root@master:~/proyectos/cadvisor# cat docker-compose.yml
+root@master:~/cadvisor# cat docker-compose.yml
 version: '3.2'
 services:
   prometheus:
@@ -60,7 +60,7 @@ services:
 ```
 
 ```
-root@master:~/proyectos/cadvisor# docker-compose up -d
+root@master:~/cadvisor# docker-compose up -d
 ```
 
 
