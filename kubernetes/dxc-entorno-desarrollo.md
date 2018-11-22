@@ -22,7 +22,7 @@ scrape_configs:
   scrape_interval: 5s
   static_configs:
   - targets:
-    - cadvisor:9091
+    - cadvisor:8080
 ```
 
 ```
