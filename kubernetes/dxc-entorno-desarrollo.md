@@ -345,6 +345,12 @@ root@master:~/apache1# curl http://localhost:8082
 </html>
 ```
 
+Traefik
+=======
+```
+root@master:~# docker run -d --name traefik -p 8080:8080 -p 80:80 -v $PWD/traefik.toml:/etc/traefik/traefik.toml traefik
+```
+
 
 
 Borrar todos los contenedores e imagenes
