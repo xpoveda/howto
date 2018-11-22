@@ -22,7 +22,7 @@ scrape_configs:
   scrape_interval: 5s
   static_configs:
   - targets:
-    - cadvisor:8080
+    - cadvisor:9091
 ```
 
 ```
@@ -44,7 +44,7 @@ services:
     image: google/cadvisor:latest
     container_name: cadvisor
     ports:
-    - 8080:8080
+    - 9091:8080
     volumes:
     - /:/rootfs:ro
     - /var/run:/var/run:rw
@@ -110,7 +110,7 @@ CONTAINER ID        IMAGE                    COMMAND                  CREATED   
 b6b197127144        portainer/portainer      "/portainer"             9 minutes ago       Up 9 minutes        0.0.0.0:9000->9000/tcp   trusting_johnson
 fb0344239f35        grafana/grafana          "/run.sh"                21 minutes ago      Up 21 minutes       0.0.0.0:3000->3000/tcp   wizardly_chatterjee
 38265ce3918d        prom/prometheus:latest   "/bin/prometheus --c…"   34 minutes ago      Up 25 minutes       0.0.0.0:9090->9090/tcp   prometheus
-8482bfb097e1        google/cadvisor:latest   "/usr/bin/cadvisor -…"   34 minutes ago      Up 25 minutes       0.0.0.0:8080->8080/tcp   cadvisor
+8482bfb097e1        google/cadvisor:latest   "/usr/bin/cadvisor -…"   34 minutes ago      Up 25 minutes       0.0.0.0:9091->8080/tcp   cadvisor
 ddd30ff8b26c        redis:latest             "docker-entrypoint.s…"   34 minutes ago      Up 25 minutes       0.0.0.0:6379->6379/tcp   redis
 ```
 
@@ -284,7 +284,7 @@ CONTAINER ID        IMAGE                    COMMAND                  CREATED   
 b6b197127144        portainer/portainer      "/portainer"             About an hour ago   Exited (2) 5 minutes ago                                                    trusting_johnson
 fb0344239f35        grafana/grafana          "/run.sh"                About an hour ago   Up About an hour           0.0.0.0:3000->3000/tcp                           wizardly_chatterjee
 38265ce3918d        prom/prometheus:latest   "/bin/prometheus --c…"   About an hour ago   Up About an hour           0.0.0.0:9090->9090/tcp                           prometheus
-8482bfb097e1        google/cadvisor:latest   "/usr/bin/cadvisor -…"   About an hour ago   Up About an hour           0.0.0.0:8080->8080/tcp                           cadvisor
+8482bfb097e1        google/cadvisor:latest   "/usr/bin/cadvisor -…"   About an hour ago   Up About an hour           0.0.0.0:9091->8080/tcp                           cadvisor
 ddd30ff8b26c        redis:latest             "docker-entrypoint.s…"   About an hour ago   Up About an hour           0.0.0.0:6379->6379/tcp                           redis
 f5ebfa18962f        hello-world              "/hello"                 2 hours ago         Exited (0) 2 hours ago                                                      vigorous_perlman
 262e42b16922        hello-world              "/hello"                 2 hours ago         Exited (0) 2 hours ago                                                      xenodochial_hopper
