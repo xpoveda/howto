@@ -85,13 +85,6 @@ root@master:~# docker volume create portainer_data
 portainer_data
 
 root@master:~# docker run -d --name portainer -p 9001:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
-Unable to find image 'portainer/portainer:latest' locally
-latest: Pulling from portainer/portainer
-d1e017099d17: Pull complete
-d4e5419541f5: Pull complete
-Digest: sha256:07c0e19e28e18414dd02c313c36b293758acf197d5af45077e3dd69c630e25cc
-Status: Downloaded newer image for portainer/portainer:latest
-b6b19712714471f67fd4dac85ac1467a003c806c7237d7e8409dad7b9bbd6d51
 ```
 
 Finalmente:
