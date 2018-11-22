@@ -131,6 +131,83 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt-get install ansible
 ```
 
+Intentamos conectarnos con el resto de nodos pero no hemos hecho nada para conectarlos por lo que dará error.
+```
+vagrant@master:~$ ansible all -m ping
+The authenticity of host '10.0.100.51 (10.0.100.51)' can't be established.
+ECDSA key fingerprint is SHA256:iBWcGKKJv73115DfINEnuSq1c5iezlt2kf2wiCQGN/M.
+
+Are you sure you want to continue connecting (yes/no)? yes
+10.0.100.51 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '10.0.100.51' (ECDSA) to the list of known hosts.\r\nPermission denied (publickey,password).\r\n",
+    "unreachable": true
+}
+```
+
+Generamos una clave publica y privada
+```
+vagrant@master:~/.ssh$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/vagrant/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/vagrant/.ssh/id_rsa.
+Your public key has been saved in /home/vagrant/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:6hNjXJMsH8diIjU+EoRAkPMFl2e0I3Z/g3PKivkqyG8 vagrant@master
+The key's randomart image is:
++---[RSA 2048]----+
+|=+.+oo.          |
+|o ..+ =.         |
+| o .o*+o o       |
+|  ..oo=oO.o      |
+|     + BS=+      |
+|      =o.= .     |
+|..   ..oo        |
+|...E +..         |
+|  oo+o+.         |
++----[SHA256]-----+
+```
+
+```
+vagrant@master:~/.ssh$ ls -lt | more
+total 12
+-rw------- 1 vagrant vagrant 1675 Nov 22 14:52 id_rsa
+-rw-r--r-- 1 vagrant vagrant  396 Nov 22 14:52 id_rsa.pub
+```
+
+La clave publica (1 linea) que hemos generado en el master la copiaremos en un fichero del nodo1 (que es con quien queremos contactar) y lo añadiremos a .ssh/authorized_keys concatenandola.
+
+```
+vagrant@node1:~/.ssh$ ls -lt id_rsa_master.pub
+-rw-rw-r-- 1 vagrant vagrant 396 Nov 22 14:53 id_rsa_master.pub
+vagrant@node1:~/.ssh$ ls -lt | more
+total 16
+-rw-rw-r-- 1 vagrant vagrant  396 Nov 22 14:53 id_rsa_master.pub
+-rw------- 1 vagrant vagrant 1679 Nov 22 14:47 id_rsa
+-rw-r--r-- 1 vagrant vagrant  395 Nov 22 14:47 id_rsa.pub
+-rw------- 1 vagrant vagrant  389 Nov 22 12:25 authorized_keys
+vagrant@node1:~/.ssh$ cat id_rsa_master.pub >> authorized_keys
+vagrant@node1:~/.ssh$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/kWzjp4+SlyCR31e53tAAj4EB8pAceRND6v1i1KN5F5GV2Pwcnf2ZfrU3dbL8juJo1tiKGF6IkgZFjw+263S8jwt+xPnEl5BSrM9+rg0qENM+lINJWjaVCBQIe0dEeP9DB5azOLHE+vV2I3YzhyKATbgNJ8CxVGyw3F9vQ2Gl03O3OSzbBox8xYQV+nplAgCZ+gZxqPUWK3JTXdqBxCXJRWaUKF/7gjLLv9OlNnR1pvwGDiE22vKoj3GWaCHFBrZPaY1Ts6rmRjEl15ZGb/GTDOGbYDYl6NM1+ZMsDJv2i7kZG4vgStaOFgFexjGHVylC+WbXuyuORqSScTkzJoj3 vagrant
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcxNx/x+2XzLOMjKZzF3+cKj8fR+0dDDRtqaFmLNbdPUEfUONSWaWuw+pBzenuGpKHbsQqOWwCLh8dwYKk0XrM0qMD2OQxcGzjZZ1KblLo+kCbIj9PHxLUHBX0s5goOEjNqTysd0Wuh24LLq4z86axUz4BjQIl+JWAHK8bvfsLoUibQj8b5ZkkCXx7QJAAWbEiagAnPOwd/GLkO4NFT1shxIc282d+8PcwbYIqa14V2IfkZXY5diW6jLvfFs/PBiM2HIIEmd7njnwvArrucSB1lfogL2M48G6MuwY4UMw3F8PIQoA9aLxBwVPsgJ/mK1uA/jd8hsfpcxdnOX0OiF5T vagrant@master
+```
+
+Ahora ya podemos acceder a los distintos nodos con los que hayamos hecho esto con ansible.
+
+```
+vagrant@master:~$ ansible all -m ping
+The authenticity of host '10.0.100.51 (10.0.100.51)' can't be established.
+ECDSA key fingerprint is SHA256:iBWcGKKJv73115DfINEnuSq1c5iezlt2kf2wiCQGN/M.
+Are you sure you want to continue connecting (yes/no)? yes
+10.0.100.51 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+
+}
+```
+
 Sonarqube
 ---------
 
