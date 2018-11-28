@@ -200,4 +200,5 @@ Git bash con windows
 --------------------
 ```
 git config --global http.proxy http://USER:PASSWORD@PROXY_URL:PROXY_PORT
+git config --global https.proxy http://USER:PASSWORD@PROXY_URL:PROXY_PORT
 ```
