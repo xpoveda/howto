@@ -28,4 +28,4 @@ estás en howto
 
 ---
 ---
-tonto
+esto es una prueba
