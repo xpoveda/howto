@@ -27,5 +27,3 @@ estás en howto
 
 
 ---
----
-a ver que pasa
